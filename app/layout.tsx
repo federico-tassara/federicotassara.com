@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         "sviluppo siti web professionali",
     ],
 
-    authors: [{ name: "Federico Tassara", url: "https://federicotassara.com" }],
+    authors: [{ name: "Federico Tassara", url: "https://federicotassara.it" }],
     creator: "Federico Tassara",
     publisher: "Federico Tassara",
 
@@ -35,12 +35,12 @@ export const metadata: Metadata = {
         title: "Federico Tassara – Sviluppatore Web, Mobile & Fractional CTO in Italia",
         description:
             "Sviluppo app mobile, siti web e piattaforme per startup e aziende italiane. Disponibile per progetti, consulenze e ruolo di CTO part-time.",
-        url: "https://federicotassara.com",
+        url: "https://federicotassara.it",
         siteName: "Federico Tassara",
         type: "website",
         images: [
             {
-                url: "https://federicotassara.com/og-image.jpg",
+                url: "https://federicotassara.it/og-image.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Federico Tassara – Sviluppatore Web e Mobile",
@@ -54,11 +54,11 @@ export const metadata: Metadata = {
         title: "Federico Tassara – Full Stack Developer & Fractional CTO",
         description:
             "Sviluppo app, siti web e piattaforme personalizzate per aziende e startup italiane.",
-        images: ["https://federicotassara.com/og-image.jpg"],
+        images: ["https://federicotassara.it/og-image.jpg"],
         creator: "@tua_handle_twitter",
     },
     alternates: {
-        canonical: "https://federicotassara.com",
+        canonical: "https://federicotassara.it",
     },
 };
 
