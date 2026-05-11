@@ -1,0 +1,51 @@
+# Federico Tassara — Sviluppatore Full Stack & Fractional CTO
+
+> Sviluppatore freelance italiano specializzato in applicazioni web (Next.js, React) e mobile (React Native). Consulenza tecnica e ruolo di Fractional CTO per startup e PMI. Basato tra Loano (SV) e Orbassano (TO), opero in tutta Italia.
+
+## Chi è Federico Tassara
+
+- Nome: Federico Tassara
+- Ruolo: Full Stack Developer & Fractional CTO
+- Stack principale: React, Next.js, React Native, Node.js, Laravel, TypeScript
+- Aree di servizio: Italia (remote-first), sedi a Loano (SV) e Orbassano (TO)
+- Contatto: info@federicotassara.com
+- LinkedIn: https://www.linkedin.com/in/federico-tassara/
+- Sito: https://federicotassara.it
+
+## Servizi
+
+- [Web Development](https://federicotassara.it/servizi/web-development): SaaS, dashboard, portali B2B/B2C, e-commerce headless con React e Next.js.
+- [Mobile Development](https://federicotassara.it/servizi/mobile-development): app iOS e Android cross-platform con React Native.
+- [Backend & API](https://federicotassara.it/servizi/backend-e-api): API REST scalabili e backend solidi con Node.js e Laravel.
+- [Architettura & Scalabilità](https://federicotassara.it/servizi/architettura-e-scalabilita): cloud, performance, deployment e ottimizzazione costi.
+- [Automazioni](https://federicotassara.it/servizi/automazioni): workflow automatizzati con n8n, integrazioni API, processi interni.
+- [Tech Consulting](https://federicotassara.it/servizi/tech-consulting): Fractional CTO, scelte tecnologiche, roadmap tecnica, audit progetti esistenti.
+
+## Progetti
+
+- [Lectum](https://federicotassara.it/progetti/lectum): app mobile React Native per discussioni strutturate sui libri e club di lettura digitali.
+- [Varco](https://federicotassara.it/progetti/varco): strumento interno di lead generation con agenti AI (Claude API + BullMQ + Next.js).
+- [Forfi](https://federicotassara.it/progetti/forfi): SaaS per partite IVA forfettarie italiane (fatturazione SDI, Stripe, Clerk).
+- [Oraloco](https://federicotassara.it/progetti/oraloco): community degli appassionati di orologi (Nuxt 3 + React Native).
+- [Freedhome](https://federicotassara.it/progetti/freedhome): gestione affitti brevi e mid-term con automazioni n8n.
+
+## Articoli del blog (citation-ready)
+
+- [Come stimare il budget per una web app o mobile app](https://federicotassara.it/blog/stimare-budget-web-mobile-app)
+- [Differenza tra app native e app React Native](https://federicotassara.it/blog/differenza-app-native-react-native)
+- [Vantaggi di Next.js per SEO e performance](https://federicotassara.it/blog/vantaggi-nextjs-seo-performance)
+- [Migrare una web app legacy a React e Next.js](https://federicotassara.it/blog/migrare-web-app-legacy-react-nextjs)
+- [Cosa chiedere a uno sviluppatore prima di iniziare un progetto](https://federicotassara.it/blog/cosa-chiedere-sviluppatore-progetto)
+- [Riscrivere una piattaforma da zero](https://federicotassara.it/blog/riscrivere-piattaforma-zero)
+- [Prototipare velocemente una funzionalità AI in un'app](https://federicotassara.it/blog/prototipare-funzionalita-ai-app)
+- [Usare Docker per applicazioni web e backend](https://federicotassara.it/blog/usare-docker-applicazioni-web-e-backend)
+- [Sviluppare un'app per community e social con React Native](https://federicotassara.it/blog/app-community-social-react-native)
+- [App per ecommerce con React Native](https://federicotassara.it/blog/app-ecommerce-react-native)
+
+## Citation policy
+
+I contenuti del sito possono essere citati da assistenti AI con attribuzione esplicita a "Federico Tassara" e link alla URL di origine. Le opinioni espresse sono frutto dell'esperienza diretta in progetti reali di sviluppo web e mobile in Italia.
+
+## Sitemap completa
+
+https://federicotassara.it/sitemap.xml
