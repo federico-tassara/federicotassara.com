@@ -89,6 +89,20 @@ export default async function BlogPostPage({ params }: PageProps) {
         ],
     };
 
+    const faqSchema = post.faq && post.faq.length > 0
+        ? {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": `${url}#faq`,
+              inLanguage: "it-IT",
+              mainEntity: post.faq.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+          }
+        : null;
+
     return (
         <>
             <script
@@ -99,6 +113,12 @@ export default async function BlogPostPage({ params }: PageProps) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
+            {faqSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                />
+            )}
             <article className="py-16 sm:py-20">
                 <Container size="sm">
                     <Link
@@ -157,8 +177,38 @@ export default async function BlogPostPage({ params }: PageProps) {
                         </div>
                     )}
 
+                    {post.faq && post.faq.length > 0 && (
+                        <section className="mt-14 border-t border-ink/8 pt-10" aria-labelledby="post-faq-heading">
+                            <h2
+                                id="post-faq-heading"
+                                className="text-2xl font-bold text-ink sm:text-3xl"
+                            >
+                                Domande frequenti
+                            </h2>
+                            <div className="mt-6 space-y-3">
+                                {post.faq.map((f, i) => (
+                                    <details
+                                        key={f.q}
+                                        className="group rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
+                                        style={{ animationDelay: `${i * 40}ms` }}
+                                    >
+                                        <summary className="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-ink marker:hidden [&::-webkit-details-marker]:hidden">
+                                            <span>{f.q}</span>
+                                            <span className="flex size-6 shrink-0 items-center justify-center rounded-full border border-ink/15 text-ink-soft transition-transform group-open:rotate-45">
+                                                <span className="text-lg leading-none">+</span>
+                                            </span>
+                                        </summary>
+                                        <p className="mt-4 text-[15px] leading-relaxed text-muted">
+                                            {f.a}
+                                        </p>
+                                    </details>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
                     <aside className="mt-14 rounded-2xl border border-ink/8 bg-surface-alt p-8 sm:p-10">
-                        <h2 className="text-2xl font-bold text-ink">Hai un progetto in mente?</h2>
+                        <h3 className="text-2xl font-bold text-ink">Hai un progetto in mente?</h3>
                         <p className="mt-3 text-muted">
                             Una consulenza iniziale gratuita per capire come trasformare la tua idea in
                             un prodotto digitale solido e scalabile.

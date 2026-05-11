@@ -20,8 +20,44 @@ export const metadata: Metadata = {
     },
 };
 
+const url = `${SITE_URL}/progetti`;
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Progetti", item: url },
+    ],
+};
+
+const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${url}#list`,
+    name: "Progetti di Federico Tassara",
+    inLanguage: "it-IT",
+    numberOfItems: PROJECTS.length,
+    itemListElement: PROJECTS.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/progetti/${p.slug}`,
+        name: p.title,
+    })),
+};
+
 export default function ProgettiPage() {
     return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+            />
         <section className="py-16 sm:py-24">
             <Container>
                 <SectionTitle
@@ -73,5 +109,6 @@ export default function ProgettiPage() {
                 </div>
             </Container>
         </section>
+        </>
     );
 }

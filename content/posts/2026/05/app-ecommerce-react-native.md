@@ -7,6 +7,15 @@ excerpt: "Sviluppare un'app ecommerce con React Native: architettura, performanc
 tags: ["react native", "ecommerce", "mobile development", "pagamenti", "ux"]
 ---
 
+**TL;DR.** Un'app ecommerce con React Native richiede 4 scelte chiave prima dello sviluppo:
+
+- architettura modulare con isolamento di pagamenti, catalogo e auth
+- performance del rendering liste e gestione immagini
+- gestione stato e sincronizzazione (offline-ready per il carrello)
+- moduli nativi per pagamenti e in-app purchase
+
+Il costo tipico per un'app ecommerce React Native con backend custom è €60.000–€130.000 (5-9 mesi). Conviene rispetto al native puro per il 90% dei casi.
+
 Progettare un'app per ecommerce con React Native richiede decisioni informate su architettura, integrazioni, performance e user experience. La scelta del framework può accelerare lo sviluppo e semplificare la manutenzione, ma necessita di pianificazione strategica.
 
 ## Architettura e scelta della base tecnologica

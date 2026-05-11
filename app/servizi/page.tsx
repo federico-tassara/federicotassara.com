@@ -20,9 +20,44 @@ export const metadata: Metadata = {
     },
 };
 
+const url = `${SITE_URL}/servizi`;
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Servizi", item: url },
+    ],
+};
+
+const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${url}#list`,
+    name: "Servizi di Federico Tassara",
+    inLanguage: "it-IT",
+    numberOfItems: SERVICES.length,
+    itemListElement: SERVICES.map((s, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/servizi/${s.slug}`,
+        name: s.title,
+    })),
+};
+
 export default function ServiziPage() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+            />
             <section className="py-16 sm:py-24">
                 <Container>
                     <div className="anim-fade-up max-w-3xl">

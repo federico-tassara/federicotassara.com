@@ -40,7 +40,7 @@ export default async function OGImage() {
                             color: "#5a607a",
                         }}
                     >
-                        federicotassara.it
+                        federicotassara.com
                     </div>
                 </div>
 

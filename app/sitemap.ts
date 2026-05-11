@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${SITE_URL}/progetti`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
         { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
         { url: `${SITE_URL}/contatti`, lastModified: now, changeFrequency: "yearly", priority: 0.7 },
+        { url: `${SITE_URL}/fractional-cto`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+        { url: `${SITE_URL}/sviluppatore-react-native-italia`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
         { url: `${SITE_URL}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
         { url: `${SITE_URL}/cookie`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     ];

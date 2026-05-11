@@ -175,6 +175,52 @@ export default async function ProjectPage({ params }: PageProps) {
                 </Container>
             </section>
 
+            {project.caseStudy && (
+                <section className="py-20 sm:py-24">
+                    <Container>
+                        <div className="max-w-3xl">
+                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                                Case study
+                            </span>
+                            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl md:text-[2.4rem]">
+                                Sfida, soluzione e risultati.
+                            </h2>
+                        </div>
+                        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            <div className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7">
+                                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted">
+                                    <span className="size-1.5 rounded-full bg-red-500" /> Sfida
+                                </span>
+                                <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
+                                    {project.caseStudy.challenge}
+                                </p>
+                            </div>
+                            <div className="anim-fade-up anim-delay-100 rounded-2xl border border-ink/8 bg-white p-7">
+                                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted">
+                                    <span className="size-1.5 rounded-full bg-amber-500" /> Soluzione
+                                </span>
+                                <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
+                                    {project.caseStudy.solution}
+                                </p>
+                            </div>
+                            <div className="anim-fade-up anim-delay-200 rounded-2xl border border-ink/8 bg-white p-7">
+                                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted">
+                                    <span className="size-1.5 rounded-full bg-emerald-500" /> Risultati
+                                </span>
+                                <ul className="mt-4 space-y-3">
+                                    {project.caseStudy.results.map((r) => (
+                                        <li key={r} className="flex items-start gap-2 text-[15px] leading-relaxed text-ink-soft">
+                                            <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-ink" />
+                                            <span>{r}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </Container>
+                </section>
+            )}
+
             <section className="py-20 sm:py-24">
                 <Container>
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

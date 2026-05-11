@@ -5,7 +5,25 @@ author: "Federico Tassara"
 category: "Consulenza"
 excerpt: "Come stimare il budget di una web app o mobile app: requisiti, costi di sviluppo, infrastruttura, manutenzione e margini di rischio realistici."
 tags: ["budget", "preventivo", "consulenza", "web app", "mobile app"]
+faq:
+  - q: "Quanto costa un MVP di web app in Italia?"
+    a: "Un MVP web in Italia parte indicativamente da €15.000 e arriva a €40.000 per applicazioni con autenticazione, dashboard e backend custom. Il range dipende da numero di schermate, integrazioni e profondità del design. Tempi tipici: 2-4 mesi."
+  - q: "Cosa entra nel budget oltre allo sviluppo iniziale?"
+    a: "Almeno 4 voci: design e UX (10-20% del totale), QA e testing (10-15%), infrastruttura ricorrente (hosting, monitoring, servizi a consumo) e manutenzione evolutiva (15-25% del costo iniziale all'anno). Ignorare queste voci porta sempre a sforare il budget."
+  - q: "Quale margine di contingency è realistico?"
+    a: "Tra il 15% e il 25% del budget stimato. Sotto il 15% si esce dal range alla prima sorpresa; sopra il 30% di solito significa che la stima iniziale era troppo ottimistica e va rivista alla radice."
+  - q: "Meglio prezzo fisso o tariffa oraria?"
+    a: "Prezzo fisso funziona quando i requisiti sono stabili e ben definiti (es. piccoli progetti, MVP molto chiari). Tariffa oraria o sprint è più adatta a progetti evolutivi o dove i requisiti devono ancora essere validati. Una via di mezzo è il prezzo fisso per milestone, che dà controllo a entrambi i lati."
 ---
+
+**TL;DR.** Una stima realistica di budget per una web app o mobile app si costruisce in 4 passaggi:
+
+- scomporre il progetto in 5 voci (design, dev frontend, dev backend, QA, infrastruttura)
+- stimare ogni voce in sprint da 2 settimane con deliverable verificabili
+- aggiungere 15-25% di contingency per imprevisti
+- prevedere i costi ricorrenti (hosting, manutenzione, servizi a consumo)
+
+I range tipici in Italia 2026: MVP €15k-40k, app business €40k-90k, marketplace €80k-200k+. Per range più dettagliati per tipo di app, vedi [Quanto costa un'app mobile in Italia 2026](/blog/quanto-costa-app-mobile-italia-2026).
 
 Stimare il budget per una web app o mobile app richiede un approccio metodico che integri valutazioni tecniche, analisi dei requisiti e stime dei tempi di sviluppo. In questo articolo trovi un percorso pratico per trasformare esigenze di business in cifre realistiche e utilizzabili per decisioni rapide e fondate.
 

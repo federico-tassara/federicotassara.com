@@ -6,7 +6,24 @@ category: "Sviluppo mobile"
 project: "lectum"
 excerpt: "Differenza tra app native e React Native: performance, esperienza utente, costi e quando scegliere l'una o l'altra per un'app mobile in Italia."
 tags: ["react native", "mobile development", "ios", "android", "performance"]
+faq:
+  - q: "Le app React Native hanno performance simili a quelle native?"
+    a: "Sì, per il 90% dei casi business. React Native usa componenti nativi: la differenza di performance percepita è minima rispetto a Swift o Kotlin. La differenza si nota in scenari estremi come giochi 3D, audio a bassa latenza o elaborazioni grafiche pesanti, dove il native puro rimane preferibile."
+  - q: "Quando conviene scegliere native invece di React Native?"
+    a: "Quando hai requisiti di performance critici (giochi avanzati, AR/VR), uso intensivo di hardware (sensori, camera con elaborazione pesante), o quando il team ha solide competenze native su entrambe le piattaforme e i tempi non sono il vincolo principale."
+  - q: "Quanto si risparmia con React Native rispetto al native puro?"
+    a: "Indicativamente il 40-70% sui costi di sviluppo, perché si elimina il doppio team (iOS + Android) e si mantiene una sola codebase. Il risparmio è massimo per app business con 20-50 schermate; si riduce per app che richiedono molti moduli nativi custom."
+  - q: "React Native è production-ready per app complesse?"
+    a: "Sì. Aziende come Shopify, Discord, Microsoft, Meta usano React Native in produzione su app con milioni di utenti. La maturità dell'ecosistema (Expo, EAS, librerie audited) lo rende adatto anche a progetti enterprise."
 ---
+
+**TL;DR.** React Native conviene quando vuoi una sola codebase per iOS e Android, time-to-market rapido e budget contenuto: copre bene il 90% delle app business. Le app native restano migliori per:
+
+- giochi e AR/VR ad alta intensità grafica
+- audio low-latency o video real-time
+- integrazioni hardware molto profonde (camera avanzata, BLE complesso, ARKit/ARCore)
+
+In tutti gli altri casi la scelta tra native e React Native è guidata da budget, team skill e time-to-market — non da limiti tecnici.
 
 La differenza tra app native e app React Native è spesso al centro delle decisioni strategiche per chi deve sviluppare un prodotto mobile competitivo. Comprendere le implicazioni su performance, esperienza utente, tempi di sviluppo e costi è fondamentale per scegliere la soluzione più adatta al proprio progetto. Questa guida pratica offre un confronto operativo e orientato alla scelta, pensato per manager, product owner e sviluppatori che cercano indicazioni concrete.
 

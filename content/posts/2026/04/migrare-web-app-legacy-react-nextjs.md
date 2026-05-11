@@ -7,6 +7,15 @@ excerpt: "Come migrare una web app legacy a React e Next.js: valutazione, archit
 tags: ["react", "nextjs", "migrazione", "web development", "legacy"]
 ---
 
+**TL;DR.** Una migrazione legacy → React/Next.js ben fatta segue 4 regole:
+
+- migrazione incrementale (strangler pattern) invece di big-bang rewrite
+- mappatura URL completa con redirect 301 per non perdere SEO
+- test end-to-end automatici sui flussi critici prima di ogni cutover
+- canary release e monitoring per intercettare regressioni in produzione
+
+Tempi tipici: 3-9 mesi per un'app media, con 30-50% di codice riusabile. Tagliare la pianificazione "per andare veloci" è la prima causa di migrazione fallita.
+
 Migrare una web app legacy a React e Next.js richiede pianificazione tecnica, attenzione alle dipendenze e un percorso di test ben definito, con focus su prestazioni, SEO lato server e mantenibilità del codice nel medio-lungo periodo.
 
 ## Valutazione iniziale dell'applicazione

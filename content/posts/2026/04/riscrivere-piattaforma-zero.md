@@ -7,6 +7,15 @@ excerpt: "Quando ha senso riscrivere da zero una piattaforma esistente: criteri 
 tags: ["legacy", "rewrite", "consulenza", "architettura", "debito tecnico"]
 ---
 
+**TL;DR.** Riscrivere da zero una piattaforma ha senso solo se vale una di queste condizioni:
+
+- il costo di manutenzione mensile supera il 30-40% del valore generato dal prodotto
+- ogni nuova feature richiede sforzi 3-5x rispetto a un competitor green-field
+- la piattaforma non è in grado di scalare ai volumi previsti nei prossimi 18 mesi
+- vincoli regolamentari (GDPR, compliance) impongono cambi strutturali infattibili sul legacy
+
+In tutti gli altri casi il refactor mirato o lo strangler pattern (sostituire pezzi incrementalmente) sono soluzioni migliori. La riscrittura completa fallisce nel 60-70% dei casi reali.
+
 Quando ha senso riscrivere da zero una piattaforma esistente è una domanda critica per product manager, CTO e team di sviluppo che devono bilanciare costi, rischi e opportunità di innovazione. In questo articolo analizziamo i segnali che indicano la necessità di una riscrittura completa e offriamo un percorso pratico per prendere una decisione informata e allineata agli obiettivi di business.
 
 ## Quando ha senso riscrivere da zero

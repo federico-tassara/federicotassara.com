@@ -89,7 +89,7 @@ export async function POST(request: Request) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
-    const from = process.env.RESEND_FROM ?? "noreply@federicotassara.it";
+    const from = process.env.RESEND_FROM ?? "noreply@federicotassara.com";
     const to = process.env.RESEND_TO ?? "info@federicotassara.com";
 
     if (!apiKey) {

@@ -8,6 +8,15 @@ excerpt: "Come integrare rapidamente una funzionalità AI in un'app esistente: a
 tags: ["ai", "prototipazione", "api", "feature flag", "product"]
 ---
 
+**TL;DR.** Prototipare una funzionalità AI in un'app esistente in modo serio richiede 4 mosse:
+
+- API esterna (OpenAI, Anthropic, Mistral) invece di modelli self-hosted nel prototipo
+- feature flag per accendere/spegnere la feature sul singolo utente
+- UX che dichiari la natura sperimentale (badge "beta", microcopy chiari)
+- raccolta dati input/output per valutare l'ipotesi su numeri reali
+
+Il prototipo non deve essere perfetto: deve produrre segnali per decidere se iterare, scalare o abbandonare. Tempi tipici: 2-6 settimane per il primo deploy a utenti reali.
+
 Integrare rapidamente funzionalità AI in applicazioni esistenti richiede iterazioni rapide, integrazione minima invasiva e strumenti che consentano di validare idee con utenti reali. L'obiettivo non è costruire la versione finale, ma ridurre l'incertezza nel minor tempo possibile.
 
 ## Definire l'ipotesi di valore

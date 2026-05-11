@@ -14,6 +14,12 @@ export type ProjectKind =
     | "MobileApplication"
     | "SoftwareApplication";
 
+export type CaseStudy = {
+    challenge: string;
+    solution: string;
+    results: string[];
+};
+
 export type Project = {
     slug: string;
     title: string;
@@ -32,6 +38,7 @@ export type Project = {
     operatingSystem?: string;
     seoTitle?: string;
     seoDescription?: string;
+    caseStudy?: CaseStudy;
 };
 
 export const PROJECTS: Project[] = [
@@ -67,6 +74,18 @@ export const PROJECTS: Project[] = [
         kind: "MobileApplication",
         applicationCategory: "SocialNetworkingApplication",
         operatingSystem: "iOS, Android",
+        caseStudy: {
+            challenge:
+                "Le conversazioni sui libri online sono distribuite tra Goodreads, Reddit, Discord e gruppi WhatsApp: ogni piattaforma ha pezzi del puzzle ma nessuna offre un'esperienza tematica e ordinata. I lettori che vogliono partecipare a club di lettura organizzati o discutere capitoli senza spoiler hanno strumenti frammentati e UX caotica.",
+            solution:
+                "Un'app mobile React Native che mette il libro al centro: ricerca per ISBN, thread strutturati per separare trama e personaggi, club di lettura con discussioni organizzate per capitoli, libreria personale e scudo anti-spoiler attivo per default. Sviluppata in public da fondatore tecnico, con cadenza di rilascio quindicinale e roadmap pubblica.",
+            results: [
+                "MVP rilasciato in 12 settimane partendo da zero, su iOS e Android da unica codebase",
+                "Architettura backend modulare Node.js + Express + MongoDB con caching Redis e queue BullMQ",
+                "Schema dati pensato per scalare a thread profondi, commenti annidati e metadata variabili per libro",
+                "Community di beta tester attiva con feedback iterativi integrati nella roadmap",
+            ],
+        },
     },
     {
         slug: "varco",
@@ -100,6 +119,18 @@ export const PROJECTS: Project[] = [
         kind: "WebApplication",
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
+        caseStudy: {
+            challenge:
+                "Le agenzie marketing che generano lead per i loro clienti perdono molte ore su attività manuali: scraping, qualifica prospect, ricerca segnali di acquisto, scrittura di email outreach personalizzate. La maggior parte del tempo non genera valore — è preparazione. E i lead prodotti spesso non sono qualificati abbastanza per giustificare il costo del processo.",
+            solution:
+                "Una pipeline di agenti AI orchestrati che identifica aziende pronte al contatto, le qualifica su criteri specifici per cliente e genera email outreach personalizzate. Gli operatori interni approvano le email che vengono inviate via Instantly.ai. Tutto il flusso è auditato, ripetibile e scalabile: una sola persona può gestire decine di campagne in parallelo.",
+            results: [
+                "Architettura modulare con agenti specializzati basati su Claude Sonnet 4.5, orchestrati da MoltBot",
+                "Pipeline asincrona con BullMQ + Redis per processare migliaia di lead senza bloccare la UI",
+                "Dashboard operatori Next.js 15 + shadcn/ui per gestione aziende, campagne e approvazioni",
+                "Integrazione end-to-end con Instantly.ai, Serper API per ricerca e n8n per side effects",
+            ],
+        },
     },
     {
         slug: "forfi",
@@ -133,6 +164,18 @@ export const PROJECTS: Project[] = [
         kind: "WebApplication",
         applicationCategory: "FinanceApplication",
         operatingSystem: "Web",
+        caseStudy: {
+            challenge:
+                "I professionisti in regime forfettario in Italia gestiscono fatturazione SDI, tracciamento spese, calcolo imposte e abbonamenti con strumenti separati, spesso vecchi e fiscalmente non aggiornati. Il tempo speso su gestione amministrativa è alto rispetto al valore prodotto, con rischio reale di errori sulle scadenze.",
+            solution:
+                "Un SaaS dedicato che integra in un solo prodotto: emissione e invio fatture elettroniche via Aruba SDI, anagrafica clienti, anni fiscali separati con numerazione automatica, abbonamenti Stripe per i piani, file storage Cloudflare R2 con signed URL e notifiche transazionali Brevo. Backend layered MVC rigoroso, frontend Next.js 15 con Clerk.",
+            results: [
+                "Architettura backend con 5 modelli Mongoose (User, Client, Invoice, FiscalYear, InvoiceCounter) e queue Bull dedicata per task fiscali",
+                "Invio SDI funzionante con counter automatico per anno fiscale e gestione stati ricevuta",
+                "Integrazione Stripe completa con webhook, billing portal e gestione abbonamenti per piani di servizio",
+                "Pipeline CI/CD su CapRover (backend) e Vercel (frontend) con ambienti separati staging/produzione",
+            ],
+        },
     },
     {
         slug: "oraloco",
@@ -167,6 +210,18 @@ export const PROJECTS: Project[] = [
         kind: "WebApplication",
         applicationCategory: "LifestyleApplication",
         operatingSystem: "Web, iOS, Android",
+        caseStudy: {
+            challenge:
+                "La community italiana degli appassionati di orologi è frammentata tra forum vecchi, gruppi Facebook poco moderati e thread Reddit. Mancava un punto di riferimento moderno, curato editorialmente e ottimizzato per la ricerca organica, capace di unire contenuti tecnici e community in un'unica esperienza coerente.",
+            solution:
+                "Una piattaforma editoriale costruita su Nuxt 3 con SSR/SSG, schede orologi strutturate e SEO curato, affiancata da un'app mobile companion in React Native (Expo) per la community e i contenuti in mobilità. Backoffice operatori dedicato per gestire contenuti, utenti e moderazione, con integrazione di Brevo per email transazionali e GTM per analytics.",
+            results: [
+                "Sito SEO-friendly con SSR/SSG, sitemap dinamica, schema.org strutturato e Core Web Vitals nei target Google",
+                "App mobile companion con autenticazione Apple/Google Sign-In e navigazione expo-router",
+                "Backoffice interno completo per gestione contenuti editoriali, schede tecniche e community",
+                "Architettura pensata per scalare a migliaia di pagine indicizzate sul mercato italiano degli orologi",
+            ],
+        },
     },
     {
         slug: "freedhome",
@@ -199,6 +254,18 @@ export const PROJECTS: Project[] = [
         kind: "WebApplication",
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
+        caseStudy: {
+            challenge:
+                "I property manager che gestiscono affitti brevi e di medio periodo coordinano prenotazioni, contratti, check-in, pulizie e comunicazioni con gli ospiti su strumenti separati: spreadsheet, WhatsApp, email, calendari di terzi. Il risultato sono errori frequenti su date e disponibilità, tempo perso su task ripetitivi e nessuna visibilità sulle metriche operative reali.",
+            solution:
+                "Una piattaforma che centralizza calendario prenotazioni unificato, generazione contratti digitali, comunicazioni automatiche con gli ospiti e reporting. Automazioni n8n orchestrano i flussi operativi ricorrenti (reminder check-in, comunicazioni cleaning team, follow-up post-soggiorno), riducendo il lavoro manuale e gli errori di sincronizzazione.",
+            results: [
+                "Gestione end-to-end delle prenotazioni in un solo prodotto, dalla richiesta al check-out",
+                "Generazione e gestione contratti di locazione digitali con flussi automatizzati",
+                "Workflow n8n per check-in, pulizie, reminder e comunicazioni ricorrenti con ospiti",
+                "Dashboard di reporting con metriche di occupancy, revenue e attività operative",
+            ],
+        },
     },
 ];
 

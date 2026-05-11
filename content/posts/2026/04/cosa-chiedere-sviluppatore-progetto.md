@@ -5,7 +5,26 @@ author: "Federico Tassara"
 category: "Consulenza"
 excerpt: "Domande essenziali per valutare competenze, tempi, costi e responsabilità prima di iniziare un progetto con uno sviluppatore freelance o un'agenzia."
 tags: ["consulenza", "freelance", "preventivo", "gestione progetti"]
+faq:
+  - q: "Quali sono le 5 domande essenziali prima di iniziare un progetto?"
+    a: "1) Mostrami un progetto simile per complessità e settore. 2) Stima dei costi suddivisa per voci (design, dev, QA, infrastruttura) e modalità di fatturazione. 3) Milestone con deliverable verificabile e gestione cambi di scope. 4) A chi appartiene il codice sorgente a fine progetto. 5) Piani di contingenza in caso di blocchi tecnici o assenze prolungate."
+  - q: "A chi appartiene il codice sorgente a fine progetto?"
+    a: "Va chiarito per iscritto prima di firmare. Lo standard etico è che il codice sorgente, gli asset di design e le credenziali appartengano al cliente, e che il fornitore mantenga solo il know-how. Diffida di chi propone modelli a 'codice in hosting suo'."
+  - q: "Come gestire i cambi di scope durante lo sviluppo?"
+    a: "Definire prima una change request policy: ogni richiesta fuori scope viene valutata in termini di tempo aggiuntivo e costo, e approvata per iscritto prima di essere lavorata. Questo evita la classica situazione 'piccola aggiunta' che diventa due settimane di ritardo."
+  - q: "Cosa serve avere prima di chiedere un preventivo?"
+    a: "Descrizione delle 5-10 funzionalità principali, target utente, eventuali riferimenti a prodotti simili, piattaforme target (web, iOS, Android), budget indicativo e timing desiderato. Anche un brief incompleto va bene: serve per allineare le aspettative prima della stima."
 ---
+
+**TL;DR.** Le 5 domande fondamentali da fare a uno sviluppatore prima di iniziare un progetto:
+
+- "Mostrami un progetto simile per complessità e settore che hai già completato"
+- "Stima dei costi suddivisa per voci (design, dev, QA, infrastruttura) e modello di fatturazione"
+- "Quali milestone con deliverable verificabile, e come gestiamo i cambi di scope"
+- "Chi è proprietario del codice sorgente e quali repository / asset vengono consegnati"
+- "Quali sono i tuoi piani di contingenza se ti ammali, perdi disponibilità o emerge un blocco tecnico"
+
+Senza risposte chiare a queste 5 domande, il rischio di sforare budget e tempi è alto.
 
 Quando si avvia una collaborazione è fondamentale sapere cosa chiedere a uno sviluppatore prima di iniziare un progetto, per evitare equivoci, ritardi e costi inattesi. Questo articolo fornisce domande mirate e indicazioni pratiche per valutare competenze, tempistiche, responsabilità e costi, in modo da impostare il lavoro con chiarezza e professionalità fin dal primo incontro.
 

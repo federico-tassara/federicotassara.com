@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Youtube, Linkedin, Twitter, Mail } from "lucide-react";
+import { Instagram, Youtube, Linkedin, Mail } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { SERVICES } from "@/src/lib/services";
 import { ADDRESSES, SITE_EMAIL, SOCIAL } from "@/src/lib/utils";
@@ -23,7 +23,6 @@ export function Footer() {
                             <SocialIcon href={SOCIAL.instagram} label="Instagram"><Instagram className="size-4" /></SocialIcon>
                             <SocialIcon href={SOCIAL.youtube} label="YouTube"><Youtube className="size-4" /></SocialIcon>
                             <SocialIcon href={SOCIAL.linkedin} label="LinkedIn"><Linkedin className="size-4" /></SocialIcon>
-                            <SocialIcon href={SOCIAL.twitter} label="Twitter"><Twitter className="size-4" /></SocialIcon>
                         </div>
                     </div>
 

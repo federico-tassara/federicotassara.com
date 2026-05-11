@@ -19,11 +19,64 @@ export const metadata: Metadata = {
     },
 };
 
+const url = `${SITE_URL}/contatti`;
+
+const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${url}#contact`,
+    inLanguage: "it-IT",
+    name: "Contatti — Federico Tassara",
+    description:
+        "Contatta Federico Tassara per progetti web, mobile, consulenza tecnica o Fractional CTO.",
+    url,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    mainEntity: {
+        "@id": `${SITE_URL}/#organization`,
+        contactPoint: [
+            {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                email: SITE_EMAIL,
+                availableLanguage: ["Italian", "English"],
+                areaServed: "IT",
+            },
+            {
+                "@type": "ContactPoint",
+                contactType: "sales",
+                email: SITE_EMAIL,
+                availableLanguage: ["Italian", "English"],
+                areaServed: "IT",
+            },
+        ],
+    },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
+};
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Contatti", item: url },
+    ],
+};
+
 export default function ContattiPage() {
     const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
 
     return (
-        <section className="py-16 sm:py-24">
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <section className="py-16 sm:py-24">
             <Container>
                 <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr]">
                     <div className="anim-fade-up">
@@ -85,6 +138,7 @@ export default function ContattiPage() {
                 </div>
             </Container>
         </section>
+        </>
     );
 }
 

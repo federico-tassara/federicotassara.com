@@ -75,6 +75,11 @@ const personSchema = {
         "https://www.youtube.com/@federicotassara_dev",
         "https://www.linkedin.com/in/federico-tassara/",
     ],
+    hasOccupation: {
+        "@type": "Occupation",
+        name: "Full Stack Developer & Fractional CTO",
+        occupationLocation: { "@type": "Country", name: "Italia" },
+    },
     address: {
         "@type": "PostalAddress",
         streetAddress: "Via Tito Minniti 20",

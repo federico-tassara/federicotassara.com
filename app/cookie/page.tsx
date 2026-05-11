@@ -4,7 +4,7 @@ import { SITE_EMAIL, SITE_URL } from "@/src/lib/utils";
 
 export const metadata: Metadata = {
     title: "Cookie Policy",
-    description: "Informativa cookie per il sito federicotassara.it.",
+    description: "Informativa cookie per il sito federicotassara.com.",
     alternates: { canonical: `${SITE_URL}/cookie` },
 };
 

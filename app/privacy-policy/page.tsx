@@ -4,7 +4,7 @@ import { SITE_EMAIL, SITE_URL } from "@/src/lib/utils";
 
 export const metadata: Metadata = {
     title: "Privacy Policy",
-    description: "Informativa privacy per il sito federicotassara.it.",
+    description: "Informativa privacy per il sito federicotassara.com.",
     alternates: { canonical: `${SITE_URL}/privacy-policy` },
     robots: { index: true, follow: true },
 };

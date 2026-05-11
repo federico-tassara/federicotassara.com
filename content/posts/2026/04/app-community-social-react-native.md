@@ -8,6 +8,16 @@ excerpt: "Progettare e lanciare un'app per community e social con React Native: 
 tags: ["react native", "community", "social app", "mobile development", "ux"]
 ---
 
+**TL;DR.** Un'app per community e social con React Native richiede 5 componenti spesso sottovalutati:
+
+- feed performante con virtualizzazione e caching aggressivo
+- notifiche push affidabili con preferenze granulari (anti-churn)
+- chat realtime con WebSocket e sincronizzazione offline
+- moderazione (filtri automatici, segnalazioni utenti, dashboard moderatori)
+- analytics su retention, DAU/MAU e funnel di attivazione
+
+Costo tipico in Italia: €70.000–€180.000 per la prima release (6-12 mesi). Senza moderazione e analytics seri l'app non scala.
+
 Progettare e lanciare un'app per community e social con React Native richiede decisioni tecniche mirate e una chiara strategia di prodotto. Questo articolo esplora i punti critici dello sviluppo, dall'architettura all'esperienza utente, passando per integrazioni fondamentali come notifiche, moderazione e analisi dei dati.
 
 ## Perché scegliere React Native per un'app social

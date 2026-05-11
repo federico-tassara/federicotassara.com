@@ -7,6 +7,16 @@ excerpt: "Come Next.js incide su SEO e performance: SSR, SSG, ISR, ottimizzazion
 tags: ["nextjs", "seo", "performance", "core web vitals", "web development"]
 ---
 
+**TL;DR.** Next.js è il framework di riferimento per siti dove SEO e performance contano. I 5 vantaggi concreti:
+
+- rendering flessibile (SSR / SSG / ISR) per ogni pagina del sito
+- ottimizzazione automatica di immagini, font e bundle
+- controllo dinamico di meta tag, OG, JSON-LD e canonical
+- Core Web Vitals (LCP, INP, CLS) facilmente sotto le soglie Google
+- ecosistema con caching avanzato e deploy globale su edge
+
+Per progetti dove il traffico organico è una leva di business, Next.js riduce di 30-50% il lavoro custom necessario per ottenere risultati SEO.
+
 Parlare di Next.js significa considerare un ecosistema progettato per ridurre il tempo al primo byte, migliorare i Core Web Vitals e offrire controllo granulare sui contenuti lato server e client. I vantaggi si manifestano sia sul piano tecnico che pratico: tempi di caricamento ridotti, markup scansionabile dai motori di ricerca e migliore gestione delle risorse critiche.
 
 ## Rendering flessibile: SSR, SSG e ISR

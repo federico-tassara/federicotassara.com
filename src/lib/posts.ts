@@ -11,6 +11,8 @@ import rehypeStringify from "rehype-stringify";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
+export type PostFaqItem = { q: string; a: string };
+
 export interface PostMetadata {
     title: string;
     date: string;
@@ -19,6 +21,7 @@ export interface PostMetadata {
     tags: string[];
     category?: string;
     project?: string;
+    faq?: PostFaqItem[];
     slug: string;
     year: string;
     month: string;
@@ -69,6 +72,7 @@ export const getAllPosts = cache((): PostMetadata[] => {
                     tags: Array.isArray(data.tags) ? data.tags : [],
                     category: data.category,
                     project: data.project,
+                    faq: Array.isArray(data.faq) ? (data.faq as PostFaqItem[]) : undefined,
                     slug,
                     year,
                     month,
