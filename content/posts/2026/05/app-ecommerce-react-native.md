@@ -52,3 +52,5 @@ Definire metriche chiare come tassi di conversione, valore medio dell'ordine, te
 ## Conclusione e priorità pratiche
 
 Sviluppare un'app ecommerce con React Native include decisioni su architettura, performance, integrazioni native, sicurezza e strategie di testing e deployment. Prioritizzare esperienza utente e affidabilità tecnica consente di ottenere un prodotto sostenibile nel tempo. Affrontare questi aspetti sin dalle fasi iniziali riduce rischi e porta a un rilascio più rapido e controllato.
+
+Per il lato app guarda lo [Sviluppo App Mobile con React Native](/servizi/mobile-development), per il livello server lo [Sviluppo Backend e API](/servizi/backend-e-api). Se hai un progetto ecommerce in fase di scoping, [parliamone insieme](/contatti).

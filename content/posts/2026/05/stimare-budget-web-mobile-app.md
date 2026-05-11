@@ -40,3 +40,5 @@ Presentare una stima efficace significa accompagnarla con scenari alternativi e 
 ## Conclusione e prossimi passi
 
 Stimare il budget per una web app o mobile app richiede rigore, esperienza e un approccio iterativo. Definire requisiti chiari, scomporre i costi, considerare infrastruttura e manutenzione e prevedere un margine per imprevisti sono passaggi essenziali. Un preventivo ben strutturato facilita decisioni rapide, riduce i rischi e aumenta le probabilità di un rilascio puntuale e di successo.
+
+Per progetti web parti da [Sviluppo Web App con Next.js e React](/servizi/web-development); per il mobile vedi [Sviluppo App Mobile con React Native](/servizi/mobile-development). Per una stima personalizzata sul tuo caso, [contattami](/contatti) per una call introduttiva gratuita.

@@ -53,9 +53,60 @@ const TECH = [
     "Tailwind",
 ];
 
+const url = `${SITE_URL}/chi-sono`;
+
+const profilePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${url}#profile`,
+    inLanguage: "it-IT",
+    name: "Chi sono — Federico Tassara",
+    description:
+        "Profilo professionale di Federico Tassara, sviluppatore Full Stack freelance e Fractional CTO in Italia.",
+    url,
+    mainEntity: { "@id": `${SITE_URL}/#person` },
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
+};
+
+const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${url}#about`,
+    inLanguage: "it-IT",
+    name: "Chi sono",
+    description:
+        "Pagina chi sono di Federico Tassara, sviluppatore Full Stack freelance e Fractional CTO in Italia.",
+    url,
+    about: { "@id": `${SITE_URL}/#person` },
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+};
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Chi sono", item: url },
+    ],
+};
+
 export default function ChiSonoPage() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <section className="py-16 sm:py-24">
                 <Container>
                     <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_1fr]">

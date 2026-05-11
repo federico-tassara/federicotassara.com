@@ -48,3 +48,5 @@ Pianificare la separazione delle responsabilità tra servizi, mantenere immagini
 ## Conclusione operativa
 
 Passare a Docker per applicazioni web e backend è una scelta che porta benefici immediati in termini di coerenza degli ambienti, velocità di rilascio e flessibilità operativa. Adottando pratiche solide di configurazione, testing e monitoraggio si ottiene un'infrastruttura più resiliente e semplice da scalare. Questo approccio non è una soluzione magica, ma un elemento strutturale che, se gestito con disciplina, migliora significativamente l'efficienza del team di sviluppo e la qualità del prodotto.
+
+Se vuoi approfondire il livello server vedi [Sviluppo Backend e API REST](/servizi/backend-e-api); per progettare l'infrastruttura cloud sopra Docker guarda [Architettura e Scalabilità](/servizi/architettura-e-scalabilita). Per consulenza su un setup esistente, [contattami](/contatti).

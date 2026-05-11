@@ -81,6 +81,20 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         ],
     };
 
+    const faqSchema = service.faq && service.faq.length > 0
+        ? {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": `${url}#faq`,
+              inLanguage: "it-IT",
+              mainEntity: service.faq.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+          }
+        : null;
+
     const otherServices = SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
 
     return (
@@ -93,6 +107,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
+            {faqSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                />
+            )}
 
             <section className="py-16 sm:py-24">
                 <Container>
@@ -194,6 +214,43 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                     </div>
                 </Container>
             </section>
+
+            {service.faq && service.faq.length > 0 && (
+                <section className="py-20 sm:py-24" id="faq">
+                    <Container size="sm">
+                        <div className="max-w-3xl">
+                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                                FAQ
+                            </span>
+                            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                                Domande frequenti.
+                            </h2>
+                            <p className="mt-4 text-base text-muted sm:text-lg sm:leading-relaxed">
+                                Le risposte alle domande più comuni su questo servizio.
+                            </p>
+                        </div>
+                        <div className="mt-12 space-y-4">
+                            {service.faq.map((f, i) => (
+                                <details
+                                    key={f.q}
+                                    className="anim-fade-up group rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
+                                    style={{ animationDelay: `${i * 50}ms` }}
+                                >
+                                    <summary className="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-ink marker:hidden [&::-webkit-details-marker]:hidden">
+                                        <span>{f.q}</span>
+                                        <span className="flex size-6 shrink-0 items-center justify-center rounded-full border border-ink/15 text-ink-soft transition-transform group-open:rotate-45">
+                                            <span className="text-lg leading-none">+</span>
+                                        </span>
+                                    </summary>
+                                    <p className="mt-4 text-[15px] leading-relaxed text-muted">
+                                        {f.a}
+                                    </p>
+                                </details>
+                            ))}
+                        </div>
+                    </Container>
+                </section>
+            )}
 
             <section className="bg-surface-alt py-20 sm:py-24">
                 <Container>

@@ -44,3 +44,5 @@ La migrazione a Next.js richiede una pianificazione accurata, valutando la gesti
 ## Conclusione
 
 Adottare Next.js per progetti dove SEO e performance sono prioritari è una scelta che paga nel tempo: l'architettura del framework rende naturali pratiche che altrimenti richiederebbero molto lavoro custom. Il risultato è un sito più veloce, più indicizzabile e più semplice da mantenere.
+
+Per costruire o migrare il tuo prodotto su Next.js vedi [Sviluppo Web App con Next.js e React](/servizi/web-development). Se stai valutando il framework prima di partire, può essere utile una sessione di [Tech Consulting](/servizi/tech-consulting) per impostare la scelta tecnologica.

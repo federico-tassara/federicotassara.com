@@ -71,3 +71,5 @@ Investire in prototipazione e test con utenti reali fin dalle prime fasi riduce 
 ## Conclusione
 
 Se stai pensando di costruire un'app per community e social con React Native, una consulenza tecnica mirata può chiarire architettura, costi e tempistiche, evitando scelte premature e debito tecnico nascosto.
+
+Approfondisci il servizio di [Sviluppo App Mobile con React Native](/servizi/mobile-development) o guarda come ho costruito [Lectum](/progetti/lectum), un'app community per lettori. Per discutere il tuo progetto, [scrivimi qui](/contatti).

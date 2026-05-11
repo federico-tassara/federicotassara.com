@@ -52,3 +52,5 @@ La migrazione richiede comunicazione continua con stakeholder e team di prodotto
 ## Conclusione e next steps
 
 La migrazione può portare benefici significativi in performance, SEO e scalabilità, richiedendo valutazione attenta e piano di esecuzione dettagliato. Il percorso ideale è pragmatico, basato su iterazioni controllate, automazione dei test e monitoraggio continuo.
+
+Per portare in produzione la nuova piattaforma vedi [Sviluppo Web App con Next.js e React](/servizi/web-development); per impostare l'infrastruttura di supporto guarda [Architettura e Scalabilità](/servizi/architettura-e-scalabilita). [Parliamone](/contatti) per pianificare insieme la migrazione.

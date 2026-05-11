@@ -45,3 +45,5 @@ Dopo la validazione, consolidare i casi d'uso, ottimizzare le API e scegliere il
 ## Risultati e decisioni
 
 Il prototipo deve abilitare scelte informate: iterare, scalare o abbandonare. L'approccio privilegia esperimenti rapidi, controllo del rischio e raccolta sistematica di dati utili per il business — non l'innamoramento della tecnologia.
+
+Se vuoi integrare AI nei workflow aziendali in modo strutturale, vedi [Automazioni e Ottimizzazione Processi](/servizi/automazioni). Per impostare la strategia tecnologica intorno all'AI prima ancora di prototipare, parliamone in una sessione di [Tech Consulting](/servizi/tech-consulting).
