@@ -1,13 +1,35 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, AlertTriangle } from "lucide-react";
 import { Button } from "@/src/components/ui/Button";
 import { TurnstileWidget } from "./TurnstileWidget";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm({ siteKey }: { siteKey: string }) {
+    if (!siteKey) {
+        return (
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-7 sm:p-9">
+                <div className="flex items-start gap-3">
+                    <AlertTriangle className="mt-0.5 size-5 shrink-0 text-amber-700" />
+                    <div>
+                        <h2 className="text-lg font-bold text-amber-900">
+                            Form temporaneamente non disponibile
+                        </h2>
+                        <p className="mt-2 text-sm text-amber-800">
+                            Il modulo di contatto è in manutenzione. Nel frattempo puoi scrivermi
+                            direttamente a <a href="mailto:info@federicotassara.com" className="font-semibold underline">info@federicotassara.com</a> o prenotare una call dal pulsante qui a fianco.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+    return <ContactFormInner siteKey={siteKey} />;
+}
+
+function ContactFormInner({ siteKey }: { siteKey: string }) {
     const [state, setState] = useState<FormState>("idle");
     const [errorMsg, setErrorMsg] = useState("");
     const [token, setToken] = useState("");
@@ -53,7 +75,7 @@ export function ContactForm({ siteKey }: { siteKey: string }) {
         return (
             <div className="rounded-2xl border border-ink/8 bg-surface-alt p-10 text-center">
                 <CheckCircle2 className="mx-auto size-12 text-ink" />
-                <h3 className="mt-5 text-2xl font-bold text-ink">Messaggio inviato.</h3>
+                <h2 className="mt-5 text-2xl font-bold text-ink">Messaggio inviato.</h2>
                 <p className="mt-3 text-muted">
                     Grazie per avermi scritto. Ti rispondo nel più breve tempo possibile.
                 </p>

@@ -44,7 +44,8 @@ export default async function ProjectPage({ params }: PageProps) {
     const url = `${SITE_URL}/progetti/${slug}`;
     const relatedPosts = getPostsByProject(slug, 3);
 
-    const dateCreated = project.year.match(/^\d{4}/)?.[0];
+    const yearMatch = project.year.match(/^\d{4}/)?.[0];
+    const dateCreated = yearMatch ? `${yearMatch}-01-01` : undefined;
     const projectSchema = {
         "@context": "https://schema.org",
         "@type": project.kind,

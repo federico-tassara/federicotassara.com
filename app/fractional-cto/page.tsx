@@ -220,7 +220,7 @@ export default function FractionalCTOPage() {
                 <Container>
                     <div className="max-w-3xl">
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                            Cos'è un Fractional CTO
+                            Cos’è un Fractional CTO
                         </span>
                         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
                             Un CTO senior, ma a frazione del costo.
@@ -231,7 +231,7 @@ export default function FractionalCTOPage() {
                             in azienda senza il costo di un CTO full-time (che in Italia parte da
                             €80k-150k/anno). Si occupa di scelte tecnologiche, architettura, hiring
                             del team tech, due diligence e roadmap di prodotto. Lavora tipicamente da
-                            mezza giornata a tre giorni a settimana, in base alla fase dell'azienda.
+                            mezza giornata a tre giorni a settimana, in base alla fase dell’azienda.
                         </p>
                         <p className="mt-4 text-lg leading-relaxed text-muted">
                             È la soluzione adatta per startup pre-seed e seed che non possono ancora
@@ -346,7 +346,7 @@ export default function FractionalCTOPage() {
                                 sviluppatore Full Stack freelance con esperienza in startup, PMI e
                                 progetti enterprise. Founder e Fractional CTO di Oraloco, ho lavorato
                                 con stack moderni (React, Next.js, React Native, Node.js, Laravel) e
-                                ho seguito prodotti dall'idea al rilascio in più verticali.
+                                ho seguito prodotti dall’idea al rilascio in più verticali.
                             </p>
                             <ul className="mt-6 space-y-3">
                                 {[
@@ -414,7 +414,7 @@ export default function FractionalCTOPage() {
                                     Parliamone in 30 minuti.
                                 </h2>
                                 <p className="mt-5 max-w-lg text-base text-white/70 sm:text-lg">
-                                    Discovery call gratuita per capire la fase dell'azienda, il
+                                    Discovery call gratuita per capire la fase dell’azienda, il
                                     contesto tecnico e se ha senso lavorare insieme.
                                 </p>
                             </div>

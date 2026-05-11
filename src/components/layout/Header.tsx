@@ -65,7 +65,7 @@ export function Header() {
                                     {item.label}
                                     <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180" />
                                 </Link>
-                                <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                                <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 focus-within:visible focus-within:opacity-100">
                                     <div className="w-72 overflow-hidden rounded-xl border border-ink/8 bg-white shadow-xl">
                                         <ul className="p-2">
                                             {SERVICES.map((s) => (
@@ -79,6 +79,20 @@ export function Header() {
                                                 </li>
                                             ))}
                                         </ul>
+                                        <div className="border-t border-ink/5 p-2">
+                                            <Link
+                                                href="/fractional-cto"
+                                                className="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-surface-alt"
+                                            >
+                                                Fractional CTO
+                                            </Link>
+                                            <Link
+                                                href="/sviluppatore-react-native-italia"
+                                                className="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-surface-alt"
+                                            >
+                                                Sviluppatore React Native
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -138,6 +152,24 @@ export function Header() {
                                                         </Link>
                                                     </li>
                                                 ))}
+                                                <li>
+                                                    <Link
+                                                        href="/fractional-cto"
+                                                        onClick={() => setMobileOpen(false)}
+                                                        className="block rounded-md px-3 py-2 text-sm font-medium text-ink"
+                                                    >
+                                                        Fractional CTO
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/sviluppatore-react-native-italia"
+                                                        onClick={() => setMobileOpen(false)}
+                                                        className="block rounded-md px-3 py-2 text-sm font-medium text-ink"
+                                                    >
+                                                        Sviluppatore React Native
+                                                    </Link>
+                                                </li>
                                             </ul>
                                         )}
                                     </li>

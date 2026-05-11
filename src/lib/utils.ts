@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }
 
-export const SITE_URL = "https://federicotassara.com";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://federicotassara.com";
 export const SITE_NAME = "Federico Tassara";
 export const SITE_EMAIL = "info@federicotassara.com";
 export const CALENDLY_URL = "https://calendly.com/federicotassara/";

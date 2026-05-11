@@ -47,6 +47,16 @@ export function Footer() {
                                     </Link>
                                 </li>
                             ))}
+                            <li className="pt-1.5">
+                                <Link href="/fractional-cto" className="font-medium text-ink hover:text-ink-soft">
+                                    Fractional CTO
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/sviluppatore-react-native-italia" className="font-medium text-ink hover:text-ink-soft">
+                                    Sviluppatore React Native
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 

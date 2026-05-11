@@ -19,14 +19,14 @@ export default function CookiePage() {
                     Cookie Policy
                 </h1>
                 <p className="mt-4 text-sm text-muted">
-                    Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" })}
+                    Ultimo aggiornamento: 11 maggio 2026
                 </p>
 
                 <div className="markdown-body mt-10">
                     <h2>1. Cosa sono i cookie</h2>
                     <p>
                         I cookie sono piccoli file di testo che i siti visitati salvano sul dispositivo
-                        dell'utente. Servono a far funzionare il sito, ricordare preferenze o
+                        dell’utente. Servono a far funzionare il sito, ricordare preferenze o
                         raccogliere informazioni in forma aggregata.
                     </p>
 
@@ -35,7 +35,7 @@ export default function CookiePage() {
                     <ul>
                         <li>
                             <strong>Cloudflare Turnstile</strong> — verifica anti-spam sul modulo di
-                            contatto. Non profila l'utente.
+                            contatto. Non profila l’utente.
                         </li>
                     </ul>
                     <p>
@@ -44,8 +44,8 @@ export default function CookiePage() {
 
                     <h2>3. Gestione dei cookie</h2>
                     <p>
-                        L'utente può configurare il proprio browser per bloccare o eliminare i cookie.
-                        La disabilitazione di alcuni cookie può limitare l'utilizzo di alcune funzioni
+                        L’utente può configurare il proprio browser per bloccare o eliminare i cookie.
+                        La disabilitazione di alcuni cookie può limitare l’utilizzo di alcune funzioni
                         del sito (es. il modulo di contatto).
                     </p>
 

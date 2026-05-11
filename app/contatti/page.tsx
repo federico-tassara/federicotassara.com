@@ -84,7 +84,7 @@ export default function ContattiPage() {
                             Contatti
                         </span>
                         <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
-                            Hai un'idea?
+                            Hai un’idea?
                             <br />
                             Parliamone, senza impegno.
                         </h1>

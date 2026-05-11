@@ -242,7 +242,7 @@ export default function Home() {
                         <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
                             <div>
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl md:leading-[1.05]">
-                                    Hai un'idea? Parliamone, senza impegno.
+                                    Hai un’idea? Parliamone, senza impegno.
                                 </h2>
                                 <p className="mt-5 max-w-lg text-base text-white/70 sm:text-lg">
                                     Una consulenza iniziale gratuita per capire se possiamo lavorare bene

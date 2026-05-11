@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, CheckCircle2, Smartphone, Code2, Zap, RefreshCw, Shield } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Smartphone, Code2, Zap, RefreshCw } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
 import { PROJECTS } from "@/src/lib/projects";
@@ -436,7 +436,7 @@ export default function ReactNativeIndexPage() {
                         <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
                             <div>
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl md:leading-[1.05]">
-                                    Hai un'app in mente?
+                                    Hai un’app in mente?
                                 </h2>
                                 <p className="mt-5 max-w-lg text-base text-white/70 sm:text-lg">
                                     Discovery call gratuita per capire scope, tempi e budget realistici

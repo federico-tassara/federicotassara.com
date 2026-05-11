@@ -56,8 +56,8 @@ export default async function BlogPostPage({ params }: PageProps) {
     const related = getRelatedPosts(slug, post.tags, 3);
     const url = `${SITE_URL}/blog/${slug}`;
 
-    const ogImage = `${url}/opengraph-image`;
-    const wordCount = post.readingTime * 200;
+    const ogImage = `${SITE_URL}/opengraph-image`;
+    const wordCount = post.content.split(/\s+/).filter(Boolean).length;
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
