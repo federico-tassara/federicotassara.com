@@ -5,6 +5,7 @@ import {
     Receipt,
     Smile,
     Home,
+    Waves,
 } from "lucide-react";
 
 export type ProjectStatus = "rilasciato" | "in-corso" | "wip" | "privato";
@@ -84,6 +85,52 @@ export const PROJECTS: Project[] = [
                 "Architettura backend modulare Node.js + Express + MongoDB con caching Redis e queue BullMQ",
                 "Schema dati pensato per scalare a thread profondi, commenti annidati e metadata variabili per libro",
                 "Community di beta tester attiva con feedback iterativi integrati nella roadmap",
+            ],
+        },
+    },
+    {
+        slug: "mose",
+        title: "MOSE",
+        seoTitle: "MOSE — App offline-first per la manutenzione dei tiranti",
+        seoDescription:
+            "App mobile offline-first per la manutenzione straordinaria dei tiranti delle paratoie del MOSE: lavoro in ambienti sotterranei senza connettività, foto e sincronizzazione automatica.",
+        tagline: "Manutenzione dei tiranti del MOSE, anche dove non c'è rete.",
+        status: "in-corso",
+        role: "Sviluppo full-stack",
+        year: "2025 — in corso",
+        summary:
+            "App mobile offline-first per la manutenzione straordinaria dei tiranti delle paratoie del MOSE, con backend di sincronizzazione e dashboard per il committente.",
+        description: [
+            "MOSE è l'app usata dalle squadre tecniche per la manutenzione straordinaria dei tiranti delle paratoie mobili del sistema MOSE di Venezia. Il lavoro si svolge nei cassoni e nelle gallerie di servizio sotto le barriere: ambienti chiusi, sotterranei, dove non esiste connettività. L'app è quindi progettata offline-first — ogni operazione funziona senza rete e si sincronizza da sola al rientro in copertura.",
+            "Il prodotto è composto da tre parti: l'app mobile per i tablet in cantiere, un backend che riceve e concilia i dati delle due squadre, e una dashboard web con cui il committente segue l'avanzamento ed esporta i rapporti. Ogni tirante viene lavorato in quattro step documentati con foto, per una tracciabilità completa dell'intervento.",
+        ],
+        features: [
+            { title: "Funziona senza connessione", desc: "Schede, foto e avanzamento vengono salvati in locale sul tablet e restano usabili in galleria, senza alcuna rete." },
+            { title: "Sincronizzazione automatica", desc: "Al rientro in copertura i dati delle due squadre si sincronizzano da soli, con risoluzione dei conflitti campo per campo." },
+            { title: "Lavorazione in quattro step", desc: "Ogni tirante segue una procedura guidata in quattro fasi, con foto obbligatorie a garanzia della tracciabilità." },
+            { title: "Dashboard e report PDF", desc: "Il committente segue l'avanzamento per sito, stanza e tirante ed esporta rapporti PDF pronti per l'invio via PEC." },
+        ],
+        stack: [
+            { area: "Mobile", items: ["React Native", "Expo", "TypeScript"] },
+            { area: "Stato & offline", items: ["Zustand", "MMKV"] },
+            { area: "Backend", items: ["Node.js", "Express", "MongoDB", "MinIO"] },
+            { area: "Dashboard", items: ["Next.js", "Vercel"] },
+            { area: "Infrastruttura", items: ["CapRover", "Docker"] },
+        ],
+        icon: Waves,
+        kind: "MobileApplication",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Android, iOS",
+        caseStudy: {
+            challenge:
+                "La manutenzione straordinaria dei tiranti del MOSE si svolge nei cassoni e nelle gallerie sotto le paratoie: ambienti sotterranei senza alcuna connettività. Le squadre registravano gli interventi su carta, con il rischio di schede incomplete, foto scollegate dalla lavorazione e nessuna visibilità in tempo reale per il committente. Trascrivere e impaginare i rapporti a fine cantiere richiedeva giorni di lavoro manuale.",
+            solution:
+                "Un'app mobile offline-first che digitalizza l'intera procedura: ogni tirante viene lavorato in quattro step con foto obbligatorie, tutto salvato in locale sul tablet e quindi sempre disponibile anche in galleria. Un backend Express + MongoDB riceve i dati delle due squadre e ne concilia le modifiche con una strategia di merge campo per campo. Una dashboard web permette al committente di seguire l'avanzamento e di esportare rapporti PDF completi di foto, pronti per l'invio via PEC.",
+            results: [
+                "App offline-first: ogni operazione funziona senza rete e si sincronizza da sola al rientro in copertura",
+                "Sync engine con coda persistente e risoluzione dei conflitti campo per campo tra le due squadre",
+                "Documentazione fotografica vincolata a ogni step, con upload differito su storage S3-compatibile",
+                "Dashboard per il committente con avanzamento per sito/stanza/tirante ed export PDF dei rapporti",
             ],
         },
     },
