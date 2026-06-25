@@ -17,6 +17,13 @@ export const metadata: Metadata = {
             "App mobile React Native, SaaS, piattaforme community e tool interni con AI: una selezione di lavori.",
         url: `${SITE_URL}/progetti`,
         type: "website",
+        images: [`${SITE_URL}/opengraph-image`],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Progetti di sviluppo web e app",
+        description:
+            "App mobile React Native, SaaS, piattaforme community e tool interni con AI: una selezione di lavori.",
     },
 };
 

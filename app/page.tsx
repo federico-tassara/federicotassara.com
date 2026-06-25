@@ -128,6 +128,7 @@ export default function Home() {
                                     width={640}
                                     height={640}
                                     className="aspect-square w-full rounded-xl object-cover"
+                                    sizes="(min-width: 1024px) 40vw, (min-width: 640px) 50vw, 100vw"
                                     priority
                                 />
                             </div>

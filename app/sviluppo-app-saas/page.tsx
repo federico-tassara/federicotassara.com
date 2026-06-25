@@ -18,6 +18,8 @@ import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
 import { ClientsMarquee } from "@/src/components/ui/ClientsMarquee";
 import { ContactForm } from "@/src/components/contact/ContactForm";
+import { FeaturedProject } from "@/src/components/sections/FeaturedProject";
+import { Testimonials } from "@/src/components/sections/Testimonials";
 import { PROJECTS } from "@/src/lib/projects";
 import { CALENDLY_URL, SITE_EMAIL, SITE_URL } from "@/src/lib/utils";
 
@@ -34,6 +36,13 @@ export const metadata: Metadata = {
             "Sviluppo applicazioni web, mobile e prodotti SaaS per aziende e startup italiane. Un solo referente senior, consegne rispettate.",
         url,
         type: "website",
+        images: [`${SITE_URL}/opengraph-image`],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Sviluppo App e SaaS su misura",
+        description:
+            "Sviluppo applicazioni web, mobile e prodotti SaaS per aziende e startup italiane. Un solo referente senior, consegne rispettate.",
     },
 };
 
@@ -403,6 +412,10 @@ export default function SviluppoAppSaaSPage() {
                     </div>
                 </Container>
             </section>
+
+            <FeaturedProject slug="mose" />
+
+            <Testimonials className="bg-surface-alt py-20 sm:py-24" />
 
             <section className="bg-surface-alt py-20 sm:py-24">
                 <Container>

@@ -3,6 +3,7 @@ import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
 import { SectionTitle } from "@/src/components/ui/SectionTitle";
 import { ServiceCard } from "@/src/components/ui/ServiceCard";
+import { FeaturedProject } from "@/src/components/sections/FeaturedProject";
 import { SERVICES } from "@/src/lib/services";
 import { CALENDLY_URL, SITE_URL } from "@/src/lib/utils";
 
@@ -17,6 +18,13 @@ export const metadata: Metadata = {
             "Sviluppo web, mobile, backend, architettura, automazioni e consulenza tecnica per startup e PMI.",
         url: `${SITE_URL}/servizi`,
         type: "website",
+        images: [`${SITE_URL}/opengraph-image`],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Servizi di sviluppo web, mobile e cloud",
+        description:
+            "Sviluppo web, mobile, backend, architettura, automazioni e consulenza tecnica per startup e PMI.",
     },
 };
 
@@ -94,6 +102,8 @@ export default function ServiziPage() {
                     </div>
                 </Container>
             </section>
+
+            <FeaturedProject slug="mose" />
 
             <section className="bg-surface-alt py-20 sm:py-28">
                 <Container>

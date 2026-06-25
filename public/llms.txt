@@ -12,10 +12,15 @@
 - LinkedIn: https://www.linkedin.com/in/federico-tassara/
 - Sito: https://federicotassara.com
 
+## Profilo
+
+- [Chi sono](https://federicotassara.com/chi-sono): biografia, percorso ed esperienza di Federico Tassara come sviluppatore Full Stack e Fractional CTO.
+
 ## Pagine hub
 
 - [Fractional CTO in Italia](https://federicotassara.com/fractional-cto): Chief Technology Officer part-time per startup e PMI italiane.
 - [Sviluppatore React Native in Italia](https://federicotassara.com/sviluppatore-react-native-italia): sviluppo app mobile iOS e Android cross-platform.
+- [Sviluppo app e SaaS su misura](https://federicotassara.com/sviluppo-app-saas): applicazioni web, mobile e prodotti SaaS per aziende e startup italiane.
 
 ## Servizi
 
@@ -29,6 +34,7 @@
 ## Progetti
 
 - [Lectum](https://federicotassara.com/progetti/lectum): app mobile React Native per discussioni strutturate sui libri e club di lettura digitali.
+- [MOSE](https://federicotassara.com/progetti/mose): app mobile offline-first per la manutenzione dei tiranti delle paratoie del MOSE di Venezia, con sync engine e dashboard per il committente.
 - [Varco](https://federicotassara.com/progetti/varco): strumento interno di lead generation con agenti AI (Claude API + BullMQ + Next.js).
 - [Forfi](https://federicotassara.com/progetti/forfi): SaaS per partite IVA forfettarie italiane (fatturazione SDI, Stripe, Clerk).
 - [Oraloco](https://federicotassara.com/progetti/oraloco): community degli appassionati di orologi (Nuxt 3 + React Native).
@@ -36,16 +42,36 @@
 
 ## Articoli del blog (citation-ready)
 
-- [Come stimare il budget per una web app o mobile app](https://federicotassara.com/blog/stimare-budget-web-mobile-app)
-- [Differenza tra app native e app React Native](https://federicotassara.com/blog/differenza-app-native-react-native)
-- [Vantaggi di Next.js per SEO e performance](https://federicotassara.com/blog/vantaggi-nextjs-seo-performance)
-- [Migrare una web app legacy a React e Next.js](https://federicotassara.com/blog/migrare-web-app-legacy-react-nextjs)
+Fractional CTO e consulenza
+- [Quanto costa un Fractional CTO in Italia: range reali e modelli 2026](https://federicotassara.com/blog/quanto-costa-fractional-cto-italia)
+- [Cosa fa concretamente un Fractional CTO: attività e deliverable](https://federicotassara.com/blog/cosa-fa-fractional-cto)
+- [Quando serve un Fractional CTO (e quando no): guida onesta](https://federicotassara.com/blog/quando-serve-fractional-cto)
+- [Come scegliere un Fractional CTO: 7 criteri concreti](https://federicotassara.com/blog/come-scegliere-fractional-cto)
 - [Cosa chiedere a uno sviluppatore prima di iniziare un progetto](https://federicotassara.com/blog/cosa-chiedere-sviluppatore-progetto)
 - [Riscrivere una piattaforma da zero](https://federicotassara.com/blog/riscrivere-piattaforma-zero)
-- [Prototipare velocemente una funzionalità AI in un'app](https://federicotassara.com/blog/prototipare-funzionalita-ai-app)
-- [Usare Docker per applicazioni web e backend](https://federicotassara.com/blog/usare-docker-applicazioni-web-e-backend)
+
+Budget e MVP
+- [Quanto costa un'app mobile in Italia nel 2026](https://federicotassara.com/blog/quanto-costa-app-mobile-italia-2026)
+- [Come stimare il budget per una web app o mobile app](https://federicotassara.com/blog/stimare-budget-web-mobile-app)
+- [Sviluppare un MVP: tempi realistici](https://federicotassara.com/blog/sviluppare-mvp-tempi-realistici)
+
+Mobile e React Native
+- [React Native vs Flutter nel 2026](https://federicotassara.com/blog/react-native-vs-flutter-2026)
+- [Differenza tra app native e app React Native](https://federicotassara.com/blog/differenza-app-native-react-native)
 - [Sviluppare un'app per community e social con React Native](https://federicotassara.com/blog/app-community-social-react-native)
 - [App per ecommerce con React Native](https://federicotassara.com/blog/app-ecommerce-react-native)
+
+Offline-first e architettura
+- [App offline-first per ambienti senza connessione](https://federicotassara.com/blog/app-offline-first-ambienti-senza-connessione)
+- [Sync engine e gestione dei conflitti in app offline-first](https://federicotassara.com/blog/sync-engine-conflitti-app-offline-first)
+- [Digitalizzare la manutenzione sul campo con un'app](https://federicotassara.com/blog/digitalizzare-manutenzione-campo-app)
+- [Dashboard di avanzamento e report PDF per il committente](https://federicotassara.com/blog/dashboard-avanzamento-report-pdf-committente)
+- [Usare Docker per applicazioni web e backend](https://federicotassara.com/blog/usare-docker-applicazioni-web-e-backend)
+
+Web, Next.js e AI
+- [Vantaggi di Next.js per SEO e performance](https://federicotassara.com/blog/vantaggi-nextjs-seo-performance)
+- [Migrare una web app legacy a React e Next.js](https://federicotassara.com/blog/migrare-web-app-legacy-react-nextjs)
+- [Prototipare velocemente una funzionalità AI in un'app](https://federicotassara.com/blog/prototipare-funzionalita-ai-app)
 
 ## Citation policy
 

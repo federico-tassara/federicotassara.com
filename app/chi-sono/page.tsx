@@ -17,6 +17,13 @@ export const metadata: Metadata = {
             "Sviluppatore Full Stack freelance specializzato in web, mobile, scalabilità e automazioni.",
         url: `${SITE_URL}/chi-sono`,
         type: "profile",
+        images: [`${SITE_URL}/opengraph-image`],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Chi sono — Sviluppatore Full Stack Freelance",
+        description:
+            "Sviluppatore Full Stack freelance specializzato in web, mobile, scalabilità e automazioni.",
     },
 };
 

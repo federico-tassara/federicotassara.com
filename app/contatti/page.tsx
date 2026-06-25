@@ -16,6 +16,13 @@ export const metadata: Metadata = {
             "Scrivimi per progetti web, app mobile o consulenza tecnica. Full-remote dall'Italia.",
         url: `${SITE_URL}/contatti`,
         type: "website",
+        images: [`${SITE_URL}/opengraph-image`],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Contatti — Sviluppatore freelance e Fractional CTO",
+        description:
+            "Scrivimi per progetti web, app mobile o consulenza tecnica. Full-remote dall'Italia.",
     },
 };
 

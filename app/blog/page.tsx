@@ -36,6 +36,13 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
                 "Articoli e guide pratiche su sviluppo web, mobile, architetture e consulenza tecnica.",
             url: `${SITE_URL}/blog`,
             type: "website",
+            images: [`${SITE_URL}/opengraph-image`],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "Blog — Sviluppo web, mobile e architetture",
+            description:
+                "Articoli e guide pratiche su sviluppo web, mobile, architetture e consulenza tecnica.",
         },
     };
 }

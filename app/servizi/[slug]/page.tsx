@@ -31,6 +31,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             description: seoDescription,
             url,
             type: "website",
+            images: [`${SITE_URL}/opengraph-image`],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${seoTitle} | Federico Tassara`,
+            description: seoDescription,
         },
     };
 }

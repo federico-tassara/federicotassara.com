@@ -19,6 +19,13 @@ export const metadata: Metadata = {
             "App iOS e Android cross-platform con React Native: MVP, app B2B, marketplace e community.",
         url,
         type: "website",
+        images: [`${SITE_URL}/opengraph-image`],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Sviluppatore React Native in Italia",
+        description:
+            "App iOS e Android cross-platform con React Native: MVP, app B2B, marketplace e community.",
     },
 };
 

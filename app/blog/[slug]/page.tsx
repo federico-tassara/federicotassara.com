@@ -37,7 +37,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             type: "article",
             url,
             publishedTime: post.date,
+            modifiedTime: post.updatedAt ?? post.date,
             authors: [post.author],
+            images: [`${SITE_URL}/opengraph-image`],
         },
         twitter: {
             card: "summary_large_image",

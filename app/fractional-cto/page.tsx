@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Compass, Layers, Users, Target, Workflow, BookOpen } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
+import { Testimonials } from "@/src/components/sections/Testimonials";
 import { CALENDLY_URL, SITE_EMAIL, SITE_URL } from "@/src/lib/utils";
 
 const url = `${SITE_URL}/fractional-cto`;
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
             "CTO part-time on-demand: scelte tecnologiche, roadmap, due diligence, hiring tech e audit.",
         url,
         type: "website",
+        images: [`${SITE_URL}/opengraph-image`],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Fractional CTO in Italia per Startup e PMI",
+        description:
+            "CTO part-time on-demand: scelte tecnologiche, roadmap, due diligence, hiring tech e audit.",
     },
 };
 
@@ -174,19 +182,19 @@ const faqSchema = {
 
 const RELATED_POSTS = [
     {
-        href: "/blog/come-scegliere-fractional-cto",
-        title: "Come scegliere un Fractional CTO: 7 criteri concreti",
-        desc: "I segnali che distinguono un Fractional CTO efficace da un semplice consulente esterno.",
+        href: "/blog/quando-serve-fractional-cto",
+        title: "Quando serve un Fractional CTO (e quando no)",
+        desc: "Gli scenari concreti in cui ha senso, e i casi in cui è la scelta sbagliata.",
     },
     {
-        href: "/blog/cosa-chiedere-sviluppatore-progetto",
-        title: "Cosa chiedere a uno sviluppatore prima di iniziare un progetto",
-        desc: "Le domande giuste per valutare competenza, processo e affidabilità prima di firmare.",
+        href: "/blog/cosa-fa-fractional-cto",
+        title: "Cosa fa concretamente un Fractional CTO",
+        desc: "Attività e deliverable settimana per settimana, oltre i titoli astratti.",
     },
     {
-        href: "/blog/riscrivere-piattaforma-zero",
-        title: "Riscrivere una piattaforma da zero: quando ha senso",
-        desc: "Come decidere tra rewrite e refactoring incrementale di un sistema legacy.",
+        href: "/blog/quanto-costa-fractional-cto-italia",
+        title: "Quanto costa un Fractional CTO in Italia nel 2026",
+        desc: "Range reali, modelli di engagement e confronto onesto con un CTO full-time.",
     },
 ];
 
@@ -422,6 +430,8 @@ export default function FractionalCTOPage() {
                     </div>
                 </Container>
             </section>
+
+            <Testimonials />
 
             <section className="py-20 sm:py-24">
                 <Container>
