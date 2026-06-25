@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { Container } from "@/src/components/ui/Container";
 import { TESTIMONIALS } from "@/src/lib/testimonials";
+import { getProject } from "@/src/lib/projects";
 
 type TestimonialsProps = {
     /** Optional eyebrow/heading override. */
@@ -33,21 +35,33 @@ export function Testimonials({
                     </h2>
                 </div>
                 <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {TESTIMONIALS.map((t, i) => (
-                        <figure
-                            key={`${t.name}-${i}`}
-                            className="anim-fade-up flex flex-col rounded-2xl border border-ink/8 bg-white p-6"
-                            style={{ animationDelay: `${i * 40}ms` }}
-                        >
-                            <blockquote className="flex-1 text-[15px] leading-relaxed text-ink-soft">
-                                “{t.quote}”
-                            </blockquote>
-                            <figcaption className="mt-5 text-sm">
-                                <span className="font-semibold text-ink">{t.name}</span>
-                                <span className="text-muted"> — {t.role}, {t.company}</span>
-                            </figcaption>
-                        </figure>
-                    ))}
+                    {TESTIMONIALS.map((t, i) => {
+                        const project = t.project ? getProject(t.project) : undefined;
+                        const affiliation = [t.role, t.company].filter(Boolean).join(", ");
+                        return (
+                            <figure
+                                key={`${t.name}-${i}`}
+                                className="anim-fade-up flex flex-col rounded-2xl border border-ink/8 bg-white p-6"
+                                style={{ animationDelay: `${i * 40}ms` }}
+                            >
+                                <blockquote className="flex-1 text-[15px] leading-relaxed text-ink-soft">
+                                    “{t.quote}”
+                                </blockquote>
+                                <figcaption className="mt-5 text-sm">
+                                    <span className="font-semibold text-ink">{t.name}</span>
+                                    {affiliation && <span className="text-muted"> — {affiliation}</span>}
+                                    {project && (
+                                        <Link
+                                            href={`/progetti/${project.slug}`}
+                                            className="mt-1 block text-muted underline-offset-2 hover:text-ink hover:underline"
+                                        >
+                                            Progetto: {project.title}
+                                        </Link>
+                                    )}
+                                </figcaption>
+                            </figure>
+                        );
+                    })}
                 </div>
             </Container>
         </section>
