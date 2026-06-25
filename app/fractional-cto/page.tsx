@@ -172,6 +172,24 @@ const faqSchema = {
     })),
 };
 
+const RELATED_POSTS = [
+    {
+        href: "/blog/come-scegliere-fractional-cto",
+        title: "Come scegliere un Fractional CTO: 7 criteri concreti",
+        desc: "I segnali che distinguono un Fractional CTO efficace da un semplice consulente esterno.",
+    },
+    {
+        href: "/blog/cosa-chiedere-sviluppatore-progetto",
+        title: "Cosa chiedere a uno sviluppatore prima di iniziare un progetto",
+        desc: "Le domande giuste per valutare competenza, processo e affidabilità prima di firmare.",
+    },
+    {
+        href: "/blog/riscrivere-piattaforma-zero",
+        title: "Riscrivere una piattaforma da zero: quando ha senso",
+        desc: "Come decidere tra rewrite e refactoring incrementale di un sistema legacy.",
+    },
+];
+
 export default function FractionalCTOPage() {
     return (
         <>
@@ -400,6 +418,36 @@ export default function FractionalCTOPage() {
                                 </summary>
                                 <p className="mt-4 text-[15px] leading-relaxed text-muted">{f.a}</p>
                             </details>
+                        ))}
+                    </div>
+                </Container>
+            </section>
+
+            <section className="py-20 sm:py-24">
+                <Container>
+                    <div className="max-w-3xl">
+                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            Approfondimenti
+                        </span>
+                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                            Dal blog.
+                        </h2>
+                    </div>
+                    <div className="mt-12 grid gap-6 sm:grid-cols-3">
+                        {RELATED_POSTS.map((p, i) => (
+                            <Link
+                                key={p.href}
+                                href={p.href}
+                                className="anim-fade-up group flex flex-col rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20"
+                                style={{ animationDelay: `${i * 40}ms` }}
+                            >
+                                <h3 className="text-base font-semibold text-ink">{p.title}</h3>
+                                <p className="mt-3 flex-1 text-[15px] leading-relaxed text-muted">{p.desc}</p>
+                                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-ink">
+                                    Leggi
+                                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                                </span>
+                            </Link>
                         ))}
                     </div>
                 </Container>

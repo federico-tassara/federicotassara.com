@@ -1,6 +1,7 @@
 ---
 title: "Cosa chiedere a uno sviluppatore prima di iniziare un progetto"
 date: "2026-04-25"
+updatedAt: "2026-06-25"
 author: "Federico Tassara"
 category: "Consulenza"
 excerpt: "Domande essenziali per valutare competenze, tempi, costi e responsabilità prima di iniziare un progetto con uno sviluppatore freelance o un'agenzia."
@@ -80,4 +81,4 @@ Prima di concludere è importante definire cosa rappresenta il successo del prog
 
 Porsi le domande giuste fin dall'inizio riduce i rischi e migliora i risultati. Chiedere dettagli su obiettivi, tecnologie, tempistiche, costi e responsabilità crea le condizioni per una collaborazione produttiva. Per una valutazione mirata e un preventivo preciso, organizzare un incontro conoscitivo per analizzare insieme obiettivi e requisiti è sempre il modo più efficace per iniziare.
 
-Se cerchi un approccio strutturato a queste decisioni, vedi il servizio di [Tech Consulting e Fractional CTO](/servizi/tech-consulting). Per parlarne nel concreto del tuo caso, [contattami](/contatti) per una call introduttiva.
+Se cerchi un approccio strutturato a queste decisioni, vedi il servizio di [Tech Consulting](/servizi/tech-consulting) o la pagina dedicata al [Fractional CTO in Italia](/fractional-cto). Per parlarne nel concreto del tuo caso, [contattami](/contatti) per una call introduttiva.

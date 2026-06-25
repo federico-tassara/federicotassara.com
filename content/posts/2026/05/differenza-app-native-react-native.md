@@ -1,6 +1,7 @@
 ---
 title: "Differenza tra app native e app React Native: guida pratica"
 date: "2026-05-09"
+updatedAt: "2026-06-25"
 author: "Federico Tassara"
 category: "Sviluppo mobile"
 project: "lectum"
@@ -75,4 +76,4 @@ La decisione pratica nasce dall'analisi dei requisiti funzionali, del budget, de
 
 Conoscere la differenza tra app native e app React Native permette di adottare un approccio progettuale mirato, ottimizzando costi e risultati. La scelta migliore dipende da requisiti tecnici, obiettivi di business e competenze del team. Se vuoi una valutazione personalizzata per il tuo progetto, posso aiutarti con un'analisi tecnica per identificare la soluzione più efficace e sostenibile.
 
-Approfondisci sul servizio di [Sviluppo App Mobile con React Native](/servizi/mobile-development) oppure, se vuoi un parere prima ancora di scegliere lo stack, valuta una sessione di [Tech Consulting](/servizi/tech-consulting). Per discuterne direttamente, [scrivimi qui](/contatti).
+Approfondisci sul servizio di [Sviluppo App Mobile con React Native](/servizi/mobile-development), scopri il mio profilo da [sviluppatore React Native in Italia](/sviluppatore-react-native-italia) oppure, se vuoi un parere prima ancora di scegliere lo stack, valuta una sessione di [Tech Consulting](/servizi/tech-consulting). Per discuterne direttamente, [scrivimi qui](/contatti).

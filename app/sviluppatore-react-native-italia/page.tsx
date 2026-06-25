@@ -179,6 +179,29 @@ const faqSchema = {
     })),
 };
 
+const RELATED_POSTS = [
+    {
+        href: "/blog/react-native-vs-flutter-2026",
+        title: "React Native vs Flutter nel 2026",
+        desc: "Quale framework cross-platform scegliere in base a team, budget ed ecosistema.",
+    },
+    {
+        href: "/blog/differenza-app-native-react-native",
+        title: "Differenza tra app native e app React Native",
+        desc: "Performance, costi e manutenzione: cosa cambia davvero tra nativo e cross-platform.",
+    },
+    {
+        href: "/blog/app-community-social-react-native",
+        title: "App community e social con React Native",
+        desc: "Architettura, feed, notifiche e real-time per un'app sociale cross-platform.",
+    },
+    {
+        href: "/blog/app-ecommerce-react-native",
+        title: "App e-commerce con React Native",
+        desc: "Catalogo, carrello, pagamenti e checkout per un'app di vendita mobile.",
+    },
+];
+
 export default function ReactNativeIndexPage() {
     const lectum = PROJECTS.find((p) => p.slug === "lectum");
     return (
@@ -425,6 +448,36 @@ export default function ReactNativeIndexPage() {
                                 </summary>
                                 <p className="mt-4 text-[15px] leading-relaxed text-muted">{f.a}</p>
                             </details>
+                        ))}
+                    </div>
+                </Container>
+            </section>
+
+            <section className="py-20 sm:py-24">
+                <Container>
+                    <div className="max-w-3xl">
+                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            Approfondimenti
+                        </span>
+                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                            Dal blog.
+                        </h2>
+                    </div>
+                    <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                        {RELATED_POSTS.map((p, i) => (
+                            <Link
+                                key={p.href}
+                                href={p.href}
+                                className="anim-fade-up group flex flex-col rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20"
+                                style={{ animationDelay: `${i * 40}ms` }}
+                            >
+                                <h3 className="text-base font-semibold text-ink">{p.title}</h3>
+                                <p className="mt-3 flex-1 text-[15px] leading-relaxed text-muted">{p.desc}</p>
+                                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-ink">
+                                    Leggi
+                                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                                </span>
+                            </Link>
                         ))}
                     </div>
                 </Container>

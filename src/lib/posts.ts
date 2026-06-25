@@ -16,6 +16,7 @@ export type PostFaqItem = { q: string; a: string };
 export interface PostMetadata {
     title: string;
     date: string;
+    updatedAt?: string;
     author: string;
     excerpt: string;
     tags: string[];
@@ -67,6 +68,7 @@ export const getAllPosts = cache((): PostMetadata[] => {
                 posts.push({
                     title: data.title ?? slug,
                     date: data.date ?? "",
+                    updatedAt: data.updatedAt ?? data.updated ?? undefined,
                     author: data.author ?? "Federico Tassara",
                     excerpt: data.excerpt ?? "",
                     tags: Array.isArray(data.tags) ? data.tags : [],

@@ -64,9 +64,16 @@ export default async function BlogPostPage({ params }: PageProps) {
         "@id": `${url}#article`,
         headline: post.title,
         description: post.excerpt,
-        image: [ogImage],
+        image: [
+            {
+                "@type": "ImageObject",
+                url: ogImage,
+                width: 1200,
+                height: 630,
+            },
+        ],
         datePublished: post.date,
-        dateModified: post.date,
+        dateModified: post.updatedAt ?? post.date,
         url,
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
         author: { "@id": `${SITE_URL}/#person` },

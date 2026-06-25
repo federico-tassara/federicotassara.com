@@ -159,6 +159,24 @@ const faqSchema = {
     })),
 };
 
+const RELATED_POSTS = [
+    {
+        href: "/blog/sviluppare-mvp-tempi-realistici",
+        title: "Sviluppare un MVP: tempi realistici",
+        desc: "Quanto serve davvero per portare un MVP dal concept al rilascio, fase per fase.",
+    },
+    {
+        href: "/blog/stimare-budget-web-mobile-app",
+        title: "Come stimare il budget di una web o mobile app",
+        desc: "I fattori che determinano il costo di un progetto e come arrivare a una stima sensata.",
+    },
+    {
+        href: "/blog/vantaggi-nextjs-seo-performance",
+        title: "Vantaggi di Next.js per SEO e performance",
+        desc: "Perché Next.js è una base solida per un SaaS veloce e ben indicizzato.",
+    },
+];
+
 export default function SviluppoAppSaaSPage() {
     const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
     const featuredProject = PROJECTS.find((p) => p.slug === "lectum") ?? PROJECTS[0];
@@ -381,6 +399,36 @@ export default function SviluppoAppSaaSPage() {
                                 </summary>
                                 <p className="mt-4 text-[15px] leading-relaxed text-muted">{f.a}</p>
                             </details>
+                        ))}
+                    </div>
+                </Container>
+            </section>
+
+            <section className="bg-surface-alt py-20 sm:py-24">
+                <Container>
+                    <div className="max-w-3xl">
+                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            Approfondimenti
+                        </span>
+                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                            Dal blog.
+                        </h2>
+                    </div>
+                    <div className="mt-12 grid gap-6 sm:grid-cols-3">
+                        {RELATED_POSTS.map((p, i) => (
+                            <Link
+                                key={p.href}
+                                href={p.href}
+                                className="anim-fade-up group flex flex-col rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20"
+                                style={{ animationDelay: `${i * 40}ms` }}
+                            >
+                                <h3 className="text-base font-semibold text-ink">{p.title}</h3>
+                                <p className="mt-3 flex-1 text-[15px] leading-relaxed text-muted">{p.desc}</p>
+                                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-ink">
+                                    Leggi
+                                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                                </span>
+                            </Link>
                         ))}
                     </div>
                 </Container>

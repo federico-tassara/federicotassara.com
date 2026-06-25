@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy",
     description: "Informativa privacy per il sito federicotassara.com.",
     alternates: { canonical: `${SITE_URL}/privacy-policy` },
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: true },
 };
 
 export default function PrivacyPage() {

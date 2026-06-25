@@ -1,6 +1,7 @@
 ---
 title: "Riscrivere una piattaforma da zero: guida per decisioni strategiche"
 date: "2026-04-29"
+updatedAt: "2026-06-25"
 author: "Federico Tassara"
 category: "Consulenza"
 excerpt: "Quando ha senso riscrivere da zero una piattaforma esistente: criteri economici, rischi, alternative e roadmap per decidere in modo strategico."
@@ -58,4 +59,4 @@ Il successo di una riscrittura dipende dall'allineamento tra sviluppo, prodotto,
 
 Decidere quando ha senso riscrivere da zero una piattaforma esistente richiede una combinazione di analisi tecnica, valutazione economica e strategia di business. Applicare criteri misurabili, considerare alternative e pianificare mitigazioni trasforma una scelta rischiosa in un progetto gestibile. Una decisione informata permette di recuperare velocità di sviluppo, ridurre costi operativi e posizionare l'azienda per la crescita futura senza compromettere il servizio attuale.
 
-Per un audit della piattaforma attuale e una roadmap pragmatica, valuta una sessione di [Tech Consulting](/servizi/tech-consulting). Se la riscrittura è già decisa, può aiutarti il servizio di [Architettura e Scalabilità](/servizi/architettura-e-scalabilita). [Scrivimi](/contatti) per una valutazione iniziale.
+Per un audit della piattaforma attuale e una roadmap pragmatica, valuta una sessione di [Tech Consulting](/servizi/tech-consulting) o un ingaggio come [Fractional CTO](/fractional-cto). Se la riscrittura è già decisa, può aiutarti il servizio di [Architettura e Scalabilità](/servizi/architettura-e-scalabilita). [Scrivimi](/contatti) per una valutazione iniziale.

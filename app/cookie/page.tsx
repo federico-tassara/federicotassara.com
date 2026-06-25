@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     title: "Cookie Policy",
     description: "Informativa cookie per il sito federicotassara.com.",
     alternates: { canonical: `${SITE_URL}/cookie` },
+    robots: { index: false, follow: true },
 };
 
 export default function CookiePage() {
