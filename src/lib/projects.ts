@@ -227,21 +227,21 @@ export const PROJECTS: Project[] = [
     {
         slug: "oraloco",
         title: "Oraloco",
-        seoTitle: "Oraloco — Community per appassionati di orologi",
+        seoTitle: "Oraloco — Community e contenuti sul calciomercato",
         seoDescription:
-            "Oraloco è la piattaforma per appassionati di orologi: contenuti editoriali, schede tecniche, community moderata e app mobile companion in sviluppo.",
-        tagline: "La community degli appassionati di orologi.",
+            "Oraloco è la piattaforma per gli appassionati di calciomercato: contenuti editoriali, news e approfondimenti, community moderata e app mobile companion in sviluppo.",
+        tagline: "La community degli appassionati di calciomercato.",
         status: "in-corso",
         role: "Founder & Fractional CTO",
         year: "2023 — in corso",
         summary:
-            "Piattaforma web e mobile dedicata alla community degli appassionati di orologi: contenuti, community, mercato.",
+            "Piattaforma web e mobile dedicata alla community degli appassionati di calciomercato: contenuti, news e community.",
         description: [
-            "Oraloco è la piattaforma per chi ama gli orologi: contenuti editoriali, schede tecniche, community attiva e ambiente di confronto fra collezionisti. Il prodotto include un sito web pubblicato e un'app mobile in sviluppo.",
-            "L'obiettivo è creare un punto di riferimento italiano per la cultura orologiera, con SEO curato, contenuti di qualità e una community moderata.",
+            "Oraloco è la piattaforma per chi segue il calciomercato: contenuti editoriali, news e approfondimenti, community attiva e ambiente di confronto fra tifosi e appassionati. Il prodotto include un sito web pubblicato e un'app mobile in sviluppo.",
+            "L'obiettivo è creare un punto di riferimento italiano sul calciomercato, con SEO curato, contenuti di qualità e una community moderata.",
         ],
         features: [
-            { title: "Sito editoriale", desc: "Contenuti, schede orologi e SEO ottimizzato su Nuxt 3 con sitemap dinamica e schema.org." },
+            { title: "Sito editoriale", desc: "Contenuti, news di calciomercato e SEO ottimizzato su Nuxt 3 con sitemap dinamica e schema.org." },
             { title: "App mobile companion", desc: "App React Native (Expo) con autenticazione Google/Apple e feed personalizzato." },
             { title: "Backoffice operatori", desc: "Pannello interno per gestione contenuti, utenti e moderazione." },
             { title: "Community e thread", desc: "Discussioni tematiche, profili utente e interazione social moderata." },
@@ -255,18 +255,18 @@ export const PROJECTS: Project[] = [
         url: "https://oraloco.com",
         icon: Smile,
         kind: "WebApplication",
-        applicationCategory: "LifestyleApplication",
+        applicationCategory: "SportsApplication",
         operatingSystem: "Web, iOS, Android",
         caseStudy: {
             challenge:
-                "La community italiana degli appassionati di orologi è frammentata tra forum vecchi, gruppi Facebook poco moderati e thread Reddit. Mancava un punto di riferimento moderno, curato editorialmente e ottimizzato per la ricerca organica, capace di unire contenuti tecnici e community in un'unica esperienza coerente.",
+                "La community italiana del calciomercato è frammentata tra forum datati, gruppi Facebook poco moderati, thread Reddit e X. Mancava un punto di riferimento moderno, curato editorialmente e ottimizzato per la ricerca organica, capace di unire news, approfondimenti e community in un'unica esperienza coerente.",
             solution:
-                "Una piattaforma editoriale costruita su Nuxt 3 con SSR/SSG, schede orologi strutturate e SEO curato, affiancata da un'app mobile companion in React Native (Expo) per la community e i contenuti in mobilità. Backoffice operatori dedicato per gestire contenuti, utenti e moderazione, con integrazione di Brevo per email transazionali e GTM per analytics.",
+                "Una piattaforma editoriale costruita su Nuxt 3 con SSR/SSG, contenuti di calciomercato strutturati e SEO curato, affiancata da un'app mobile companion in React Native (Expo) per la community e i contenuti in mobilità. Backoffice operatori dedicato per gestire contenuti, utenti e moderazione, con integrazione di Brevo per email transazionali e GTM per analytics.",
             results: [
                 "Sito SEO-friendly con SSR/SSG, sitemap dinamica, schema.org strutturato e Core Web Vitals nei target Google",
                 "App mobile companion con autenticazione Apple/Google Sign-In e navigazione expo-router",
-                "Backoffice interno completo per gestione contenuti editoriali, schede tecniche e community",
-                "Architettura pensata per scalare a migliaia di pagine indicizzate sul mercato italiano degli orologi",
+                "Backoffice interno completo per gestione contenuti editoriali e community",
+                "Architettura pensata per scalare a migliaia di pagine indicizzate sul calciomercato italiano",
             ],
         },
     },

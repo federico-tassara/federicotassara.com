@@ -37,7 +37,7 @@
 - [MOSE](https://federicotassara.com/progetti/mose): app mobile offline-first per la manutenzione dei tiranti delle paratoie del MOSE di Venezia, con sync engine e dashboard per il committente.
 - [Varco](https://federicotassara.com/progetti/varco): strumento interno di lead generation con agenti AI (Claude API + BullMQ + Next.js).
 - [Forfi](https://federicotassara.com/progetti/forfi): SaaS per partite IVA forfettarie italiane (fatturazione SDI, Stripe, Clerk).
-- [Oraloco](https://federicotassara.com/progetti/oraloco): community degli appassionati di orologi (Nuxt 3 + React Native).
+- [Oraloco](https://federicotassara.com/progetti/oraloco): community e contenuti editoriali sul calciomercato (Nuxt 3 + React Native).
 - [Freedhome](https://federicotassara.com/progetti/freedhome): gestione affitti brevi e mid-term con automazioni n8n.
 
 ## Articoli del blog (citation-ready)
