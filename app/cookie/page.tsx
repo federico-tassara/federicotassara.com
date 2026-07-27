@@ -20,7 +20,7 @@ export default function CookiePage() {
                     Cookie Policy
                 </h1>
                 <p className="mt-4 text-sm text-muted">
-                    Ultimo aggiornamento: 11 maggio 2026
+                    Ultimo aggiornamento: 27 luglio 2026
                 </p>
 
                 <div className="markdown-body mt-10">
@@ -31,26 +31,48 @@ export default function CookiePage() {
                         raccogliere informazioni in forma aggregata.
                     </p>
 
-                    <h2>2. Cookie utilizzati su questo sito</h2>
-                    <p>Questo sito utilizza esclusivamente cookie tecnici e di terze parti necessari al funzionamento di servizi specifici:</p>
+                    <h2>2. Cookie tecnici</h2>
+                    <p>
+                        Questi cookie fanno funzionare il sito e non richiedono il consenso
+                        dell’utente:
+                    </p>
                     <ul>
                         <li>
                             <strong>Cloudflare Turnstile</strong> — verifica anti-spam sul modulo di
                             contatto. Non profila l’utente.
                         </li>
                     </ul>
+
+                    <h2>3. Cookie analitici</h2>
                     <p>
-                        Non sono installati cookie di profilazione o pubblicitari senza consenso esplicito.
+                        Il sito misura le visite con Google Analytics 4. Google scrive i cookie
+                        analitici solo dopo che l’utente ha prestato il consenso: prima di quel
+                        momento la libreria non salva alcun identificatore sul dispositivo, perché
+                        il sito imposta tutte le categorie di Consent Mode su “denied”.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>_ga</strong> e <strong>_ga_&lt;ID&gt;</strong> — Google li usa per
+                            distinguere i visitatori e le sessioni. Durata massima 24 mesi.
+                        </li>
+                    </ul>
+                    <p>
+                        Questo sito non installa cookie pubblicitari. Le finalità di advertising,
+                        la personalizzazione degli annunci e la condivisione dei dati con Google a
+                        fini pubblicitari restano disattivate.
                     </p>
 
-                    <h2>3. Gestione dei cookie</h2>
+                    <h2>4. Come gestire o revocare il consenso</h2>
                     <p>
-                        L’utente può configurare il proprio browser per bloccare o eliminare i cookie.
-                        La disabilitazione di alcuni cookie può limitare l’utilizzo di alcune funzioni
-                        del sito (es. il modulo di contatto).
+                        L’utente può cambiare o ritirare la propria scelta in qualsiasi momento dal
+                        pannello di gestione del consenso presente sul sito. In alternativa può
+                        bloccare o eliminare i cookie dalle impostazioni del browser, oppure
+                        installare il componente aggiuntivo di Google per la disattivazione di
+                        Analytics. Bloccare i cookie tecnici limita alcune funzioni del sito, tra
+                        cui l’invio del modulo di contatto.
                     </p>
 
-                    <h2>4. Contatti</h2>
+                    <h2>5. Contatti</h2>
                     <p>
                         Per qualsiasi domanda sulla cookie policy, scrivere a{" "}
                         <a href={`mailto:${SITE_EMAIL}`}>{SITE_EMAIL}</a>.
