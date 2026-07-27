@@ -2,14 +2,27 @@
 
 import Script from "next/script";
 import { usePathname, useSearchParams } from "next/navigation";
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useRef } from "react";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
+/**
+ * ID dello scopo "Statistiche" configurato nel Consent Management di Cloudflare
+ * Zaraz. Se lo scopo viene ricreato in dashboard, Zaraz genera un ID nuovo e
+ * questa costante va aggiornata di conseguenza.
+ */
+const ZARAZ_ANALYTICS_PURPOSE = "sVpK";
 
 declare global {
     interface Window {
         dataLayer?: unknown[];
         gtag?: (...args: unknown[]) => void;
+        zaraz?: {
+            consent?: {
+                get: (purposeId: string) => boolean | undefined;
+                getAll: () => Record<string, boolean>;
+            };
+        };
     }
 }
 
@@ -17,8 +30,7 @@ declare global {
  * Consent Mode v2 con tutte le categorie negate per impostazione predefinita.
  *
  * Viene reso come script inline (non tramite next/script) perché deve girare
- * durante il parsing dell'HTML, quindi prima che gtag.js venga caricato. Un CMP
- * esterno sblocca la misurazione chiamando gtag('consent', 'update', {...}).
+ * durante il parsing dell'HTML, quindi prima che gtag.js venga caricato.
  */
 const CONSENT_DEFAULT = `
 window.dataLayer=window.dataLayer||[];
@@ -36,18 +48,73 @@ wait_for_update:500
 gtag('js',new Date());
 `;
 
+function sendPageView(gaId: string, path: string) {
+    window.gtag?.("event", "page_view", {
+        send_to: gaId,
+        page_path: path,
+        page_location: window.location.href,
+        page_title: document.title,
+    });
+}
+
+function currentPath(pathname: string, searchParams: URLSearchParams) {
+    const query = searchParams.toString();
+    return query ? `${pathname}?${query}` : pathname;
+}
+
 function PageViewTracker({ gaId }: { gaId: string }) {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
     useEffect(() => {
-        const query = searchParams.toString();
-        window.gtag?.("event", "page_view", {
-            send_to: gaId,
-            page_path: query ? `${pathname}?${query}` : pathname,
-            page_location: window.location.href,
-            page_title: document.title,
-        });
+        sendPageView(gaId, currentPath(pathname, searchParams));
+    }, [gaId, pathname, searchParams]);
+
+    return null;
+}
+
+/**
+ * Traduce le scelte del Consent Management di Zaraz in comandi Google Consent Mode.
+ *
+ * Serve perché zaraz.set("google_consent_update", ...) governa solo i tool caricati
+ * da Zaraz, mentre qui gtag.js lo carica il sito. Senza questo ponte il banner
+ * registrerebbe la scelta dell'utente senza mai sbloccare la misurazione.
+ *
+ * Le finalità pubblicitarie restano negate: il sito non usa advertising.
+ */
+function ZarazConsentBridge({ gaId }: { gaId: string }) {
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+    const previousConsent = useRef<boolean | null>(null);
+
+    useEffect(() => {
+        const sync = () => {
+            const granted = window.zaraz?.consent?.get(ZARAZ_ANALYTICS_PURPOSE);
+            if (typeof granted !== "boolean") return;
+
+            window.gtag?.("consent", "update", {
+                analytics_storage: granted ? "granted" : "denied",
+            });
+
+            // Chi accetta dopo il caricamento ha già generato una pageview senza
+            // cookie: la reinvia una volta sola, alla transizione da negato a
+            // concesso, per non contare due volte chi aveva già accettato prima.
+            if (granted && previousConsent.current === false) {
+                sendPageView(gaId, currentPath(pathname, searchParams));
+            }
+            previousConsent.current = granted;
+        };
+
+        document.addEventListener("zarazConsentAPIReady", sync);
+        document.addEventListener("zarazConsentChoicesUpdated", sync);
+        // Zaraz può essere già pronto quando React monta: in quel caso l'evento
+        // è passato e lo stato va letto subito.
+        sync();
+
+        return () => {
+            document.removeEventListener("zarazConsentAPIReady", sync);
+            document.removeEventListener("zarazConsentChoicesUpdated", sync);
+        };
     }, [gaId, pathname, searchParams]);
 
     return null;
@@ -76,6 +143,7 @@ export function GoogleAnalytics() {
             </Script>
             <Suspense fallback={null}>
                 <PageViewTracker gaId={GA_ID} />
+                <ZarazConsentBridge gaId={GA_ID} />
             </Suspense>
         </>
     );
