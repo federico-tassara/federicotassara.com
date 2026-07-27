@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
+import { GoogleAnalytics } from "@/src/components/analytics/GoogleAnalytics";
 import { SITE_URL } from "@/src/lib/utils";
 
 const montserrat = Montserrat({
@@ -161,6 +162,7 @@ export default function RootLayout({
     return (
         <html lang="it" className={montserrat.variable}>
             <body className="antialiased">
+                <GoogleAnalytics />
                 <Header />
                 <main className="pt-16 sm:pt-18">{children}</main>
                 <Footer />

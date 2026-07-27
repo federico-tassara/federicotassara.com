@@ -20,7 +20,7 @@ export default function PrivacyPage() {
                     Privacy Policy
                 </h1>
                 <p className="mt-4 text-sm text-muted">
-                    Ultimo aggiornamento: 11 maggio 2026
+                    Ultimo aggiornamento: 27 luglio 2026
                 </p>
 
                 <div className="markdown-body mt-10">
@@ -44,14 +44,19 @@ export default function PrivacyPage() {
                         <li>Rispondere alle richieste inviate tramite modulo di contatto.</li>
                         <li>Adempiere a obblighi di legge.</li>
                         <li>Protezione contro spam e abusi tramite Cloudflare Turnstile.</li>
-                        <li>Misurare l’utilizzo del sito in forma aggregata e anonima.</li>
+                        <li>
+                            Misurare l’utilizzo del sito in forma aggregata, previo consenso
+                            dell’utente.
+                        </li>
                     </ul>
 
                     <h2>4. Base giuridica</h2>
                     <p>
-                        Il trattamento si fonda sul consenso dell’utente (modulo di contatto), su
-                        obblighi di legge e sul legittimo interesse del titolare a tutelare il
-                        funzionamento del sito.
+                        Il titolare tratta i dati sulla base del consenso dell’utente per il modulo
+                        di contatto e per i cookie analitici, di obblighi di legge e del proprio
+                        legittimo interesse a proteggere il sito da spam e abusi. L’utente può
+                        ritirare il consenso in qualsiasi momento senza pregiudicare la liceità del
+                        trattamento svolto fino a quel momento.
                     </p>
 
                     <h2>5. Servizi di terze parti</h2>
@@ -65,7 +70,19 @@ export default function PrivacyPage() {
                         <li>
                             <strong>Calendly</strong> — prenotazione di consulenze online.
                         </li>
+                        <li>
+                            <strong>Google Analytics 4</strong> — misurazione statistica delle visite,
+                            attiva solo dopo il consenso dell’utente. Fornito da Google Ireland
+                            Limited.
+                        </li>
                     </ul>
+                    <p>
+                        Google può trasferire i dati raccolti verso server situati negli Stati Uniti.
+                        Il trasferimento si fonda sulle clausole contrattuali standard approvate dalla
+                        Commissione europea e sull’adesione di Google al Data Privacy Framework
+                        UE-USA. Il titolare non ha attivato la condivisione dei dati con Google per
+                        finalità pubblicitarie.
+                    </p>
 
                     <h2>6. Conservazione dei dati</h2>
                     <p>
