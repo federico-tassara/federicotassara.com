@@ -45,10 +45,10 @@ export default function CookiePage() {
 
                     <h2>3. Cookie analitici</h2>
                     <p>
-                        Il sito misura le visite con Google Analytics 4. Google scrive i cookie
-                        analitici solo dopo che l’utente ha prestato il consenso: prima di quel
-                        momento la libreria non salva alcun identificatore sul dispositivo, perché
-                        il sito imposta tutte le categorie di Consent Mode su “denied”.
+                        Il sito misura le visite con Google Analytics 4, caricato tramite
+                        Cloudflare Zaraz. Lo strumento viene attivato solo dopo che l’utente ha
+                        prestato il consenso: prima di quel momento non viene caricato e non salva
+                        alcun identificatore sul dispositivo.
                     </p>
                     <ul>
                         <li>
