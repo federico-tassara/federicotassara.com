@@ -1,9 +1,10 @@
 ---
-title: "Quanto costa un'app mobile in Italia 2026: range, tabella e fattori"
+title: "Quanto costa un'app mobile in Italia 2026: da €15.000 a €200.000"
 date: "2026-05-11"
+updatedAt: "2026-07-29"
 author: "Federico Tassara"
 category: "Consulenza"
-excerpt: "Quanto costa un'app mobile in Italia nel 2026: range realistici da MVP a marketplace, tabella €€€, fattori che moltiplicano il prezzo e costi ricorrenti."
+excerpt: "MVP da €15.000, app business €40.000-90.000, marketplace fino a €200.000. Tabella dei range per tipo di app, cosa entra nel prezzo e i costi ricorrenti che quasi nessuno mette a preventivo."
 tags: ["budget app mobile", "costi sviluppo app", "mvp", "react native", "preventivo app", "Italia"]
 faq:
   - q: "Quanto costa un MVP di app mobile?"
