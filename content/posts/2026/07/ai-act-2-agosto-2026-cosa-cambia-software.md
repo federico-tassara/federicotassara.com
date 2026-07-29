@@ -85,6 +85,6 @@ Se leggi questa lista e non sai rispondere per i tuoi sistemi, è la stessa situ
 
 L'AI Act non è slittato: è slittata la sua parte più pesante, mentre quella che tocca il maggior numero di aziende entra in applicazione il 2 agosto 2026. La buona notizia è che gli interventi richiesti in questa fase sono per lo più circoscritti e tecnici — avvisi, etichette, punti di revisione umana, log — e si chiudono in tempi brevi se si sa dove mettere le mani.
 
-Vale la stessa logica della [NIS2](/blog/nis2-software-azienda-cosa-controllare): la compliance costa molto meno quando la incorpori nella progettazione invece di rincorrerla dopo una segnalazione. Se vuoi capire quali dei tuoi sistemi sono coinvolti e cosa va modificato, i servizi di [Tech Consulting](/servizi/tech-consulting) e [Automazioni](/servizi/automazioni) partono esattamente da qui.
+Vale la stessa logica della [NIS2](/blog/nis2-software-azienda-cosa-controllare): la compliance costa molto meno quando la incorpori nella progettazione invece di rincorrerla dopo una segnalazione. Se vuoi capire quali dei tuoi sistemi sono coinvolti e cosa va modificato, i servizi di [Tech Consulting](/servizi/tech-consulting) e [Automazioni](/automazione-processi-aziendali) partono esattamente da qui.
 
 Hai AI dentro il tuo prodotto o nei tuoi processi e non sai a che punto sei? [Scrivimi](/contatti) e facciamo il punto sul tuo caso concreto.

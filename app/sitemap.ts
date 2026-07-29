@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${SITE_URL}/fractional-cto`, lastModified: fileModified("app/fractional-cto/page.tsx"), changeFrequency: "monthly", priority: 0.95 },
         { url: `${SITE_URL}/sviluppatore-react-native-italia`, lastModified: fileModified("app/sviluppatore-react-native-italia/page.tsx"), changeFrequency: "monthly", priority: 0.95 },
         { url: `${SITE_URL}/sviluppo-app-saas`, lastModified: fileModified("app/sviluppo-app-saas/page.tsx"), changeFrequency: "monthly", priority: 0.95 },
+        { url: `${SITE_URL}/automazione-processi-aziendali`, lastModified: fileModified("app/automazione-processi-aziendali/page.tsx"), changeFrequency: "monthly", priority: 0.95 },
     ];
 
     const serviceEntries: MetadataRoute.Sitemap = SERVICES.map((s) => ({
