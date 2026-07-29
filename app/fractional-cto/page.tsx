@@ -196,6 +196,11 @@ const RELATED_POSTS = [
         title: "Quanto costa un Fractional CTO in Italia nel 2026",
         desc: "Range reali, modelli di engagement e confronto onesto con un CTO full-time.",
     },
+    {
+        href: "/blog/come-scegliere-fractional-cto",
+        title: "Come scegliere un Fractional CTO",
+        desc: "I criteri di valutazione che contano davvero e le domande da fare al primo incontro.",
+    },
 ];
 
 export default function FractionalCTOPage() {
