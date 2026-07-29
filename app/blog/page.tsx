@@ -15,12 +15,24 @@ interface PageProps {
 }
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
-    const { project } = await searchParams;
+    const { project, page } = await searchParams;
     const proj = project ? getProject(project) : undefined;
     if (proj) {
         return {
             title: { absolute: `Articoli su ${proj.title} | Blog Federico Tassara` },
             description: `Articoli, guide e aggiornamenti su ${proj.title}: ${proj.tagline}`,
+            alternates: { canonical: `${SITE_URL}/blog` },
+            robots: { index: false, follow: true },
+        };
+    }
+    // Le pagine 2+ dichiaravano "index, follow" con canonical verso /blog: due
+    // segnali in contrasto, che Search Console riporta come scansionate e non
+    // indicizzate. Restano seguibili per far scoprire i post, senza finire in indice.
+    if (page && Number(page) > 1) {
+        return {
+            title: { absolute: `Blog, pagina ${Number(page)} | Federico Tassara` },
+            description:
+                "Articoli, guide pratiche e riflessioni su sviluppo web, app mobile, architetture scalabili, AI e consulenza tecnica per startup e PMI italiane.",
             alternates: { canonical: `${SITE_URL}/blog` },
             robots: { index: false, follow: true },
         };

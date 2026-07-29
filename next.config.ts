@@ -30,6 +30,9 @@ const legacyPostRedirects = [
     "gestione-autenticazione-ruoli-react",
     "architettura-sistema-ai-backend-frontend",
     "differenza-scaling-verticale-orizzontale",
+    // Emerso dal drilldown di copertura del 2026-07-29: aveva gia l'equivalente
+    // vivo, ma con zero impression non compariva nel report Prestazioni.
+    "vantaggi-nextjs-seo-performance",
 ].map((slug) => ({
     source: `/${slug}`,
     destination: `/blog/${slug}`,
@@ -46,6 +49,22 @@ const orphanedPostRedirects = [
     ["organizzare-progetto-freelance", "/blog/cosa-chiedere-sviluppatore-progetto"],
     ["ai-suggerimenti-personalizzati", "/blog/prototipare-funzionalita-ai-app"],
     ["migliorare-performance-react", "/blog/vantaggi-nextjs-seo-performance"],
+    // Aggiunti dopo il drilldown di copertura del 2026-07-29. Sono URL WordPress
+    // che Google ricorda ma che non producevano impression, quindi erano invisibili
+    // nel report Prestazioni da cui era partita la mappatura.
+    ["contact", "/contatti"],
+    ["quando-usare-nextjs", "/blog/vantaggi-nextjs-seo-performance"],
+    ["integrare-pagamenti-react-native", "/sviluppatore-react-native-italia"],
+    ["collaborazione-sviluppatore-freelance-italia", "/blog/cosa-chiedere-sviluppatore-progetto"],
+    [
+        "riuso-del-codice-tra-react-e-react-native-strategie-efficaci-per-ridurre-tempi-e-costi",
+        "/blog/differenza-app-native-react-native",
+    ],
+    // Questi due erano stati lasciati morire quando non esisteva una destinazione
+    // sensata. Ora l'hub automazioni la fornisce.
+    ["automazioni-aziendali-ai-api", "/automazione-processi-aziendali"],
+    ["casi-d-uso-intelligenza-artificiale-web-mobile", "/automazione-processi-aziendali"],
+    ["ai-esperienza-utente-web-app", "/blog/prototipare-funzionalita-ai-app"],
 ].map(([slug, destination]) => ({
     source: `/${slug}`,
     destination,
