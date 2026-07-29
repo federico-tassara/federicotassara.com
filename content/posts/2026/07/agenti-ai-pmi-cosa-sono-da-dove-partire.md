@@ -70,6 +70,6 @@ Un agente può sbagliare. La risposta non è rinunciare, ma **progettare i confi
 
 ## In sintesi
 
-Gli agenti AI sono la prima ondata di automazione che *ragiona* invece di limitarsi a eseguire regole rigide, e nel 2026 il rapporto costo/valore li ha portati alla portata delle PMI. Ma il valore non nasce dallo strumento: nasce dal scegliere il processo giusto, collegarlo bene ai sistemi che hai già e misurare il risultato. È esattamente il tipo di decisione make-or-buy in cui un occhio tecnico indipendente evita di spendere su hype invece che su valore — il senso del servizio di [Tech Consulting](/servizi/tech-consulting) e di [Automazioni e Ottimizzazione Processi](/servizi/automazioni).
+Gli agenti AI sono la prima ondata di automazione che *ragiona* invece di limitarsi a eseguire regole rigide, e nel 2026 il rapporto costo/valore li ha portati alla portata delle PMI. Ma il valore non nasce dallo strumento: nasce dal scegliere il processo giusto, collegarlo bene ai sistemi che hai già e misurare il risultato. È esattamente il tipo di decisione make-or-buy in cui un occhio tecnico indipendente evita di spendere su hype invece che su valore — il senso del servizio di [Tech Consulting](/servizi/tech-consulting) e di [Automazioni e Ottimizzazione Processi](/automazione-processi-aziendali).
 
 Se vuoi capire quale processo della tua azienda ha più senso automatizzare per primo — con un numero, non con una promessa — [scrivimi qui](/contatti) e ne parliamo su un caso concreto.

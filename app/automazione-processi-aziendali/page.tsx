@@ -1,145 +1,145 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Compass, Layers, Users, Target, Workflow, BookOpen } from "lucide-react";
+import { ArrowRight, CheckCircle2, Workflow, Database, Bot, FileSpreadsheet, PlugZap, LineChart } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
 import { Testimonials } from "@/src/components/sections/Testimonials";
 import { CALENDLY_URL, SITE_EMAIL, SITE_URL } from "@/src/lib/utils";
 
-const url = `${SITE_URL}/fractional-cto`;
+const url = `${SITE_URL}/automazione-processi-aziendali`;
 
 export const metadata: Metadata = {
-    title: { absolute: "Fractional CTO in Italia per Startup e PMI | Federico Tassara" },
+    title: { absolute: "Automazione Processi Aziendali per PMI | Federico Tassara" },
     description:
-        "Fractional CTO part-time per startup e PMI italiane: scelte tecnologiche, roadmap, due diligence, hiring e audit di progetti esistenti. Remote-first.",
+        "Automatizzo processi aziendali con n8n e integrazioni API su misura: gestionale, e-commerce, CRM e agenti AI. Per PMI italiane che vogliono togliere lavoro manuale ripetitivo.",
     alternates: { canonical: url },
     openGraph: {
-        title: "Fractional CTO in Italia per Startup e PMI",
+        title: "Automazione Processi Aziendali per PMI",
         description:
-            "CTO part-time on-demand: scelte tecnologiche, roadmap, due diligence, hiring tech e audit.",
+            "Workflow n8n, integrazioni API tra gestionale ed e-commerce, agenti AI: meno lavoro manuale, meno errori di trascrizione.",
         url,
         type: "website",
         images: [`${SITE_URL}/opengraph-image`],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Fractional CTO in Italia per Startup e PMI",
+        title: "Automazione Processi Aziendali per PMI",
         description:
-            "CTO part-time on-demand: scelte tecnologiche, roadmap, due diligence, hiring tech e audit.",
+            "Workflow n8n, integrazioni API tra gestionale ed e-commerce, agenti AI: meno lavoro manuale, meno errori di trascrizione.",
     },
 };
 
-const RESPONSIBILITIES = [
-    {
-        icon: Compass,
-        title: "Scelte tecnologiche e architetturali",
-        desc: "Definisco lo stack giusto per il prodotto e la fase aziendale, evitando over-engineering e debito tecnico precoce.",
-    },
-    {
-        icon: Layers,
-        title: "Roadmap tecnica trimestrale",
-        desc: "Trasformo gli obiettivi di business in milestone tecniche misurabili, con scope, dipendenze e rischi espliciti.",
-    },
-    {
-        icon: Users,
-        title: "Hiring e gestione del team tech",
-        desc: "Definisco profili, conduco colloqui tecnici, struttura il team e processi di lavoro per scalare senza caos.",
-    },
-    {
-        icon: Target,
-        title: "Due diligence pre-investimento",
-        desc: "Audit di codice, architettura e processi per investitori o acquirenti: report scritto con findings e raccomandazioni.",
-    },
+const CAPABILITIES = [
     {
         icon: Workflow,
-        title: "Process e cadence",
-        desc: "Imposto sprint, retrospective, code review, deployment e monitoraggio. Lascio una macchina che funziona dopo l'ingaggio.",
+        title: "Workflow con n8n",
+        desc: "Automazioni che collegano CRM, email, calendario e database. Ogni passaggio resta ispezionabile: vedi cosa è passato, cosa è fallito e perché.",
     },
     {
-        icon: BookOpen,
-        title: "Mentoring tech lead",
-        desc: "Affianco tech lead o senior engineer interni nelle decisioni critiche e nella crescita del ruolo.",
+        icon: PlugZap,
+        title: "Integrazioni API su misura",
+        desc: "Quando i connettori pronti non bastano, scrivo l'integrazione. Gestionali che espongono API parziali, formati proprietari, sistemi legacy senza documentazione.",
+    },
+    {
+        icon: Database,
+        title: "Sincronizzazione gestionale ed e-commerce",
+        desc: "Anagrafiche, giacenze, ordini e fatture allineati tra i due sistemi, con gestione dei conflitti e dei casi in cui uno dei due non risponde.",
+    },
+    {
+        icon: FileSpreadsheet,
+        title: "Uscita dai fogli di calcolo",
+        desc: "Quando un Excel condiviso diventa il gestionale di fatto, lo sostituisco con qualcosa che regge più utenti insieme e conserva lo storico.",
+    },
+    {
+        icon: Bot,
+        title: "Agenti AI su processi reali",
+        desc: "Classificazione documenti, estrazione dati da PDF, smistamento richieste. Con validazione dell'output e una persona che controlla dove la decisione pesa.",
+    },
+    {
+        icon: LineChart,
+        title: "Reportistica automatica",
+        desc: "Report ricorrenti che si generano e si recapitano da soli, costruiti sui dati che già hai invece che su un'esportazione manuale mensile.",
     },
 ];
 
-const WHEN_YOU_NEED = [
+const SIGNALS = [
     {
-        title: "Hai un'idea senza co-founder tecnico",
-        desc: "Validi un MVP, gestisci provider esterni, presenti agli investitori — senza dover assumere subito un CTO full-time.",
+        title: "Qualcuno ricopia dati da un sistema all'altro",
+        desc: "Ordini dall'e-commerce al gestionale, anagrafiche dal CRM alla fatturazione. Ogni trascrizione manuale è tempo speso e un errore che aspetta di succedere.",
     },
     {
-        title: "Stai preparando un round di investimento",
-        desc: "Investitori seri richiedono due diligence tecnica. Un Fractional CTO la guida e ti aiuta a chiudere il round.",
+        title: "Il file Excel è diventato critico",
+        desc: "Ci lavorano in cinque, esiste in tre versioni, e nessuno sa quale sia quella buona. Il momento di sostituirlo è passato da un po'.",
     },
     {
-        title: "Il team tech è cresciuto in fretta",
-        desc: "5-15 sviluppatori, processi improvvisati, decisioni in stallo: serve qualcuno che imponga struttura senza fermare la velocità.",
+        title: "I report li prepara una persona a mano",
+        desc: "Due giorni al mese per esportare, incollare e formattare. Un lavoro che il sistema può fare da solo mentre nessuno lo guarda.",
     },
     {
-        title: "Decisioni di architettura che pesano per anni",
-        desc: "Microservizi vs monolite, cloud provider, monorepo, replatforming: scelte da fare con esperienza, non per tentativi.",
+        title: "Il gestionale non parla con il resto",
+        desc: "Il fornitore dice che l'integrazione non è prevista, oppure la quota a listino supera il valore del processo. Spesso l'API c'è e nessuno l'ha mai usata.",
     },
     {
-        title: "Devi rimpiazzare un CTO uscente",
-        desc: "Copertura del ruolo e knowledge transfer mentre l'azienda cerca il sostituto stabile.",
+        title: "Le richieste dei clienti arrivano ovunque",
+        desc: "Email, WhatsApp, modulo del sito, telefono. Nessun punto unico, nessuno storico, e le cose che si perdono le scopri dai reclami.",
     },
     {
-        title: "Hai dubbi sulla qualità del prodotto attuale",
-        desc: "Audit indipendente dello stato del codice, infrastruttura e team, con piano d'azione concreto.",
+        title: "Hai provato con un tool no-code e si è rotto",
+        desc: "Funzionava finché il volume era basso. Sui casi limite ha ceduto, e adesso nessuno sa dove guardare quando un passaggio salta.",
     },
 ];
 
-const ENGAGEMENT = [
+const PROCESS = [
     {
         n: "01",
-        title: "Discovery call gratuita",
-        desc: "30 minuti per capire contesto, esigenze e se siamo allineati.",
+        title: "Mappatura del processo",
+        desc: "Guardo come funziona oggi, chi fa cosa e dove si perde tempo. Spesso il candidato migliore non è quello che immaginavi.",
     },
     {
         n: "02",
-        title: "Audit iniziale (2-4 settimane)",
-        desc: "Analisi prodotto, codice, team, infrastruttura. Report con findings e piano prioritario.",
+        title: "Stima e priorità",
+        desc: "Per ogni automazione: ore risparmiate al mese, costo di realizzazione, rischio. Partiamo da quella con il rapporto migliore.",
     },
     {
         n: "03",
-        title: "Ingaggio continuativo",
-        desc: "1-3 giorni/settimana o pacchetto mensile. Standup ricorrenti, revisione roadmap, supporto decisionale.",
+        title: "Prima automazione in produzione",
+        desc: "Un processo completo, funzionante e monitorato. Serve a verificare il ritorno su un caso reale prima di allargare.",
     },
     {
         n: "04",
-        title: "Exit pianificata",
-        desc: "Knowledge transfer e onboarding del CTO interno o handoff al team, quando l'azienda è pronta.",
+        title: "Estensione e autonomia",
+        desc: "Si aggiungono i processi successivi e ti lascio in grado di modificare i workflow senza dipendere da me per ogni cambiamento.",
     },
 ];
 
 const FAQ = [
     {
-        q: "Cos'è esattamente un Fractional CTO?",
-        a: "Un Fractional CTO è un Chief Technology Officer part-time o on-demand che porta esperienza senior in azienda senza il costo di un CTO full-time. Si occupa di scelte tecnologiche, architettura, hiring del team tech, due diligence e roadmap di prodotto. Tipicamente lavora 1-3 giorni a settimana o su ingaggi mensili a forfait.",
+        q: "Quali processi aziendali conviene automatizzare per primi?",
+        a: "Quelli ripetitivi, con regole stabili e un volume misurabile: trasferimento dati tra sistemi, generazione e invio di report ricorrenti, notifiche su eventi, sincronizzazione anagrafiche. Il criterio pratico è il rapporto tra ore risparmiate al mese e ore di lavoro per costruirlo. I processi con molte eccezioni e decisioni discrezionali danno un ritorno peggiore e conviene affrontarli dopo.",
     },
     {
-        q: "Quando una startup ha bisogno di un Fractional CTO?",
-        a: "Quando hai un'idea ma nessun co-founder tecnico, prima di un round di investimento (per due diligence), durante una crescita rapida del team tech, o quando devi prendere decisioni di architettura che impatteranno i prossimi 2-3 anni di prodotto.",
+        q: "Quanto costa automatizzare un processo aziendale?",
+        a: "Un'automazione singola tra due sistemi che espongono API funzionanti si colloca indicativamente tra 1.500 e 5.000 euro. Il costo cresce quando il gestionale non ha API e serve un'integrazione su misura, quando i dati vanno ripuliti prima di poterli spostare, o quando il processo ha molte diramazioni. La stima si fa dopo la mappatura, mai prima.",
     },
     {
-        q: "Quanto costa un Fractional CTO in Italia?",
-        a: "Le tariffe in Italia variano indicativamente tra €120 e €250/ora, oppure con pacchetti mensili da €3.000 a €15.000 in base a giorni/settimana e seniority. Per startup early-stage esistono modelli misti equity + cash ridotto.",
+        q: "Perché n8n invece di Zapier o Make?",
+        a: "n8n si può installare sui tuoi server, quindi i dati aziendali non transitano da una piattaforma esterna: per chi tratta dati di clienti sotto GDPR è spesso il fattore decisivo. Il costo non cresce con il numero di esecuzioni, il che cambia il conto sui volumi alti. E dove serve una logica che nessun connettore copre, si scrive codice dentro il workflow.",
     },
     {
-        q: "Quanti giorni a settimana lavora un Fractional CTO?",
-        a: "Tipicamente da 0,5 a 3 giorni a settimana, con momenti di alta intensità (es. due diligence o lancio di prodotto) e fasi più leggere. Il modello si adatta alla fase dell'azienda.",
+        q: "Il mio gestionale non ha le API: si può fare qualcosa?",
+        a: "Nella maggior parte dei casi sì, e la prima cosa da verificare è se le API esistano davvero: molti gestionali le hanno e non le documentano, o le attivano su richiesta. Quando non ci sono restano l'esportazione programmata di file, l'accesso diretto al database in sola lettura o il ponte tramite un modulo del fornitore. Ognuna porta vincoli diversi, e vanno valutate sul sistema specifico.",
     },
     {
-        q: "Cosa fa un Fractional CTO nelle prime settimane?",
-        a: "Tipicamente nelle prime 2-4 settimane si fa audit dello stato attuale (codice, infrastruttura, team), si allineano roadmap tecnica e roadmap di business, si identificano i rischi prioritari e si definisce un piano di intervento misurabile.",
+        q: "Che differenza c'è tra un'automazione e un agente AI?",
+        a: "Un'automazione esegue regole che hai definito: se arriva questo, fai quello. Il comportamento è prevedibile e ripetibile. Un agente AI interpreta input non strutturati (un'email, un PDF, una richiesta scritta a mano libera) e decide cosa fare. Serve dove le regole fisse non bastano, e in cambio richiede validazione dell'output e supervisione umana sulle decisioni che contano.",
     },
     {
-        q: "Funziona anche se ho già un team tech interno?",
-        a: "Sì, è uno scenario molto comune. Il Fractional CTO non sostituisce il team ma lo affianca: porta esperienza esterna, sblocca decisioni in stallo, fa mentoring ai tech lead e tiene una visione integrata con il business.",
+        q: "Quanto tempo serve per vedere il primo risultato?",
+        a: "La mappatura richiede pochi giorni. La prima automazione in produzione arriva di solito entro due o quattro settimane, a seconda di quanto siano accessibili i sistemi coinvolti. Preferisco portare un processo completo in produzione presto, invece di progettare per mesi una piattaforma che nessuno ha ancora provato.",
     },
     {
-        q: "Come si esce dall'ingaggio?",
-        a: "L'obiettivo è rendere l'azienda autonoma. L'exit prevede knowledge transfer documentato, onboarding del CTO interno se viene assunto, o handoff al team. La durata tipica di un ingaggio Fractional CTO è 6-18 mesi.",
+        q: "Cosa succede quando un'automazione si rompe?",
+        a: "Ogni workflow che consegno ha registrazione delle esecuzioni e notifica sugli errori, quindi il fallimento arriva a qualcuno invece di restare silenzioso. I passaggi verso sistemi esterni prevedono ritentativi, e i casi che restano bloccati finiscono in una coda visibile da riprendere a mano. Un'automazione che fallisce senza avvisare è peggiore del lavoro manuale che ha sostituito.",
     },
 ];
 
@@ -149,7 +149,7 @@ const breadcrumbSchema = {
     "@id": `${url}#breadcrumb`,
     itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "Fractional CTO", item: url },
+        { "@type": "ListItem", position: 2, name: "Automazione processi aziendali", item: url },
     ],
 };
 
@@ -157,13 +157,13 @@ const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${url}#service`,
-    name: "Fractional CTO in Italia",
+    name: "Automazione processi aziendali",
     description:
-        "Servizio di Fractional CTO part-time per startup e PMI italiane: scelte tecnologiche, roadmap, due diligence, hiring tech e audit.",
+        "Automazione di processi aziendali per PMI italiane: workflow n8n, integrazioni API tra gestionale, e-commerce e CRM, agenti AI su processi documentali.",
     url,
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: { "@type": "Country", name: "Italia" },
-    serviceType: "Fractional CTO",
+    serviceType: "Automazione processi aziendali",
     inLanguage: "it-IT",
     audience: { "@type": "BusinessAudience" },
 };
@@ -182,28 +182,38 @@ const faqSchema = {
 
 const RELATED_POSTS = [
     {
-        href: "/blog/quando-serve-fractional-cto",
-        title: "Quando serve un Fractional CTO (e quando no)",
-        desc: "Gli scenari concreti in cui ha senso, e i casi in cui è la scelta sbagliata.",
+        href: "/blog/automazioni-processi-pmi-cosa-conviene",
+        title: "Automazioni per PMI: quali processi conviene automatizzare",
+        desc: "Come si sceglie il primo processo da automatizzare e come si stima il ritorno.",
     },
     {
-        href: "/blog/cosa-fa-fractional-cto",
-        title: "Cosa fa concretamente un Fractional CTO",
-        desc: "Attività e deliverable settimana per settimana, oltre i titoli astratti.",
+        href: "/blog/integrare-gestionale-ecommerce-api",
+        title: "Integrare gestionale ed e-commerce con le API",
+        desc: "Cosa sincronizzare, in che direzione, e come gestire i conflitti tra i due sistemi.",
     },
     {
-        href: "/blog/quanto-costa-fractional-cto-italia",
-        title: "Quanto costa un Fractional CTO in Italia nel 2026",
-        desc: "Range reali, modelli di engagement e confronto onesto con un CTO full-time.",
+        href: "/blog/agenti-ai-pmi-cosa-sono-da-dove-partire",
+        title: "Agenti AI per PMI: cosa sono davvero e da dove partire",
+        desc: "Quali processi reggono un agente e quali continuano a richiedere una persona.",
     },
     {
-        href: "/blog/come-scegliere-fractional-cto",
-        title: "Come scegliere un Fractional CTO",
-        desc: "I criteri di valutazione che contano davvero e le domande da fare al primo incontro.",
+        href: "/blog/da-excel-a-software-su-misura-quando-fare-il-salto",
+        title: "Da Excel a software su misura: quando fare il salto",
+        desc: "I segnali che dicono che il foglio di calcolo ha esaurito il suo compito.",
+    },
+    {
+        href: "/blog/ritorno-software-su-misura-2026",
+        title: "Il ritorno del software su misura nel 2026",
+        desc: "Perché le aziende stanno rivalutando il custom rispetto ai gestionali a pacchetto.",
+    },
+    {
+        href: "/blog/prototipare-funzionalita-ai-app",
+        title: "Prototipare una funzionalità AI in un'app esistente",
+        desc: "Come verificare in fretta se l'AI risolve il problema, prima di investirci.",
     },
 ];
 
-export default function FractionalCTOPage() {
+export default function AutomazioneProcessiAziendaliPage() {
     return (
         <>
             <script
@@ -223,17 +233,18 @@ export default function FractionalCTOPage() {
                 <Container>
                     <div className="anim-fade-up max-w-3xl">
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                            Fractional CTO
+                            Automazione processi aziendali
                         </span>
                         <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
-                            Fractional CTO in Italia
+                            Automazione dei processi
                             <br />
-                            per Startup e PMI.
+                            aziendali per PMI.
                         </h1>
                         <p className="mt-6 text-lg leading-relaxed text-muted sm:text-xl">
-                            Porto esperienza senior come Chief Technology Officer part-time, on-demand
-                            o in modalità mista: scelte tecnologiche, roadmap, due diligence, hiring
-                            tech e audit di progetti esistenti. Remote-first, basato in Italia.
+                            Collego i sistemi che oggi non si parlano e tolgo dal tavolo il lavoro
+                            manuale ripetitivo: workflow con n8n, integrazioni API tra gestionale,
+                            e-commerce e CRM, agenti AI sui processi documentali. Si parte da un
+                            processo solo, misurando quanto restituisce.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-3">
                             <Button href={CALENDLY_URL} external size="lg">
@@ -251,24 +262,24 @@ export default function FractionalCTOPage() {
                 <Container>
                     <div className="max-w-3xl">
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                            Cos’è un Fractional CTO
+                            Di cosa si tratta
                         </span>
                         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                            Un CTO senior, ma a frazione del costo.
+                            Meno trascrizioni, meno errori.
                         </h2>
                         <p className="mt-5 text-lg leading-relaxed text-muted">
-                            Un <strong className="font-semibold text-ink">Fractional CTO</strong> è un
-                            Chief Technology Officer part-time o on-demand che porta esperienza senior
-                            in azienda senza il costo di un CTO full-time (che in Italia parte da
-                            €80k-150k/anno). Si occupa di scelte tecnologiche, architettura, hiring
-                            del team tech, due diligence e roadmap di prodotto. Lavora tipicamente da
-                            mezza giornata a tre giorni a settimana, in base alla fase dell’azienda.
+                            In quasi tutte le PMI con cui lavoro esiste almeno una persona che passa
+                            ore a spostare dati da un sistema all&apos;altro: ordini dall&apos;e-commerce al
+                            gestionale, anagrafiche dal CRM alla fatturazione, numeri da un&apos;esportazione
+                            a un foglio di calcolo. È lavoro che nessuno ha scelto di fare, nato dal
+                            fatto che due software non si parlano.
                         </p>
                         <p className="mt-4 text-lg leading-relaxed text-muted">
-                            È la soluzione adatta per startup pre-seed e seed che non possono ancora
-                            permettersi un CTO interno, per PMI che hanno un team tech ma non una
-                            leadership tecnica strutturata, e per aziende in transizione (round di
-                            investimento, M&A, sostituzione CTO).
+                            <strong className="font-semibold text-ink">Automatizzare un processo</strong>{" "}
+                            significa far fare quel trasferimento al sistema, con controlli sui dati e
+                            un avviso quando qualcosa non torna. Il guadagno immediato sono le ore
+                            liberate; quello che pesa di più nel tempo è la sparizione degli errori di
+                            trascrizione, che oggi si scoprono a valle e costano molto più del tempo.
                         </p>
                     </div>
                 </Container>
@@ -278,14 +289,14 @@ export default function FractionalCTOPage() {
                 <Container>
                     <div className="max-w-3xl">
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                            Quando ti serve
+                            Quando serve
                         </span>
                         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                            Sei scenari in cui ha senso.
+                            Sei situazioni ricorrenti.
                         </h2>
                     </div>
                     <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                        {WHEN_YOU_NEED.map((s, i) => (
+                        {SIGNALS.map((s, i) => (
                             <div
                                 key={s.title}
                                 className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7"
@@ -306,15 +317,15 @@ export default function FractionalCTOPage() {
                             Cosa faccio
                         </span>
                         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                            Sei aree di responsabilità.
+                            Sei aree di intervento.
                         </h2>
                     </div>
                     <div className="mt-12 grid gap-5 md:grid-cols-2">
-                        {RESPONSIBILITIES.map((r, i) => {
-                            const Icon = r.icon;
+                        {CAPABILITIES.map((c, i) => {
+                            const Icon = c.icon;
                             return (
                                 <div
-                                    key={r.title}
+                                    key={c.title}
                                     className="anim-fade-up flex gap-4 rounded-2xl border border-ink/8 bg-white p-7"
                                     style={{ animationDelay: `${i * 50}ms` }}
                                 >
@@ -322,9 +333,9 @@ export default function FractionalCTOPage() {
                                         <Icon className="size-5" />
                                     </span>
                                     <div>
-                                        <h3 className="text-base font-bold text-ink">{r.title}</h3>
+                                        <h3 className="text-base font-bold text-ink">{c.title}</h3>
                                         <p className="mt-2 text-[15px] leading-relaxed text-muted">
-                                            {r.desc}
+                                            {c.desc}
                                         </p>
                                     </div>
                                 </div>
@@ -338,22 +349,22 @@ export default function FractionalCTOPage() {
                 <Container>
                     <div className="max-w-3xl">
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                            Come lavoriamo insieme
+                            Come si procede
                         </span>
                         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                            Quattro fasi, zero ambiguità.
+                            Un processo alla volta.
                         </h2>
                     </div>
                     <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                        {ENGAGEMENT.map((e, i) => (
+                        {PROCESS.map((p, i) => (
                             <div
-                                key={e.n}
+                                key={p.n}
                                 className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7"
                                 style={{ animationDelay: `${i * 60}ms` }}
                             >
-                                <span className="text-sm font-bold text-muted">{e.n}</span>
-                                <h3 className="mt-3 text-xl font-bold text-ink">{e.title}</h3>
-                                <p className="mt-3 text-[15px] leading-relaxed text-muted">{e.desc}</p>
+                                <span className="text-sm font-bold text-muted">{p.n}</span>
+                                <h3 className="mt-3 text-xl font-bold text-ink">{p.title}</h3>
+                                <p className="mt-3 text-[15px] leading-relaxed text-muted">{p.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -365,26 +376,26 @@ export default function FractionalCTOPage() {
                     <div className="grid gap-12 lg:grid-cols-2">
                         <div>
                             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
-                                Background
+                                Come lavoro
                             </span>
                             <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-                                Chi sono e perché potrei essere il match giusto.
+                                Automazioni che qualcuno può mantenere dopo di me.
                             </h2>
                         </div>
                         <div>
                             <p className="text-base leading-relaxed text-white/80 sm:text-lg">
                                 Sono <strong className="font-semibold text-white">Federico Tassara</strong>,
-                                sviluppatore Full Stack freelance con esperienza in startup, PMI e
-                                progetti enterprise. Founder e Fractional CTO di Oraloco, ho lavorato
-                                con stack moderni (React, Next.js, React Native, Node.js, Laravel) e
-                                ho seguito prodotti dall’idea al rilascio in più verticali.
+                                sviluppatore full stack e Fractional CTO. Costruisco automazioni con
+                                lo stesso criterio con cui scrivo software di produzione: registrate,
+                                monitorate e documentate, perché un workflow che nessuno sa leggere
+                                diventa un problema appena cambia qualcosa a monte.
                             </p>
                             <ul className="mt-6 space-y-3">
                                 {[
-                                    "Esperienza diretta come founder tecnico",
-                                    "Capacità di parlare sia con team tecnici che con business e investor",
-                                    "Approccio pragmatico, niente over-engineering",
-                                    "Trasparenza sulle scelte, sui tempi e sui rischi",
+                                    "Parto dal processo esistente, non dallo strumento",
+                                    "Stima del ritorno prima di scrivere il primo workflow",
+                                    "Registrazione delle esecuzioni e notifica sugli errori",
+                                    "Ti lascio in grado di modificare i workflow da solo",
                                 ].map((p) => (
                                     <li key={p} className="flex items-start gap-3 text-white/80">
                                         <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-white" />
@@ -448,7 +459,7 @@ export default function FractionalCTOPage() {
                             Dal blog.
                         </h2>
                     </div>
-                    <div className="mt-12 grid gap-6 sm:grid-cols-3">
+                    <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {RELATED_POSTS.map((p, i) => (
                             <Link
                                 key={p.href}
@@ -474,11 +485,12 @@ export default function FractionalCTOPage() {
                         <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
                             <div>
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl md:leading-[1.05]">
-                                    Parliamone in 30 minuti.
+                                    Partiamo da un processo.
                                 </h2>
                                 <p className="mt-5 max-w-lg text-base text-white/70 sm:text-lg">
-                                    Discovery call gratuita per capire la fase dell’azienda, il
-                                    contesto tecnico e se ha senso lavorare insieme.
+                                    Call gratuita di 30 minuti: mi racconti dove si perde più tempo
+                                    oggi e ti dico se ha senso automatizzarlo, con una stima di
+                                    massima.
                                 </p>
                             </div>
                             <div className="flex flex-wrap gap-3 lg:justify-end">

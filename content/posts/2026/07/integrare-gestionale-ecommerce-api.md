@@ -43,7 +43,7 @@ Da tre sistemi in su conviene valutare un **middleware**: un livello centrale a 
 
 "Voglio tutto sincronizzato in tempo reale" è la richiesta istintiva, ed è quasi sempre più costosa del necessario. Il tempo reale (via webhook, quando un sistema notifica l'altro nell'istante in cui un dato cambia) è più caro da costruire e più fragile da mantenere. E per la maggior parte dei dati non serve: un'anagrafica cliente o un listino aggiornati ogni pochi minuti, o anche ogni notte, vanno benissimo.
 
-Il criterio è il costo del ritardo. Riserva il tempo reale ai dati dove un ritardo ha una conseguenza concreta — tipicamente le **giacenze durante le vendite**, dove vendere qualcosa che non hai è un danno immediato — e sincronizza tutto il resto in modo schedulato. Distinguere i due casi, invece di trattare tutto come urgente, è una delle leve che abbassano di più il costo di un'integrazione senza toglierti nulla di utile. Spesso questi flussi schedulati sono, a tutti gli effetti, [automazioni di processo](/servizi/automazioni) che tolgono lavoro manuale ripetitivo alle persone.
+Il criterio è il costo del ritardo. Riserva il tempo reale ai dati dove un ritardo ha una conseguenza concreta — tipicamente le **giacenze durante le vendite**, dove vendere qualcosa che non hai è un danno immediato — e sincronizza tutto il resto in modo schedulato. Distinguere i due casi, invece di trattare tutto come urgente, è una delle leve che abbassano di più il costo di un'integrazione senza toglierti nulla di utile. Spesso questi flussi schedulati sono, a tutti gli effetti, [automazioni di processo](/automazione-processi-aziendali) che tolgono lavoro manuale ripetitivo alle persone.
 
 ## Quando il gestionale non ha API
 
