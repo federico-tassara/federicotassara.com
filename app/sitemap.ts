@@ -19,7 +19,12 @@ function fileModified(...relativePaths: string[]): Date {
     let latest = 0;
     for (const rel of relativePaths) {
         try {
-            const mtime = fs.statSync(path.join(process.cwd(), rel)).mtimeMs;
+            // The paths are read only while generating the static sitemap. Tell
+            // Turbopack not to treat the dynamic `rel` value as a request to
+            // include the whole repository in the server file trace.
+            const mtime = fs.statSync(
+                path.join(/* turbopackIgnore: true */ process.cwd(), rel),
+            ).mtimeMs;
             if (mtime > latest) latest = mtime;
         } catch {
             // ignore missing files
