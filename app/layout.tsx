@@ -40,6 +40,10 @@ export const metadata: Metadata = {
     },
     alternates: { canonical: SITE_URL },
     robots: { index: true, follow: true },
+    other: {
+        "akintu-site-verification":
+            "akv_8198aa0ee8875009b4c49a0d94c596cd64eecb7806c6d92c",
+    },
 };
 
 export const viewport: Viewport = {

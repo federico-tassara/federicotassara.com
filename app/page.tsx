@@ -7,6 +7,7 @@ import { Button } from "@/src/components/ui/Button";
 import { SectionTitle } from "@/src/components/ui/SectionTitle";
 import { ServiceCard } from "@/src/components/ui/ServiceCard";
 import { ClientsMarquee } from "@/src/components/ui/ClientsMarquee";
+import { HeroAkintuWidget } from "@/src/components/akintu/HeroAkintuWidget";
 import { SERVICES } from "@/src/lib/services";
 import { CALENDLY_URL, SITE_URL } from "@/src/lib/utils";
 import { getAllPosts } from "@/src/lib/posts";
@@ -81,9 +82,13 @@ export default function Home() {
                                 Scopri i servizi
                             </Button>
                         </div>
+
+                        <div className="anim-fade-up anim-delay-400 mx-auto mt-10 max-w-2xl">
+                            <HeroAkintuWidget />
+                        </div>
                     </div>
 
-                    <div className="anim-fade-up anim-delay-500 mt-16 grid gap-4 sm:mt-20 sm:grid-cols-3">
+                    <div className="anim-fade-up anim-delay-500 mt-12 grid gap-4 sm:mt-16 sm:grid-cols-3">
                         <StatItem value="6+" label="Anni di esperienza" />
                         <StatItem value="50+" label="Progetti realizzati" />
                         <StatItem value="20+" label="Startup e PMI supportate" />
