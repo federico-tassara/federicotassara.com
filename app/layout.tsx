@@ -1,14 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
 import { SITE_URL } from "@/src/lib/utils";
 
-const montserrat = Montserrat({
-    subsets: ["latin"],
+const montserrat = localFont({
+    src: "../node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2",
     display: "swap",
-    weight: ["300", "400", "500", "600", "700", "800"],
+    weight: "100 900",
+    style: "normal",
     variable: "--font-montserrat",
 });
 
