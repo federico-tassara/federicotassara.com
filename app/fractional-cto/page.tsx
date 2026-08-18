@@ -18,31 +18,31 @@ import { getCalendlyUrl, SITE_URL } from "@/src/lib/utils";
 const url = `${SITE_URL}/fractional-cto`;
 
 export const metadata: Metadata = {
-    title: { absolute: "Fractional CTO per Startup in Italia | Federico Tassara" },
+    title: { absolute: "Fractional CTO per Progetti, Startup e PMI | Federico Tassara" },
     description:
-        "Fractional CTO per founder di startup: roadmap tecnica, team, architettura e due diligence. Da €3.000/mese, remote-first in Italia.",
+        "Fractional CTO per trasformare un progetto in un prodotto sostenibile: strategia, roadmap, architettura e guida tecnica per startup, PMI e imprese.",
     alternates: { canonical: url },
     openGraph: {
-        title: "Fractional CTO per Startup in Italia",
+        title: "Fractional CTO per Progetti, Startup e PMI",
         description:
-            "Leadership tecnica part-time per trasformare priorità di business in roadmap, decisioni e un team più autonomo.",
+            "Una guida tecnica senior per trasformare un progetto in roadmap, decisioni e un prodotto sostenibile.",
         url,
         type: "website",
         images: [`${SITE_URL}/opengraph-image`],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Fractional CTO per Startup in Italia",
+        title: "Fractional CTO per Progetti, Startup e PMI",
         description:
-            "Leadership tecnica part-time per roadmap, architettura, team e due diligence.",
+            "Leadership tecnica part-time per strategia, roadmap, architettura e team.",
     },
 };
 
 const RESPONSIBILITIES = [
     {
         icon: Compass,
-        title: "Decisioni tecniche legate al runway",
-        desc: "Valuto stack, build-or-buy e architettura in base a obiettivi, vincoli e capitale disponibile, con decisioni documentate.",
+        title: "Decisioni tecniche legate a budget e priorità",
+        desc: "Valuto stack, build-or-buy e architettura in base a obiettivi, vincoli e risorse disponibili, con decisioni documentate.",
     },
     {
         icon: Layers,
@@ -73,12 +73,12 @@ const RESPONSIBILITIES = [
 
 const WHEN_YOU_NEED = [
     {
-        title: "Non hai un co-founder tecnico",
-        desc: "Devi validare il prodotto, scegliere partner e controllare lo sviluppo senza assumere subito un CTO full-time.",
+        title: "Hai un progetto ma non una guida tecnica",
+        desc: "Devi capire cosa costruire, scegliere partner e controllare lo sviluppo senza assumere subito un CTO full-time.",
     },
     {
-        title: "Ti prepari a un round o a una due diligence",
-        desc: "Vuoi arrivare al confronto con architettura, rischi, costi e roadmap documentati, senza promesse che il prodotto non può sostenere.",
+        title: "La tua PMI sta lanciando un prodotto digitale",
+        desc: "Vuoi collegare obiettivi aziendali, processi e tecnologia prima di impegnare budget e persone nello sviluppo.",
     },
     {
         title: "Il team è cresciuto più dei processi",
@@ -122,8 +122,8 @@ const ENGAGEMENT = [
 ];
 
 const FIT = [
-    "Sei un founder o un decisore e puoi condividere obiettivi, budget e vincoli reali",
-    "Hai un prodotto in validazione o crescita, con team interno o partner di sviluppo",
+    "Hai un progetto concreto e puoi condividere obiettivi, budget e vincoli reali",
+    "Sei una startup, una PMI, un'impresa o un professionista con un prodotto da validare o far crescere",
     "Cerchi una persona responsabile delle decisioni tecniche, non soltanto un advisor occasionale",
 ];
 
@@ -133,39 +133,18 @@ const NOT_FIT = [
     "Ti serve la garanzia di chiudere un round o azzerare ogni rischio tecnico",
 ];
 
-const PRICING = [
-    {
-        name: "Advisory operativo",
-        commitment: "Da mezza giornata a settimana",
-        price: "€3.000–€4.000/mese",
-        desc: "Per founder con un team autonomo che hanno bisogno di confronto senior, decisioni e controllo periodico della roadmap.",
-    },
-    {
-        name: "Fractional CTO",
-        commitment: "Da uno a due giorni a settimana",
-        price: "€5.000–€8.000/mese",
-        desc: "Per prendere ownership di roadmap, architettura, team, hiring e relazione tra tecnologia e business.",
-    },
-    {
-        name: "Audit iniziale",
-        commitment: "Progetto di 2–4 settimane",
-        price: "€4.000–€10.000 una tantum",
-        desc: "Per ottenere una baseline indipendente, rischi prioritari e un piano eseguibile prima di decidere l'ingaggio.",
-    },
-];
-
 const FAQ = [
     {
         q: "Cos'è esattamente un Fractional CTO?",
         a: "Un Fractional CTO assume una parte definita della leadership tecnica senza entrare subito in azienda a tempo pieno. Collega obiettivi di business, roadmap, architettura, team e budget; documenta decisioni e rischi e prepara l'azienda a diventare autonoma.",
     },
     {
-        q: "Quando una startup ha bisogno di un Fractional CTO?",
-        a: "Quando il founder deve controllare sviluppo e fornitori senza un co-founder tecnico, quando team e processi non crescono allo stesso ritmo o prima di una decisione ad alto impatto, di un round o di una due diligence. Se serve soltanto capacità di sviluppo aggiuntiva, non è il servizio giusto.",
+        q: "A chi serve un Fractional CTO?",
+        a: "A chi ha un progetto tecnologico ma non una leadership tecnica continuativa: può essere il founder di una startup, una PMI che sta digitalizzando un processo, un'impresa che lancia un nuovo prodotto o un team che deve prendere una decisione ad alto impatto. Se serve soltanto capacità di sviluppo aggiuntiva, non è il servizio giusto.",
     },
     {
         q: "Quanto costa un Fractional CTO in Italia?",
-        a: "I miei ingaggi continuativi partono da €3.000–€4.000 al mese per advisory operativo e arrivano indicativamente a €5.000–€8.000 al mese per un ruolo Fractional CTO da uno a due giorni a settimana. Un audit iniziale di 2–4 settimane è normalmente tra €4.000 e €10.000. Gli importi sono IVA esclusa e lo scope viene definito prima dell'avvio.",
+        a: "Non applico un listino unico: l'investimento dipende dal problema, dalle responsabilità e dalla presenza di un team interno o di fornitori. Dopo la prima call propongo un perimetro chiaro, una cadenza e un preventivo. Se basta un audit o un intervento circoscritto, non propongo un ingaggio continuativo.",
     },
     {
         q: "Quanti giorni a settimana lavora un Fractional CTO?",
@@ -199,9 +178,9 @@ const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${url}#service`,
-    name: "Fractional CTO per startup in Italia",
+    name: "Fractional CTO per progetti, startup e PMI in Italia",
     description:
-        "Servizio di Fractional CTO per founder di startup: roadmap, architettura, team, hiring, due diligence e audit tecnico.",
+        "Servizio di Fractional CTO per guidare progetti tecnologici: strategia, roadmap, architettura, team, hiring, due diligence e audit tecnico.",
     url,
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: { "@type": "Country", name: "Italia" },
@@ -209,7 +188,7 @@ const serviceSchema = {
     inLanguage: "it-IT",
     audience: {
         "@type": "BusinessAudience",
-        audienceType: "Founder di startup e scaleup",
+        audienceType: "Startup, PMI, imprese e professionisti con un progetto tecnologico",
     },
 };
 
@@ -251,28 +230,28 @@ export default function FractionalCTOPage() {
                 <Container>
                     <div className="anim-fade-up max-w-4xl">
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                            Fractional CTO per founder
+                            Fractional CTO per progetti, startup e PMI
                         </span>
                         <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
-                            Fractional CTO per startup: decisioni tecniche senza assumere subito un CTO full-time.
+                            Fractional CTO per trasformare il tuo progetto in un prodotto tecnologico sostenibile.
                         </h1>
                         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">
-                            Affianco founder pre-seed, seed e startup in crescita per trasformare priorità di business in una roadmap eseguibile, guidare team e fornitori e rendere visibili i rischi prima che consumino runway.
+                            Che tu sia un founder, una PMI, un’impresa o un professionista con un’idea concreta, ti affianco per definire la strategia tecnica, costruire una roadmap eseguibile e guidare team e fornitori senza assumere subito un CTO full-time.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-3">
                             <Button href={getCalendlyUrl("hero")} external size="lg">
-                                Verifica il fit in 30 minuti
+                                Parliamo del tuo progetto
                             </Button>
-                            <Button href="#prezzi" variant="outline" size="lg">
-                                Vedi modalità e prezzi
+                            <Button href="#come-lavoriamo" variant="outline" size="lg">
+                                Come funziona
                             </Button>
                         </div>
                         <p className="mt-4 text-sm text-muted">
-                            Call gratuita, senza proposta preconfezionata. Ingaggi continuativi da €3.000/mese.
+                            Call gratuita, senza proposta preconfezionata. Capiamo insieme quale guida tecnica serve davvero al progetto.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-ink/10 pt-6 text-sm font-medium text-ink-soft">
                             <span>Partner tecnico AKINTU</span>
-                            <span>Esperienza diretta da founder tecnico</span>
+                            <span>Progetti con startup, PMI e imprese</span>
                             <span>Remote-first · Italia</span>
                         </div>
                     </div>
@@ -292,7 +271,7 @@ export default function FractionalCTOPage() {
                             Un <strong className="font-semibold text-ink">Fractional CTO</strong> assume una parte definita della leadership tecnica: collega roadmap di prodotto, architettura, team e budget senza richiedere subito un’assunzione full-time. Il punto non è aggiungere riunioni, ma creare decisioni documentate e responsabilità chiare.
                         </p>
                         <p className="mt-4 text-lg leading-relaxed text-muted">
-                            Nei primi 30 giorni costruisco una baseline di prodotto, codice, infrastruttura e team; evidenzio i rischi per impatto; allineo una roadmap a 90 giorni con owner e criteri di completamento. Il deliverable cambia in base alla fase, ma deve sempre permettere al founder di decidere meglio.
+                            Nei primi 30 giorni costruisco una baseline di prodotto, codice, infrastruttura e team; evidenzio i rischi per impatto; allineo una roadmap a 90 giorni con owner e criteri di completamento. Il deliverable cambia in base alla fase, ma deve sempre permettere a chi guida il progetto di decidere meglio.
                         </p>
                     </div>
                 </Container>
@@ -458,30 +437,6 @@ export default function FractionalCTOPage() {
                 </Container>
             </section>
 
-            <section className="py-20 sm:py-24" id="prezzi">
-                <Container>
-                    <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Modalità e prezzi</span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">Un range prima della call, per non perdere tempo.</h2>
-                        <p className="mt-5 text-lg leading-relaxed text-muted">Il preventivo dipende da responsabilità, intensità e stato del prodotto. Questi sono i range indicativi che uso per capire subito se budget e aspettative sono compatibili.</p>
-                    </div>
-                    <div className="mt-12 grid gap-6 lg:grid-cols-3">
-                        {PRICING.map((item, i) => (
-                            <div key={item.name} className={`anim-fade-up rounded-2xl border p-7 ${i === 1 ? "border-ink bg-ink text-white" : "border-ink/8 bg-white text-ink"}`} style={{ animationDelay: `${i * 50}ms` }}>
-                                <h3 className="text-xl font-bold">{item.name}</h3>
-                                <p className={`mt-2 text-sm ${i === 1 ? "text-white/65" : "text-muted"}`}>{item.commitment}</p>
-                                <p className="mt-6 text-2xl font-bold">{item.price}</p>
-                                <p className={`mt-4 text-[15px] leading-relaxed ${i === 1 ? "text-white/75" : "text-muted"}`}>{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="mt-8 flex flex-wrap items-center gap-4">
-                        <Button href={getCalendlyUrl("pricing")} external size="lg">Verifica budget e fit</Button>
-                        <p className="max-w-xl text-sm leading-relaxed text-muted">Importi IVA esclusa. Attività di sviluppo estensive e fornitori terzi non sono inclusi; scope e condizioni vengono definiti prima dell’avvio.</p>
-                    </div>
-                </Container>
-            </section>
-
             <section className="py-20 sm:py-24" id="faq">
                 <Container size="sm">
                     <div className="max-w-3xl">
@@ -550,10 +505,10 @@ export default function FractionalCTOPage() {
                         <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
                             <div>
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl md:leading-[1.05]">
-                                    Capisci in 30 minuti se ti serve davvero un Fractional CTO.
+                                    Hai un progetto in mente? Capiamo quale guida tecnica gli serve.
                                 </h2>
                                 <p className="mt-5 max-w-lg text-base text-white/70 sm:text-lg">
-                                    Portami fase, obiettivo e problema più urgente. Ti restituisco una prima lettura del fit e del prossimo passo, anche quando non coincide con un mio ingaggio.
+                                    Raccontami obiettivo, contesto e problema più urgente. Ti restituisco una prima lettura del prossimo passo, anche quando non coincide con un mio ingaggio.
                                 </p>
                             </div>
                             <div className="flex flex-wrap gap-3 lg:justify-end">
@@ -563,15 +518,15 @@ export default function FractionalCTOPage() {
                                     size="lg"
                                     className="bg-white text-ink hover:bg-white/90"
                                 >
-                                    Verifica il fit
+                                    Parliamo del progetto
                                 </Button>
                                 <Button
-                                    href="#prezzi"
+                                    href="#come-lavoriamo"
                                     variant="outline"
                                     size="lg"
                                     className="border-white/25 text-white hover:border-white/50"
                                 >
-                                    Rivedi i prezzi
+                                    Come lavoro
                                 </Button>
                             </div>
                         </div>
