@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Workflow governato per un AI coding agent</title>
+  <desc id="desc">La specifica guida l'agente, che lavora in un ambiente isolato; test automatici e revisione umana precedono il rilascio e il monitoraggio.</desc>
+  <rect width="1200" height="630" rx="36" fill="#f5f3ee"/>
+  <text x="70" y="82" fill="#1c1f33" font-family="Arial, sans-serif" font-size="34" font-weight="700">La velocità serve solo se il percorso resta verificabile</text>
+  <g font-family="Arial, sans-serif">
+    <path d="M173 305H300M405 305H532M637 305H764M869 305H996" stroke="#7c3aed" stroke-width="6" stroke-linecap="round"/>
+    <g fill="none" stroke="#7c3aed" stroke-width="6" stroke-linejoin="round">
+      <path d="m286 289 18 16-18 16"/><path d="m518 289 18 16-18 16"/><path d="m750 289 18 16-18 16"/><path d="m982 289 18 16-18 16"/>
+    </g>
+    <g transform="translate(60 190)">
+      <rect width="220" height="230" rx="26" fill="#fff" stroke="#d9d6cf" stroke-width="3"/>
+      <text x="110" y="58" text-anchor="middle" fill="#7c3aed" font-size="20" font-weight="700">INPUT</text>
+      <text x="110" y="107" text-anchor="middle" fill="#1c1f33" font-size="23" font-weight="700">Specifica</text>
+      <text x="110" y="145" text-anchor="middle" fill="#4b5068" font-size="17">obiettivo, vincoli,</text>
+      <text x="110" y="172" text-anchor="middle" fill="#4b5068" font-size="17">criteri di accettazione</text>
+    </g>
+    <g transform="translate(292 190)">
+      <rect width="220" height="230" rx="26" fill="#fff" stroke="#d9d6cf" stroke-width="3"/>
+      <text x="110" y="58" text-anchor="middle" fill="#7c3aed" font-size="20" font-weight="700">ESECUZIONE</text>
+      <text x="110" y="107" text-anchor="middle" fill="#1c1f33" font-size="23" font-weight="700">Agente isolato</text>
+      <text x="110" y="145" text-anchor="middle" fill="#4b5068" font-size="17">branch dedicato,</text>
+      <text x="110" y="172" text-anchor="middle" fill="#4b5068" font-size="17">permessi minimi</text>
+    </g>
+    <g transform="translate(524 190)">
+      <rect width="220" height="230" rx="26" fill="#fff" stroke="#d9d6cf" stroke-width="3"/>
+      <text x="110" y="58" text-anchor="middle" fill="#7c3aed" font-size="20" font-weight="700">VERIFICA</text>
+      <text x="110" y="107" text-anchor="middle" fill="#1c1f33" font-size="23" font-weight="700">Test automatici</text>
+      <text x="110" y="145" text-anchor="middle" fill="#4b5068" font-size="17">lint, test, sicurezza,</text>
+      <text x="110" y="172" text-anchor="middle" fill="#4b5068" font-size="17">dependency scan</text>
+    </g>
+    <g transform="translate(756 190)">
+      <rect width="220" height="230" rx="26" fill="#fff" stroke="#d9d6cf" stroke-width="3"/>
+      <text x="110" y="58" text-anchor="middle" fill="#7c3aed" font-size="20" font-weight="700">DECISIONE</text>
+      <text x="110" y="107" text-anchor="middle" fill="#1c1f33" font-size="23" font-weight="700">Review umana</text>
+      <text x="110" y="145" text-anchor="middle" fill="#4b5068" font-size="17">rischi, dominio,</text>
+      <text x="110" y="172" text-anchor="middle" fill="#4b5068" font-size="17">coerenza architetturale</text>
+    </g>
+    <g transform="translate(988 190)">
+      <rect width="152" height="230" rx="26" fill="#e8f5ef" stroke="#84c9aa" stroke-width="3"/>
+      <text x="76" y="58" text-anchor="middle" fill="#047857" font-size="20" font-weight="700">OUTPUT</text>
+      <text x="76" y="107" text-anchor="middle" fill="#1c1f33" font-size="22" font-weight="700">Rilascio</text>
+      <text x="76" y="145" text-anchor="middle" fill="#4b5068" font-size="16">monitorato</text>
+      <text x="76" y="172" text-anchor="middle" fill="#4b5068" font-size="16">e reversibile</text>
+    </g>
+    <text x="600" y="500" text-anchor="middle" fill="#4b5068" font-size="20">L'agente produce una modifica. Il sistema decide se quella modifica può diventare software.</text>
+  </g>
+</svg>

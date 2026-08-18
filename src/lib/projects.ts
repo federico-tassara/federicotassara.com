@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import {
+    Bot,
     BookOpen,
     Target,
     Receipt,
@@ -43,6 +44,52 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
+    {
+        slug: "akintu",
+        title: "AKINTU",
+        seoTitle: "AKINTU — AI Employee Platform per vendite e assistenza",
+        seoDescription:
+            "AKINTU trasforma contenuti e processi aziendali in un AI Employee per assistenza, vendita, qualificazione lead e prenotazioni, integrabile su siti e WordPress.",
+        tagline: "Il tuo miglior commerciale, disponibile 24/7.",
+        status: "in-corso",
+        role: "Partner tecnico",
+        year: "2026 — in corso",
+        summary:
+            "AI Employee Platform che usa la conoscenza aziendale per assistere clienti, qualificare lead, consigliare prodotti e gestire prenotazioni.",
+        description: [
+            "AKINTU trasforma la conoscenza di un'azienda in un collaboratore digitale accessibile dal sito. Acquisisce contenuti web e documenti, li organizza in una base di conoscenza dedicata e li usa per rispondere, consigliare prodotti, qualificare contatti e accompagnare l'utente alla prenotazione.",
+            "La piattaforma è multi-tenant e comprende dashboard Next.js, backend Node.js, ricerca semantica con PostgreSQL e pgvector, job asincroni e widget distribuibili su siti custom o tramite plugin WordPress. Come partner tecnico seguo architettura, sviluppo del prodotto e affidabilità delle integrazioni.",
+        ],
+        features: [
+            { title: "Conoscenza aziendale", desc: "Ingestione di siti, documenti e PDF in una base di conoscenza separata per ogni azienda." },
+            { title: "AI Employee", desc: "Conversazioni orientate ad assistenza, vendita, raccomandazioni e qualificazione dei lead." },
+            { title: "Prenotazioni integrate", desc: "Raccolta dei dati necessari e gestione del passaggio dalla conversazione all'appuntamento." },
+            { title: "Widget e WordPress", desc: "Distribuzione tramite widget web riutilizzabile e plugin dedicato per siti WordPress." },
+        ],
+        stack: [
+            { area: "Dashboard", items: ["Next.js", "React", "TypeScript"] },
+            { area: "Backend", items: ["Node.js", "Express", "BullMQ", "Redis"] },
+            { area: "Dati & AI", items: ["PostgreSQL", "pgvector", "RAG"] },
+            { area: "Integrazioni", items: ["WordPress", "Stripe", "Google Identity", "Resend"] },
+        ],
+        url: "https://akintu.io",
+        icon: Bot,
+        kind: "WebApplication",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        caseStudy: {
+            challenge:
+                "Molte aziende hanno informazioni commerciali distribuite tra pagine web, documenti e persone. I visitatori devono cercare da soli la risposta o attendere un contatto, mentre i team ripetono le stesse attività di qualificazione e assistenza senza un contesto condiviso.",
+            solution:
+                "Una piattaforma multi-tenant che acquisisce la conoscenza autorizzata dell'azienda e la rende utilizzabile da un AI Employee. Dashboard, backend e widget sono separati: l'indicizzazione semantica usa PostgreSQL con pgvector, le elaborazioni lunghe passano da code Redis e BullMQ e la distribuzione copre sia siti custom sia WordPress.",
+            results: [
+                "Pipeline di acquisizione per contenuti web, documenti e PDF con indicizzazione vettoriale per tenant",
+                "Widget web riutilizzabile e plugin WordPress per integrare l'esperienza nei siti esistenti",
+                "Flussi conversazionali per assistenza, raccomandazioni, qualificazione lead e prenotazioni",
+                "Dashboard Next.js con onboarding, analytics e gestione degli abbonamenti Stripe",
+            ],
+        },
+    },
     {
         slug: "lectum",
         title: "Lectum",

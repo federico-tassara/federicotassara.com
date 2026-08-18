@@ -1,145 +1,187 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Compass, Layers, Users, Target, Workflow, BookOpen } from "lucide-react";
+import {
+    ArrowRight,
+    CheckCircle2,
+    Compass,
+    Layers,
+    Users,
+    Target,
+    Workflow,
+    BookOpen,
+} from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
 import { Testimonials } from "@/src/components/sections/Testimonials";
-import { CALENDLY_URL, SITE_EMAIL, SITE_URL } from "@/src/lib/utils";
+import { getCalendlyUrl, SITE_URL } from "@/src/lib/utils";
 
 const url = `${SITE_URL}/fractional-cto`;
 
 export const metadata: Metadata = {
-    title: { absolute: "Fractional CTO in Italia per Startup e PMI | Federico Tassara" },
+    title: { absolute: "Fractional CTO per Startup in Italia | Federico Tassara" },
     description:
-        "Fractional CTO part-time per startup e PMI italiane: scelte tecnologiche, roadmap, due diligence, hiring e audit di progetti esistenti. Remote-first.",
+        "Fractional CTO per founder di startup: roadmap tecnica, team, architettura e due diligence. Da €3.000/mese, remote-first in Italia.",
     alternates: { canonical: url },
     openGraph: {
-        title: "Fractional CTO in Italia per Startup e PMI",
+        title: "Fractional CTO per Startup in Italia",
         description:
-            "CTO part-time on-demand: scelte tecnologiche, roadmap, due diligence, hiring tech e audit.",
+            "Leadership tecnica part-time per trasformare priorità di business in roadmap, decisioni e un team più autonomo.",
         url,
         type: "website",
         images: [`${SITE_URL}/opengraph-image`],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Fractional CTO in Italia per Startup e PMI",
+        title: "Fractional CTO per Startup in Italia",
         description:
-            "CTO part-time on-demand: scelte tecnologiche, roadmap, due diligence, hiring tech e audit.",
+            "Leadership tecnica part-time per roadmap, architettura, team e due diligence.",
     },
 };
 
 const RESPONSIBILITIES = [
     {
         icon: Compass,
-        title: "Scelte tecnologiche e architetturali",
-        desc: "Definisco lo stack giusto per il prodotto e la fase aziendale, evitando over-engineering e debito tecnico precoce.",
+        title: "Decisioni tecniche legate al runway",
+        desc: "Valuto stack, build-or-buy e architettura in base a obiettivi, vincoli e capitale disponibile, con decisioni documentate.",
     },
     {
         icon: Layers,
-        title: "Roadmap tecnica trimestrale",
-        desc: "Trasformo gli obiettivi di business in milestone tecniche misurabili, con scope, dipendenze e rischi espliciti.",
+        title: "Roadmap che business e team capiscono",
+        desc: "Traduco obiettivi commerciali in milestone con scope, dipendenze, responsabili e criteri di completamento.",
     },
     {
         icon: Users,
-        title: "Hiring e gestione del team tech",
-        desc: "Definisco profili, conduco colloqui tecnici, struttura il team e processi di lavoro per scalare senza caos.",
+        title: "Team e fornitori sotto controllo",
+        desc: "Definisco i profili, conduco colloqui tecnici e strutturo ownership e processi senza sostituirmi al lavoro quotidiano del team.",
     },
     {
         icon: Target,
-        title: "Due diligence pre-investimento",
-        desc: "Audit di codice, architettura e processi per investitori o acquirenti: report scritto con findings e raccomandazioni.",
+        title: "Rischi visibili prima che costino",
+        desc: "Audit di codice, infrastruttura e processi con priorità, impatto e piano di mitigazione utile anche in due diligence.",
     },
     {
         icon: Workflow,
-        title: "Process e cadence",
-        desc: "Imposto sprint, retrospective, code review, deployment e monitoraggio. Lascio una macchina che funziona dopo l'ingaggio.",
+        title: "Una cadenza operativa sostenibile",
+        desc: "Imposto pianificazione, review, rilascio e monitoraggio nella misura necessaria alla fase del prodotto.",
     },
     {
         icon: BookOpen,
-        title: "Mentoring tech lead",
-        desc: "Affianco tech lead o senior engineer interni nelle decisioni critiche e nella crescita del ruolo.",
+        title: "Leadership tecnica che resta nel team",
+        desc: "Affianco tech lead e senior engineer, trasferendo contesto e metodo affinché l'azienda diventi progressivamente autonoma.",
     },
 ];
 
 const WHEN_YOU_NEED = [
     {
-        title: "Hai un'idea senza co-founder tecnico",
-        desc: "Validi un MVP, gestisci provider esterni, presenti agli investitori — senza dover assumere subito un CTO full-time.",
+        title: "Non hai un co-founder tecnico",
+        desc: "Devi validare il prodotto, scegliere partner e controllare lo sviluppo senza assumere subito un CTO full-time.",
     },
     {
-        title: "Stai preparando un round di investimento",
-        desc: "Investitori seri richiedono due diligence tecnica. Un Fractional CTO la guida e ti aiuta a chiudere il round.",
+        title: "Ti prepari a un round o a una due diligence",
+        desc: "Vuoi arrivare al confronto con architettura, rischi, costi e roadmap documentati, senza promesse che il prodotto non può sostenere.",
     },
     {
-        title: "Il team tech è cresciuto in fretta",
-        desc: "5-15 sviluppatori, processi improvvisati, decisioni in stallo: serve qualcuno che imponga struttura senza fermare la velocità.",
+        title: "Il team è cresciuto più dei processi",
+        desc: "Priorità che cambiano, ownership poco chiara e decisioni in stallo stanno rallentando sviluppo e business.",
     },
     {
-        title: "Decisioni di architettura che pesano per anni",
-        desc: "Microservizi vs monolite, cloud provider, monorepo, replatforming: scelte da fare con esperienza, non per tentativi.",
+        title: "Hai una decisione tecnica ad alto impatto",
+        desc: "Replatforming, scalabilità, sicurezza o make-or-buy richiedono criteri espliciti prima di impegnare mesi di lavoro.",
     },
     {
-        title: "Devi rimpiazzare un CTO uscente",
-        desc: "Copertura del ruolo e knowledge transfer mentre l'azienda cerca il sostituto stabile.",
+        title: "Il CTO sta uscendo",
+        desc: "Serve una copertura temporanea che protegga continuità, conoscenza e hiring del sostituto stabile.",
     },
     {
-        title: "Hai dubbi sulla qualità del prodotto attuale",
-        desc: "Audit indipendente dello stato del codice, infrastruttura e team, con piano d'azione concreto.",
+        title: "Il prodotto funziona, ma non sai quanto reggerà",
+        desc: "Ti serve una lettura indipendente di codice, infrastruttura e team prima della prossima fase di crescita.",
     },
 ];
 
 const ENGAGEMENT = [
     {
         n: "01",
-        title: "Discovery call gratuita",
-        desc: "30 minuti per capire contesto, esigenze e se siamo allineati.",
+        title: "Verifica del fit",
+        desc: "30 minuti per chiarire fase, problema, decisori e urgenza. Se non sono la figura adatta, te lo dico qui.",
     },
     {
         n: "02",
-        title: "Audit iniziale (2-4 settimane)",
-        desc: "Analisi prodotto, codice, team, infrastruttura. Report con findings e piano prioritario.",
+        title: "Primi 30 giorni",
+        desc: "Baseline di prodotto, codice, team e infrastruttura; registro dei rischi e roadmap tecnica a 90 giorni.",
     },
     {
         n: "03",
-        title: "Ingaggio continuativo",
-        desc: "1-3 giorni/settimana o pacchetto mensile. Standup ricorrenti, revisione roadmap, supporto decisionale.",
+        title: "Cadenza continuativa",
+        desc: "Da mezza giornata a due giorni a settimana: decisioni, roadmap, mentoring e allineamento con il business.",
     },
     {
         n: "04",
-        title: "Exit pianificata",
-        desc: "Knowledge transfer e onboarding del CTO interno o handoff al team, quando l'azienda è pronta.",
+        title: "Autonomia ed exit",
+        desc: "Decisioni e processi vengono documentati. Quando ha senso, preparo l'onboarding del CTO interno o l'handoff al team.",
+    },
+];
+
+const FIT = [
+    "Sei un founder o un decisore e puoi condividere obiettivi, budget e vincoli reali",
+    "Hai un prodotto in validazione o crescita, con team interno o partner di sviluppo",
+    "Cerchi una persona responsabile delle decisioni tecniche, non soltanto un advisor occasionale",
+];
+
+const NOT_FIT = [
+    "Cerchi soltanto capacità di sviluppo aggiuntiva su task già definiti",
+    "Vuoi una firma tecnica che confermi decisioni già prese senza metterle in discussione",
+    "Ti serve la garanzia di chiudere un round o azzerare ogni rischio tecnico",
+];
+
+const PRICING = [
+    {
+        name: "Advisory operativo",
+        commitment: "Da mezza giornata a settimana",
+        price: "€3.000–€4.000/mese",
+        desc: "Per founder con un team autonomo che hanno bisogno di confronto senior, decisioni e controllo periodico della roadmap.",
+    },
+    {
+        name: "Fractional CTO",
+        commitment: "Da uno a due giorni a settimana",
+        price: "€5.000–€8.000/mese",
+        desc: "Per prendere ownership di roadmap, architettura, team, hiring e relazione tra tecnologia e business.",
+    },
+    {
+        name: "Audit iniziale",
+        commitment: "Progetto di 2–4 settimane",
+        price: "€4.000–€10.000 una tantum",
+        desc: "Per ottenere una baseline indipendente, rischi prioritari e un piano eseguibile prima di decidere l'ingaggio.",
     },
 ];
 
 const FAQ = [
     {
         q: "Cos'è esattamente un Fractional CTO?",
-        a: "Un Fractional CTO è un Chief Technology Officer part-time o on-demand che porta esperienza senior in azienda senza il costo di un CTO full-time. Si occupa di scelte tecnologiche, architettura, hiring del team tech, due diligence e roadmap di prodotto. Tipicamente lavora 1-3 giorni a settimana o su ingaggi mensili a forfait.",
+        a: "Un Fractional CTO assume una parte definita della leadership tecnica senza entrare subito in azienda a tempo pieno. Collega obiettivi di business, roadmap, architettura, team e budget; documenta decisioni e rischi e prepara l'azienda a diventare autonoma.",
     },
     {
         q: "Quando una startup ha bisogno di un Fractional CTO?",
-        a: "Quando hai un'idea ma nessun co-founder tecnico, prima di un round di investimento (per due diligence), durante una crescita rapida del team tech, o quando devi prendere decisioni di architettura che impatteranno i prossimi 2-3 anni di prodotto.",
+        a: "Quando il founder deve controllare sviluppo e fornitori senza un co-founder tecnico, quando team e processi non crescono allo stesso ritmo o prima di una decisione ad alto impatto, di un round o di una due diligence. Se serve soltanto capacità di sviluppo aggiuntiva, non è il servizio giusto.",
     },
     {
         q: "Quanto costa un Fractional CTO in Italia?",
-        a: "Le tariffe in Italia variano indicativamente tra €120 e €250/ora, oppure con pacchetti mensili da €3.000 a €15.000 in base a giorni/settimana e seniority. Per startup early-stage esistono modelli misti equity + cash ridotto.",
+        a: "I miei ingaggi continuativi partono da €3.000–€4.000 al mese per advisory operativo e arrivano indicativamente a €5.000–€8.000 al mese per un ruolo Fractional CTO da uno a due giorni a settimana. Un audit iniziale di 2–4 settimane è normalmente tra €4.000 e €10.000. Gli importi sono IVA esclusa e lo scope viene definito prima dell'avvio.",
     },
     {
         q: "Quanti giorni a settimana lavora un Fractional CTO?",
-        a: "Tipicamente da 0,5 a 3 giorni a settimana, con momenti di alta intensità (es. due diligence o lancio di prodotto) e fasi più leggere. Il modello si adatta alla fase dell'azienda.",
+        a: "Da mezza giornata a due giorni a settimana, in base alle responsabilità. L'advisory leggero copre confronto e controllo periodico; un ingaggio più intenso include ownership di roadmap, architettura, team e hiring.",
     },
     {
         q: "Cosa fa un Fractional CTO nelle prime settimane?",
-        a: "Tipicamente nelle prime 2-4 settimane si fa audit dello stato attuale (codice, infrastruttura, team), si allineano roadmap tecnica e roadmap di business, si identificano i rischi prioritari e si definisce un piano di intervento misurabile.",
+        a: "Costruisco una baseline di prodotto, codice, infrastruttura e team; ordino i rischi per impatto e probabilità; preparo una roadmap tecnica a 90 giorni con owner e criteri di completamento. Profondità e deliverable vengono concordati in base alla fase del prodotto.",
     },
     {
         q: "Funziona anche se ho già un team tech interno?",
-        a: "Sì, è uno scenario molto comune. Il Fractional CTO non sostituisce il team ma lo affianca: porta esperienza esterna, sblocca decisioni in stallo, fa mentoring ai tech lead e tiene una visione integrata con il business.",
+        a: "Sì. Il Fractional CTO affianca sviluppatori e tech lead: chiarisce ownership, sblocca decisioni, rivede roadmap e rischi e fa mentoring. Non sostituisce il team né usa il ruolo per accentrare ogni scelta.",
     },
     {
         q: "Come si esce dall'ingaggio?",
-        a: "L'obiettivo è rendere l'azienda autonoma. L'exit prevede knowledge transfer documentato, onboarding del CTO interno se viene assunto, o handoff al team. La durata tipica di un ingaggio Fractional CTO è 6-18 mesi.",
+        a: "Con decisioni, rischi e processi documentati. Quando l'azienda è pronta, preparo il knowledge transfer al CTO interno o l'handoff al team. La durata si verifica con checkpoint periodici, invece di creare una dipendenza indefinita.",
     },
 ];
 
@@ -157,27 +199,18 @@ const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${url}#service`,
-    name: "Fractional CTO in Italia",
+    name: "Fractional CTO per startup in Italia",
     description:
-        "Servizio di Fractional CTO part-time per startup e PMI italiane: scelte tecnologiche, roadmap, due diligence, hiring tech e audit.",
+        "Servizio di Fractional CTO per founder di startup: roadmap, architettura, team, hiring, due diligence e audit tecnico.",
     url,
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: { "@type": "Country", name: "Italia" },
     serviceType: "Fractional CTO",
     inLanguage: "it-IT",
-    audience: { "@type": "BusinessAudience" },
-};
-
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": `${url}#faq`,
-    inLanguage: "it-IT",
-    mainEntity: FAQ.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
+    audience: {
+        "@type": "BusinessAudience",
+        audienceType: "Founder di startup e scaleup",
+    },
 };
 
 const RELATED_POSTS = [
@@ -214,34 +247,33 @@ export default function FractionalCTOPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
-
             <section className="py-16 sm:py-24">
                 <Container>
-                    <div className="anim-fade-up max-w-3xl">
+                    <div className="anim-fade-up max-w-4xl">
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                            Fractional CTO
+                            Fractional CTO per founder
                         </span>
                         <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
-                            Fractional CTO in Italia
-                            <br />
-                            per Startup e PMI.
+                            Fractional CTO per startup: decisioni tecniche senza assumere subito un CTO full-time.
                         </h1>
-                        <p className="mt-6 text-lg leading-relaxed text-muted sm:text-xl">
-                            Porto esperienza senior come Chief Technology Officer part-time, on-demand
-                            o in modalità mista: scelte tecnologiche, roadmap, due diligence, hiring
-                            tech e audit di progetti esistenti. Remote-first, basato in Italia.
+                        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">
+                            Affianco founder pre-seed, seed e startup in crescita per trasformare priorità di business in una roadmap eseguibile, guidare team e fornitori e rendere visibili i rischi prima che consumino runway.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-3">
-                            <Button href={CALENDLY_URL} external size="lg">
-                                Prenota una call
+                            <Button href={getCalendlyUrl("hero")} external size="lg">
+                                Verifica il fit in 30 minuti
                             </Button>
-                            <Button href={`mailto:${SITE_EMAIL}`} variant="outline" size="lg">
-                                Scrivimi
+                            <Button href="#prezzi" variant="outline" size="lg">
+                                Vedi modalità e prezzi
                             </Button>
+                        </div>
+                        <p className="mt-4 text-sm text-muted">
+                            Call gratuita, senza proposta preconfezionata. Ingaggi continuativi da €3.000/mese.
+                        </p>
+                        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-ink/10 pt-6 text-sm font-medium text-ink-soft">
+                            <span>Partner tecnico AKINTU</span>
+                            <span>Esperienza diretta da founder tecnico</span>
+                            <span>Remote-first · Italia</span>
                         </div>
                     </div>
                 </Container>
@@ -251,24 +283,16 @@ export default function FractionalCTOPage() {
                 <Container>
                     <div className="max-w-3xl">
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                            Cos’è un Fractional CTO
+                            Il risultato
                         </span>
                         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                            Un CTO senior, ma a frazione del costo.
+                            Più chiarezza sulle decisioni che consumano tempo e capitale.
                         </h2>
                         <p className="mt-5 text-lg leading-relaxed text-muted">
-                            Un <strong className="font-semibold text-ink">Fractional CTO</strong> è un
-                            Chief Technology Officer part-time o on-demand che porta esperienza senior
-                            in azienda senza il costo di un CTO full-time (che in Italia parte da
-                            €80k-150k/anno). Si occupa di scelte tecnologiche, architettura, hiring
-                            del team tech, due diligence e roadmap di prodotto. Lavora tipicamente da
-                            mezza giornata a tre giorni a settimana, in base alla fase dell’azienda.
+                            Un <strong className="font-semibold text-ink">Fractional CTO</strong> assume una parte definita della leadership tecnica: collega roadmap di prodotto, architettura, team e budget senza richiedere subito un’assunzione full-time. Il punto non è aggiungere riunioni, ma creare decisioni documentate e responsabilità chiare.
                         </p>
                         <p className="mt-4 text-lg leading-relaxed text-muted">
-                            È la soluzione adatta per startup pre-seed e seed che non possono ancora
-                            permettersi un CTO interno, per PMI che hanno un team tech ma non una
-                            leadership tecnica strutturata, e per aziende in transizione (round di
-                            investimento, M&A, sostituzione CTO).
+                            Nei primi 30 giorni costruisco una baseline di prodotto, codice, infrastruttura e team; evidenzio i rischi per impatto; allineo una roadmap a 90 giorni con owner e criteri di completamento. Il deliverable cambia in base alla fase, ma deve sempre permettere al founder di decidere meglio.
                         </p>
                     </div>
                 </Container>
@@ -281,7 +305,7 @@ export default function FractionalCTOPage() {
                             Quando ti serve
                         </span>
                         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                            Sei scenari in cui ha senso.
+                            Sei segnali che il problema è di leadership tecnica.
                         </h2>
                     </div>
                     <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -306,7 +330,7 @@ export default function FractionalCTOPage() {
                             Cosa faccio
                         </span>
                         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                            Sei aree di responsabilità.
+                            Dalle attività ai risultati verificabili.
                         </h2>
                     </div>
                     <div className="mt-12 grid gap-5 md:grid-cols-2">
@@ -334,14 +358,14 @@ export default function FractionalCTOPage() {
                 </Container>
             </section>
 
-            <section className="py-20 sm:py-24">
+            <section className="py-20 sm:py-24" id="come-lavoriamo">
                 <Container>
                     <div className="max-w-3xl">
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
                             Come lavoriamo insieme
                         </span>
                         <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                            Quattro fasi, zero ambiguità.
+                            Un ingresso rapido e un’uscita prevista dall’inizio.
                         </h2>
                     </div>
                     <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -360,6 +384,37 @@ export default function FractionalCTOPage() {
                 </Container>
             </section>
 
+            <section className="bg-surface-alt py-20 sm:py-24">
+                <Container>
+                    <div className="grid gap-10 lg:grid-cols-2">
+                        <div className="rounded-2xl border border-ink/8 bg-white p-8">
+                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Buon fit</span>
+                            <h2 className="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl">Ha senso lavorare insieme se…</h2>
+                            <ul className="mt-7 space-y-4">
+                                {FIT.map((item) => (
+                                    <li key={item} className="flex items-start gap-3 text-muted">
+                                        <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-ink" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="rounded-2xl border border-ink/8 bg-white p-8">
+                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Non è il servizio giusto</span>
+                            <h2 className="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl">Probabilmente non sono il match se…</h2>
+                            <ul className="mt-7 space-y-4">
+                                {NOT_FIT.map((item) => (
+                                    <li key={item} className="flex items-start gap-3 text-muted">
+                                        <span className="mt-1 flex size-4 shrink-0 items-center justify-center rounded-full border border-ink/30 text-xs text-ink">×</span>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </Container>
+            </section>
+
             <section className="bg-ink py-20 text-white sm:py-24">
                 <Container>
                     <div className="grid gap-12 lg:grid-cols-2">
@@ -374,17 +429,14 @@ export default function FractionalCTOPage() {
                         <div>
                             <p className="text-base leading-relaxed text-white/80 sm:text-lg">
                                 Sono <strong className="font-semibold text-white">Federico Tassara</strong>,
-                                sviluppatore Full Stack freelance con esperienza in startup, PMI e
-                                progetti enterprise. Founder e Fractional CTO di Oraloco, ho lavorato
-                                con stack moderni (React, Next.js, React Native, Node.js, Laravel) e
-                                ho seguito prodotti dall’idea al rilascio in più verticali.
+                                sviluppatore Full Stack e leader tecnico con esperienza in startup, PMI e progetti enterprise. Sono founder tecnico di prodotti digitali e partner tecnico di <Link href="/progetti/akintu" className="font-semibold text-white underline decoration-white/35 underline-offset-4 hover:decoration-white">AKINTU</Link>; ho seguito software dall’idea al rilascio, inclusi sistemi mobile offline-first, SaaS e piattaforme AI.
                             </p>
                             <ul className="mt-6 space-y-3">
                                 {[
-                                    "Esperienza diretta come founder tecnico",
-                                    "Capacità di parlare sia con team tecnici che con business e investor",
-                                    "Approccio pragmatico, niente over-engineering",
-                                    "Trasparenza sulle scelte, sui tempi e sui rischi",
+                                    "Esperienza diretta come founder e partner tecnico",
+                                    "Progetti pubblici con architettura, stack e responsabilità consultabili",
+                                    "Comunicazione comprensibile a team, founder e investitori",
+                                    "Decisioni, rischi e trade-off documentati",
                                 ].map((p) => (
                                     <li key={p} className="flex items-start gap-3 text-white/80">
                                         <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-white" />
@@ -402,6 +454,30 @@ export default function FractionalCTOPage() {
                                 </Link>
                             </div>
                         </div>
+                    </div>
+                </Container>
+            </section>
+
+            <section className="py-20 sm:py-24" id="prezzi">
+                <Container>
+                    <div className="max-w-3xl">
+                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Modalità e prezzi</span>
+                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">Un range prima della call, per non perdere tempo.</h2>
+                        <p className="mt-5 text-lg leading-relaxed text-muted">Il preventivo dipende da responsabilità, intensità e stato del prodotto. Questi sono i range indicativi che uso per capire subito se budget e aspettative sono compatibili.</p>
+                    </div>
+                    <div className="mt-12 grid gap-6 lg:grid-cols-3">
+                        {PRICING.map((item, i) => (
+                            <div key={item.name} className={`anim-fade-up rounded-2xl border p-7 ${i === 1 ? "border-ink bg-ink text-white" : "border-ink/8 bg-white text-ink"}`} style={{ animationDelay: `${i * 50}ms` }}>
+                                <h3 className="text-xl font-bold">{item.name}</h3>
+                                <p className={`mt-2 text-sm ${i === 1 ? "text-white/65" : "text-muted"}`}>{item.commitment}</p>
+                                <p className="mt-6 text-2xl font-bold">{item.price}</p>
+                                <p className={`mt-4 text-[15px] leading-relaxed ${i === 1 ? "text-white/75" : "text-muted"}`}>{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="mt-8 flex flex-wrap items-center gap-4">
+                        <Button href={getCalendlyUrl("pricing")} external size="lg">Verifica budget e fit</Button>
+                        <p className="max-w-xl text-sm leading-relaxed text-muted">Importi IVA esclusa. Attività di sviluppo estensive e fornitori terzi non sono inclusi; scope e condizioni vengono definiti prima dell’avvio.</p>
                     </div>
                 </Container>
             </section>
@@ -448,7 +524,7 @@ export default function FractionalCTOPage() {
                             Dal blog.
                         </h2>
                     </div>
-                    <div className="mt-12 grid gap-6 sm:grid-cols-3">
+                    <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {RELATED_POSTS.map((p, i) => (
                             <Link
                                 key={p.href}
@@ -474,29 +550,28 @@ export default function FractionalCTOPage() {
                         <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
                             <div>
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl md:leading-[1.05]">
-                                    Parliamone in 30 minuti.
+                                    Capisci in 30 minuti se ti serve davvero un Fractional CTO.
                                 </h2>
                                 <p className="mt-5 max-w-lg text-base text-white/70 sm:text-lg">
-                                    Discovery call gratuita per capire la fase dell’azienda, il
-                                    contesto tecnico e se ha senso lavorare insieme.
+                                    Portami fase, obiettivo e problema più urgente. Ti restituisco una prima lettura del fit e del prossimo passo, anche quando non coincide con un mio ingaggio.
                                 </p>
                             </div>
                             <div className="flex flex-wrap gap-3 lg:justify-end">
                                 <Button
-                                    href={CALENDLY_URL}
+                                    href={getCalendlyUrl("final_cta")}
                                     external
                                     size="lg"
                                     className="bg-white text-ink hover:bg-white/90"
                                 >
-                                    Prenota call
+                                    Verifica il fit
                                 </Button>
                                 <Button
-                                    href="/contatti"
+                                    href="#prezzi"
                                     variant="outline"
                                     size="lg"
                                     className="border-white/25 text-white hover:border-white/50"
                                 >
-                                    Scrivimi
+                                    Rivedi i prezzi
                                 </Button>
                             </div>
                         </div>

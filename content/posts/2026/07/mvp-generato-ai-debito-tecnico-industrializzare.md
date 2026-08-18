@@ -80,6 +80,8 @@ Le fasi 1-4 producono la maggior parte del beneficio e si misurano in settimane,
 
 La conclusione sbagliata sarebbe smettere. Chi ne ricava valore e chi accumula debito usano gli stessi strumenti: la differenza sta nei vincoli attorno.
 
+Ho raccolto quei vincoli in una guida operativa agli [AI coding agent in azienda](/blog/ai-coding-agent-governance-azienda), con accessi, sandbox, quality gate, review e metriche per un pilot.
+
 - **Specifiche prima del codice.** Descrivere cosa deve fare e quali sono i vincoli, prima di generare. Il tempo speso qui si recupera moltiplicato.
 - **Regole di progetto scritte e versionate.** Convenzioni, pattern ammessi, struttura attesa, in un file che vive nel repository e che ogni sessione di lavoro carica come contesto.
 - **Test e pipeline come rete di sicurezza,** non come adempimento finale.

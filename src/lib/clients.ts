@@ -5,6 +5,11 @@ export type Client = {
 };
 
 export const CLIENTS: Client[] = [
+    {
+        name: "AKINTU",
+        href: "https://akintu.io",
+        image: "/images/clients/akintu-logo.svg",
+    },
     { name: "Oraloco", href: "https://oraloco.com" },
     { name: "Lectum", href: "https://lectum.io" },
     { name: "Freedhome" },

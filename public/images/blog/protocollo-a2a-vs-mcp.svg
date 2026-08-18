@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Differenza architetturale tra protocollo A2A e MCP</title>
+  <desc id="desc">A2A collega due agenti indipendenti, mentre MCP collega un agente a strumenti e dati aziendali.</desc>
+  <rect width="1200" height="630" rx="36" fill="#f5f3ee"/>
+  <text x="70" y="82" fill="#1c1f33" font-family="Arial, sans-serif" font-size="34" font-weight="700">A2A e MCP risolvono due collegamenti diversi</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="70" y="145" width="500" height="400" rx="28" fill="#fff" stroke="#d9d6cf" stroke-width="3"/>
+    <text x="110" y="200" fill="#6d28d9" font-size="28" font-weight="700">A2A · agente ↔ agente</text>
+    <rect x="115" y="260" width="155" height="115" rx="22" fill="#1c1f33"/>
+    <text x="192" y="310" fill="#fff" font-size="22" text-anchor="middle" font-weight="700">Agente</text>
+    <text x="192" y="340" fill="#d8dbe8" font-size="17" text-anchor="middle">acquisti</text>
+    <path d="M285 318H355" stroke="#6d28d9" stroke-width="7" stroke-linecap="round"/>
+    <path d="m341 300 20 18-20 18M299 300l-20 18 20 18" fill="none" stroke="#6d28d9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="370" y="260" width="155" height="115" rx="22" fill="#1c1f33"/>
+    <text x="447" y="310" fill="#fff" font-size="22" text-anchor="middle" font-weight="700">Agente</text>
+    <text x="447" y="340" fill="#d8dbe8" font-size="17" text-anchor="middle">venditore</text>
+    <text x="110" y="438" fill="#4b5068" font-size="19">Scoperta delle capacità, delega del task,</text>
+    <text x="110" y="468" fill="#4b5068" font-size="19">stato e risultati tra sistemi indipendenti.</text>
+
+    <rect x="630" y="145" width="500" height="400" rx="28" fill="#fff" stroke="#d9d6cf" stroke-width="3"/>
+    <text x="670" y="200" fill="#047857" font-size="28" font-weight="700">MCP · agente ↔ strumenti</text>
+    <rect x="675" y="260" width="155" height="115" rx="22" fill="#1c1f33"/>
+    <text x="752" y="310" fill="#fff" font-size="22" text-anchor="middle" font-weight="700">Agente</text>
+    <text x="752" y="340" fill="#d8dbe8" font-size="17" text-anchor="middle">aziendale</text>
+    <path d="M845 318H915" stroke="#047857" stroke-width="7" stroke-linecap="round"/>
+    <path d="m899 300 20 18-20 18" fill="none" stroke="#047857" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="930" y="238" width="155" height="160" rx="22" fill="#e8f5ef" stroke="#84c9aa" stroke-width="3"/>
+    <text x="1007" y="286" fill="#065f46" font-size="19" text-anchor="middle" font-weight="700">CRM</text>
+    <text x="1007" y="323" fill="#065f46" font-size="19" text-anchor="middle" font-weight="700">File</text>
+    <text x="1007" y="360" fill="#065f46" font-size="19" text-anchor="middle" font-weight="700">API</text>
+    <text x="670" y="438" fill="#4b5068" font-size="19">Tools, resources e prompt per usare dati</text>
+    <text x="670" y="468" fill="#4b5068" font-size="19">e operazioni esposte da un server.</text>
+  </g>
+</svg>

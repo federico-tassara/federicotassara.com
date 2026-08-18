@@ -14,6 +14,8 @@ MCP risolve questo pezzo del collegamento. Non stabilisce però quali permessi d
 
 Nel 2026 **MCP**, Model Context Protocol, è passato da acronimo per sviluppatori a componente ricorrente delle architetture agentiche. La [guida di Google ai protocolli per agenti AI](https://developers.googleblog.com/en/developers-guide-to-ai-agent-protocols/) lo presenta come il livello che collega un agente a sistemi e dati, accanto a protocolli dedicati alla comunicazione tra agenti, ai pagamenti e alle interfacce.
 
+Per capire il confine complementare, nella guida al [protocollo A2A e alle differenze con MCP](/blog/protocollo-a2a-agenti-ai-vs-mcp) analizzo discovery, task e deleghe tra agenti.
+
 Costruire una volta l'accesso a un sistema e riutilizzarlo in più applicazioni è comodo. La compatibilità, da sola, non dà alcuna garanzia sulla sicurezza o sulla qualità della logica aziendale. Protocollo e autorizzazioni vanno tenuti su piani separati.
 
 ## Che cos'è un MCP Server

@@ -10,6 +10,17 @@ export const SITE_NAME = "Federico Tassara";
 export const SITE_EMAIL = "info@federicotassara.com";
 export const CALENDLY_URL = "https://calendly.com/federicotassara/";
 
+export function getCalendlyUrl(content: string) {
+    const params = new URLSearchParams({
+        utm_source: "federicotassara.com",
+        utm_medium: "website",
+        utm_campaign: "fractional_cto",
+        utm_content: content,
+    });
+
+    return `${CALENDLY_URL}?${params.toString()}`;
+}
+
 export const ADDRESSES = [
     { city: "Loano", street: "Via Tito Minniti 20", province: "Savona" },
     { city: "Orbassano", street: "Via Strada Torino 43", province: "Torino" },

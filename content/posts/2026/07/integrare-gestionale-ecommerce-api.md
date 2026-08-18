@@ -33,6 +33,8 @@ Un'API è, in pratica, la porta d'accesso che un software espone perché altri p
 
 La connessione tecnica, quando entrambi i sistemi hanno API moderne, è la parte lineare. Il lavoro vero sta nel definire tre cose per ogni flusso: **cosa** sincronizzare (quali campi), in **quale direzione** (da A a B, o in entrambi i sensi) e cosa fare in caso di **conflitto** (se lo stesso dato cambia da due parti nello stesso momento, chi vince). È lo stesso tipo di ragionamento che serve per gestire la [sincronizzazione dei dati e i conflitti in un'app offline-first](/blog/sync-engine-conflitti-app-offline-first): il problema non è muovere i dati, è decidere quale versione è quella giusta. Questo tipo di lavoro è il cuore dello [sviluppo di backend e integrazioni con sistemi terzi](/servizi/backend-e-api).
 
+Queste fondamenta stanno diventando decisive anche nell'[agentic commerce](/blog/agentic-commerce-ucp-ecommerce-ai): un agente può preparare un acquisto soltanto se catalogo, prezzi, disponibilità e checkout espongono contratti affidabili.
+
 ## Integrazione diretta o middleware
 
 Con due soli sistemi da collegare, l'integrazione **diretta** (punto-punto) è la scelta giusta: più semplice, più economica, meno cose che si rompono. Il problema nasce quando i sistemi crescono. Collegare quattro sistemi punto-punto significa potenzialmente sei connessioni separate da mantenere, ognuna con le sue regole: un groviglio che diventa ingestibile in fretta.
