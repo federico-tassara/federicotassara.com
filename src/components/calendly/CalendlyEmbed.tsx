@@ -13,6 +13,7 @@ export function CalendlyEmbed({ source }: { source: string }) {
     const calendlyUrl = useMemo(() => {
         const url = new URL(CALENDLY_URL);
         url.searchParams.set("embed_type", "Inline");
+        url.searchParams.set("embed_domain", "federicotassara.com");
         url.searchParams.set("utm_source", "federicotassara.com");
         url.searchParams.set("utm_medium", "website");
         url.searchParams.set("utm_campaign", "fractional_cto");
