@@ -13,7 +13,7 @@ import {
 import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
 import { Testimonials } from "@/src/components/sections/Testimonials";
-import { getCalendlyUrl, SITE_URL } from "@/src/lib/utils";
+import { SITE_URL } from "@/src/lib/utils";
 
 const url = `${SITE_URL}/fractional-cto`;
 
@@ -239,7 +239,7 @@ export default function FractionalCTOPage() {
                             Che tu sia un founder, una PMI, un’impresa o un professionista con un’idea concreta, ti affianco per definire la strategia tecnica, costruire una roadmap eseguibile e guidare team e fornitori senza assumere subito un CTO full-time.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-3">
-                            <Button href={getCalendlyUrl("hero")} external size="lg">
+                            <Button href="/prenota?source=fractional_cto_hero" size="lg">
                                 Parliamo del tuo progetto
                             </Button>
                             <Button href="#come-lavoriamo" variant="outline" size="lg">
@@ -513,8 +513,7 @@ export default function FractionalCTOPage() {
                             </div>
                             <div className="flex flex-wrap gap-3 lg:justify-end">
                                 <Button
-                                    href={getCalendlyUrl("final_cta")}
-                                    external
+                                    href="/prenota?source=fractional_cto_final_cta"
                                     size="lg"
                                     className="bg-white text-ink hover:bg-white/90"
                                 >
