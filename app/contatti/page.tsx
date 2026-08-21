@@ -3,7 +3,7 @@ import { Mail, MapPin, Calendar } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
 import { ContactForm } from "@/src/components/contact/ContactForm";
-import { ADDRESSES, CALENDLY_URL, SITE_EMAIL, SITE_URL } from "@/src/lib/utils";
+import { ADDRESSES, normalizeAttributionSource, SITE_EMAIL, SITE_URL } from "@/src/lib/utils";
 
 export const metadata: Metadata = {
     title: { absolute: "Contatti — Sviluppatore freelance e Fractional CTO | Federico Tassara" },
@@ -70,8 +70,14 @@ const breadcrumbSchema = {
     ],
 };
 
-export default function ContattiPage() {
+type ContattiPageProps = {
+    searchParams: Promise<{ source?: string }>;
+};
+
+export default async function ContattiPage({ searchParams }: ContattiPageProps) {
     const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
+    const { source } = await searchParams;
+    const normalizedSource = normalizeAttributionSource(source, "contact_page");
 
     return (
         <>
@@ -110,8 +116,7 @@ export default function ContattiPage() {
                                 icon={<Calendar className="size-5" />}
                                 label="Calendario"
                                 value="Prenota una call su Calendly"
-                                href={CALENDLY_URL}
-                                external
+                                href="/prenota?source=contact_page"
                             />
                             <div className="rounded-2xl border border-ink/8 bg-surface-alt p-6">
                                 <div className="flex items-center gap-2 text-sm font-semibold text-ink">
@@ -133,14 +138,14 @@ export default function ContattiPage() {
                             </div>
                         </div>
                         <div className="mt-8">
-                            <Button href={CALENDLY_URL} external size="lg">
+                            <Button href="/prenota?source=contact_page" size="lg">
                                 Prendi appuntamento
                             </Button>
                         </div>
                     </div>
 
                     <div className="anim-fade-up anim-delay-200">
-                        <ContactForm siteKey={siteKey} />
+                        <ContactForm siteKey={siteKey} source={normalizedSource} />
                     </div>
                 </div>
             </Container>

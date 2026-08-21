@@ -13,6 +13,12 @@ const postsDirectory = path.join(process.cwd(), "content/posts");
 
 export type PostFaqItem = { q: string; a: string };
 
+export type PostCta = {
+    title: string;
+    body: string;
+    label?: string;
+};
+
 export interface PostMetadata {
     title: string;
     date: string;
@@ -23,6 +29,7 @@ export interface PostMetadata {
     category?: string;
     project?: string;
     faq?: PostFaqItem[];
+    cta?: PostCta;
     slug: string;
     year: string;
     month: string;
@@ -44,6 +51,16 @@ export interface PaginatedPosts {
 function calculateReadingTime(content: string): number {
     const words = content.split(/\s+/).filter(Boolean).length;
     return Math.max(1, Math.ceil(words / 200));
+}
+
+function parseCta(value: unknown): PostCta | undefined {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return undefined;
+    const raw = value as Record<string, unknown>;
+    const title = typeof raw.title === "string" ? raw.title.trim() : "";
+    const body = typeof raw.body === "string" ? raw.body.trim() : "";
+    const label = typeof raw.label === "string" ? raw.label.trim() : "";
+    if (!title || !body) return undefined;
+    return { title, body, label: label || undefined };
 }
 
 export const getAllPosts = cache((): PostMetadata[] => {
@@ -75,6 +92,7 @@ export const getAllPosts = cache((): PostMetadata[] => {
                     category: data.category,
                     project: data.project,
                     faq: Array.isArray(data.faq) ? (data.faq as PostFaqItem[]) : undefined,
+                    cta: parseCta(data.cta),
                     slug,
                     year,
                     month,

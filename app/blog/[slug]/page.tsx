@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Calendar, Clock, User } from "lucide-react";
@@ -11,10 +12,18 @@ import {
     getRelatedPosts,
     processMarkdown,
 } from "@/src/lib/posts";
-import { CALENDLY_URL, SITE_URL } from "@/src/lib/utils";
+import { SITE_URL } from "@/src/lib/utils";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
+}
+
+function formatDate(value: string): string {
+    return new Date(value).toLocaleDateString("it-IT", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+    });
 }
 
 export async function generateStaticParams() {
@@ -57,6 +66,14 @@ export default async function BlogPostPage({ params }: PageProps) {
     const html = await processMarkdown(post.content);
     const related = getRelatedPosts(slug, post.tags, 3);
     const url = `${SITE_URL}/blog/${slug}`;
+    const source = `blog_${post.slug}`;
+    const bookingHref = `/prenota?source=${encodeURIComponent(source)}`;
+    const contactHref = `/contatti?source=${encodeURIComponent(source)}`;
+    const cta = post.cta ?? {
+        title: "Hai una decisione tecnica da prendere?",
+        body: "Raccontami obiettivo, contesto e punto che ti sta bloccando. Ti dirò se serve un affiancamento continuativo o un intervento circoscritto.",
+        label: "Parliamo del progetto",
+    };
 
     const ogImage = `${SITE_URL}/opengraph-image`;
     const wordCount = post.content.split(/\s+/).filter(Boolean).length;
@@ -149,18 +166,17 @@ export default async function BlogPostPage({ params }: PageProps) {
                             <p className="mt-5 text-lg leading-relaxed text-muted">{post.excerpt}</p>
                         )}
                         <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-ink/8 pt-5 text-sm text-muted">
-                            <span className="inline-flex items-center gap-1.5">
+                            <Link href="/chi-sono" className="inline-flex items-center gap-1.5 hover:text-ink">
                                 <User className="size-3.5" />
                                 {post.author}
-                            </span>
+                            </Link>
                             <span className="inline-flex items-center gap-1.5">
                                 <Calendar className="size-3.5" />
-                                {new Date(post.date).toLocaleDateString("it-IT", {
-                                    day: "numeric",
-                                    month: "long",
-                                    year: "numeric",
-                                })}
+                                {formatDate(post.date)}
                             </span>
+                            {post.updatedAt && post.updatedAt !== post.date && (
+                                <span>Aggiornato il {formatDate(post.updatedAt)}</span>
+                            )}
                             <span className="inline-flex items-center gap-1.5">
                                 <Clock className="size-3.5" />
                                 {post.readingTime} min lettura
@@ -185,6 +201,39 @@ export default async function BlogPostPage({ params }: PageProps) {
                             ))}
                         </div>
                     )}
+
+                    <aside
+                        className="mt-12 flex flex-col gap-5 rounded-2xl border border-ink/8 bg-white p-6 sm:flex-row sm:items-center"
+                        aria-label="Informazioni sull'autore"
+                    >
+                        <Image
+                            src="/images/profile.jpeg"
+                            alt="Federico Tassara"
+                            width={80}
+                            height={80}
+                            className="size-20 shrink-0 rounded-full object-cover"
+                        />
+                        <div>
+                            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                                Scritto da
+                            </p>
+                            <h2 className="mt-1 text-xl font-bold text-ink">
+                                <Link href="/chi-sono" className="hover:text-ink-soft">
+                                    Federico Tassara
+                                </Link>
+                            </h2>
+                            <p className="mt-2 text-sm leading-relaxed text-muted">
+                                Full Stack Developer, founder tecnico e Fractional CTO. Affianco startup e PMI nelle decisioni su prodotto, architettura, team e fornitori.
+                            </p>
+                            <Link
+                                href="/chi-sono"
+                                className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-ink hover:text-ink-soft"
+                            >
+                                Esperienza e progetti
+                                <ArrowRight className="size-3.5" />
+                            </Link>
+                        </div>
+                    </aside>
 
                     {post.faq && post.faq.length > 0 && (
                         <section className="mt-14 border-t border-ink/8 pt-10" aria-labelledby="post-faq-heading">
@@ -217,16 +266,13 @@ export default async function BlogPostPage({ params }: PageProps) {
                     )}
 
                     <aside className="mt-14 rounded-2xl border border-ink/8 bg-surface-alt p-8 sm:p-10">
-                        <h3 className="text-2xl font-bold text-ink">Hai un progetto in mente?</h3>
-                        <p className="mt-3 text-muted">
-                            Una consulenza iniziale gratuita per capire come trasformare la tua idea in
-                            un prodotto digitale solido e scalabile.
-                        </p>
+                        <h2 className="text-2xl font-bold text-ink">{cta.title}</h2>
+                        <p className="mt-3 text-muted">{cta.body}</p>
                         <div className="mt-6 flex flex-wrap gap-3">
-                            <Button href={CALENDLY_URL} external>
-                                Prenota una call
+                            <Button href={bookingHref}>
+                                {cta.label ?? "Prenota una call"}
                             </Button>
-                            <Button href="/contatti" variant="outline">
+                            <Button href={contactHref} variant="outline">
                                 Scrivimi
                             </Button>
                         </div>

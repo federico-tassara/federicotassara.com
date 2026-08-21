@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CalendarCheck, LockKeyhole } from "lucide-react";
 import { CalendlyEmbed } from "@/src/components/calendly/CalendlyEmbed";
 import { Container } from "@/src/components/ui/Container";
+import { normalizeAttributionSource } from "@/src/lib/utils";
 
 export const metadata: Metadata = {
     title: "Prenota una call",
@@ -18,6 +19,7 @@ type PrenotaPageProps = {
 
 export default async function PrenotaPage({ searchParams }: PrenotaPageProps) {
     const { source } = await searchParams;
+    const normalizedSource = normalizeAttributionSource(source, "booking_page");
 
     return (
         <section className="py-12 sm:py-16">
@@ -40,7 +42,7 @@ export default async function PrenotaPage({ searchParams }: PrenotaPageProps) {
                 </div>
 
                 <div className="mx-auto mt-8 max-w-5xl overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-[0_20px_60px_-32px_rgba(28,31,51,0.25)]">
-                    <CalendlyEmbed source={source ?? "booking_page"} />
+                    <CalendlyEmbed source={normalizedSource} />
                 </div>
             </Container>
         </section>

@@ -10,6 +10,14 @@ export const SITE_NAME = "Federico Tassara";
 export const SITE_EMAIL = "info@federicotassara.com";
 export const CALENDLY_URL = "https://calendly.com/federicotassara/";
 
+export function normalizeAttributionSource(
+    value: string | undefined,
+    fallback = "website",
+): string {
+    const source = (value ?? "").trim().slice(0, 120);
+    return /^[a-zA-Z0-9_./:-]+$/.test(source) ? source : fallback;
+}
+
 export function getCalendlyUrl(content: string) {
     const params = new URLSearchParams({
         utm_source: "federicotassara.com",

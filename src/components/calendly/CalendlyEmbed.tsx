@@ -8,6 +8,10 @@ type CalendlyMessage = {
     event?: string;
 };
 
+type AnalyticsWindow = Window & {
+    gtag?: (command: string, eventName: string, parameters?: Record<string, unknown>) => void;
+};
+
 export function CalendlyEmbed({ source }: { source: string }) {
     const router = useRouter();
     const calendlyUrl = useMemo(() => {
@@ -26,12 +30,16 @@ export function CalendlyEmbed({ source }: { source: string }) {
             if (message.origin !== "https://calendly.com") return;
             if (message.data?.event !== "calendly.event_scheduled") return;
 
-            router.replace("/grazie-prenotazione");
+            (window as AnalyticsWindow).gtag?.("event", "generate_lead", {
+                method: "calendly",
+                content_source: source,
+            });
+            router.replace(`/grazie-prenotazione?source=${encodeURIComponent(source)}`);
         };
 
         window.addEventListener("message", onCalendlyMessage);
         return () => window.removeEventListener("message", onCalendlyMessage);
-    }, [router]);
+    }, [router, source]);
 
     return (
         <iframe

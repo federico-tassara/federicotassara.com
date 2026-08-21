@@ -7,7 +7,11 @@ import { TurnstileWidget } from "./TurnstileWidget";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
-export function ContactForm({ siteKey }: { siteKey: string }) {
+type AnalyticsWindow = Window & {
+    gtag?: (command: string, eventName: string, parameters?: Record<string, unknown>) => void;
+};
+
+export function ContactForm({ siteKey, source = "contact_page" }: { siteKey: string; source?: string }) {
     if (!siteKey) {
         return (
             <div className="rounded-2xl border border-amber-200 bg-amber-50 p-7 sm:p-9">
@@ -26,10 +30,10 @@ export function ContactForm({ siteKey }: { siteKey: string }) {
             </div>
         );
     }
-    return <ContactFormInner siteKey={siteKey} />;
+    return <ContactFormInner siteKey={siteKey} source={source} />;
 }
 
-function ContactFormInner({ siteKey }: { siteKey: string }) {
+function ContactFormInner({ siteKey, source }: { siteKey: string; source: string }) {
     const [state, setState] = useState<FormState>("idle");
     const [errorMsg, setErrorMsg] = useState("");
     const [token, setToken] = useState("");
@@ -56,12 +60,16 @@ function ContactFormInner({ siteKey }: { siteKey: string }) {
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ ...form, turnstileToken: token }),
+                body: JSON.stringify({ ...form, source, turnstileToken: token }),
             });
             if (!res.ok) {
                 const data = await res.json().catch(() => ({}));
                 throw new Error(data.error ?? "Errore durante l'invio.");
             }
+            (window as AnalyticsWindow).gtag?.("event", "generate_lead", {
+                method: "contact_form",
+                content_source: source,
+            });
             setState("success");
             setForm({ firstName: "", lastName: "", email: "", message: "" });
         } catch (err: unknown) {

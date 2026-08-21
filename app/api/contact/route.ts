@@ -8,6 +8,7 @@ type Payload = {
     lastName?: string;
     email?: string;
     message?: string;
+    source?: string;
     turnstileToken?: string;
 };
 
@@ -54,6 +55,8 @@ export async function POST(request: Request) {
     const lastName = (payload.lastName ?? "").trim();
     const email = (payload.email ?? "").trim();
     const message = (payload.message ?? "").trim();
+    const rawSource = (payload.source ?? "contact_page").trim().slice(0, 120);
+    const source = /^[a-zA-Z0-9_./:-]+$/.test(rawSource) ? rawSource : "unknown";
     const turnstileToken = payload.turnstileToken ?? "";
 
     if (!firstName || !lastName || !email || !message) {
@@ -112,11 +115,12 @@ export async function POST(request: Request) {
                 <div style="font-family: Arial, sans-serif; color:#1c1f33; line-height:1.6;">
                     <h2 style="margin:0 0 12px;">Nuovo contatto dal sito</h2>
                     <p><strong>Da:</strong> ${escapeHtml(firstName)} ${escapeHtml(lastName)} &lt;${escapeHtml(email)}&gt;</p>
+                    <p><strong>Sorgente:</strong> ${escapeHtml(source)}</p>
                     <hr style="border:none;border-top:1px solid #e5e7eb;margin:16px 0;" />
                     <p style="white-space:pre-wrap;">${escapeHtml(message)}</p>
                 </div>
             `,
-            text: `Da: ${firstName} ${lastName} <${email}>\n\n${message}`,
+            text: `Da: ${firstName} ${lastName} <${email}>\nSorgente: ${source}\n\n${message}`,
         });
 
         if (error) {

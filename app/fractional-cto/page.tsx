@@ -194,6 +194,11 @@ const serviceSchema = {
 
 const RELATED_POSTS = [
     {
+        href: "/blog/fractional-cto-startup-healthtech-caso-reale",
+        title: "Fractional CTO per una startup healthtech",
+        desc: "Un caso reale: revisione iniziale, decisioni tecniche e criteri verificabili prima del pilota.",
+    },
+    {
         href: "/blog/quando-serve-fractional-cto",
         title: "Quando serve un Fractional CTO (e quando no)",
         desc: "Gli scenari concreti in cui ha senso, e i casi in cui è la scelta sbagliata.",
@@ -212,6 +217,11 @@ const RELATED_POSTS = [
         href: "/blog/come-scegliere-fractional-cto",
         title: "Come scegliere un Fractional CTO",
         desc: "I criteri di valutazione che contano davvero e le domande da fare al primo incontro.",
+    },
+    {
+        href: "/blog/fractional-cto-vs-software-house-cto-full-time",
+        title: "Fractional CTO, software house o CTO full-time?",
+        desc: "Responsabilità, incentivi e segnali concreti per capire quale figura serve davvero.",
     },
 ];
 
@@ -479,7 +489,7 @@ export default function FractionalCTOPage() {
                             Dal blog.
                         </h2>
                     </div>
-                    <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {RELATED_POSTS.map((p, i) => (
                             <Link
                                 key={p.href}
