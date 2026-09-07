@@ -195,7 +195,7 @@ const serviceSchema = {
 const RELATED_POSTS = [
     {
         href: "/blog/fractional-cto-startup-healthtech-caso-reale",
-        title: "Fractional CTO per una startup healthtech",
+        title: "Fractional CTO per Sinfea",
         desc: "Un caso reale: revisione iniziale, decisioni tecniche e criteri verificabili prima del pilota.",
     },
     {

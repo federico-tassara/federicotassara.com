@@ -1,11 +1,11 @@
 ---
-title: "Fractional CTO per una startup healthtech: come ho impostato la prima fase tecnica"
+title: "Fractional CTO per Sinfea: la prima fase tecnica"
 date: "2026-08-21"
-updatedAt: "2026-08-21"
+updatedAt: "2026-09-07"
 author: "Federico Tassara"
 category: "Consulenza"
-excerpt: "Un caso reale di leadership tecnica per una startup che sviluppa software destinato a centri sanitari privati: revisione iniziale, decisioni sullo stack e criteri verificabili prima del pilota."
-tags: ["fractional cto", "healthtech", "startup", "software sanitario", "leadership tecnica"]
+excerpt: "Il caso Sinfea: revisione tecnica, decisioni sullo stack e criteri verificabili prima del pilota di un software per centri sanitari privati."
+tags: ["fractional cto", "Sinfea", "healthtech", "startup", "software sanitario", "leadership tecnica"]
 cta:
   title: "Devi portare un software sanitario verso il primo pilota?"
   body: "Raccontami cosa esiste già, quali dati tratterà il prodotto e quale decisione tecnica è ancora senza un responsabile. Partiremo dai rischi da rendere verificabili."
@@ -21,9 +21,9 @@ faq:
     a: "Può predisporre misure tecniche, descrivere i flussi dei dati e produrre le evidenze necessarie, ma non dovrebbe dichiarare da solo la conformità giuridica. Nel caso descritto il perimetro tecnico è stato separato esplicitamente dal lavoro del consulente privacy incaricato dalla startup."
 ---
 
-**Nota sulla riservatezza.** Il caso è reale, ma azienda, prodotto e persone restano anonimi. Descrivo il metodo e le decisioni tecniche utili a capire il lavoro di un Fractional CTO; non pubblico dati sanitari, importi, codice o informazioni che possano identificare il cliente.
+**Nota sulla riservatezza.** Il progetto si chiama Sinfea. Mantengo riservati azienda, persone, dati sanitari, importi e codice. Descrivo soltanto il metodo e le decisioni tecniche utili a capire il lavoro di un Fractional CTO.
 
-**TL;DR.** Una startup che sviluppa software per centri sanitari privati mi ha trovato attraverso il sito e mi ha affidato la leadership tecnica del progetto. Non sono partito scegliendo un nuovo stack o promettendo una data di lancio. Ho prima verificato la fondazione esistente, deciso cosa mantenere e trasformato i rischi prima del pilota in risultati controllabili dal founder. Il punto dell’ingaggio non era aggiungere ore di sviluppo: era creare una responsabilità tecnica unica su prodotto, architettura, sicurezza, fornitori e passaggio alla produzione.
+**TL;DR.** Sinfea sviluppa software per centri sanitari privati. La startup mi ha trovato attraverso il sito e mi ha affidato la leadership tecnica del progetto. Ho verificato la fondazione esistente, deciso cosa mantenere e trasformato i rischi prima del pilota in risultati controllabili dal founder. L'ingaggio ha assegnato una responsabilità tecnica unica su prodotto, architettura, sicurezza, fornitori e passaggio alla produzione.
 
 ## Cosa significava “partire da zero”
 
@@ -31,7 +31,7 @@ In questo progetto partire da zero non significava trovare un repository vuoto. 
 
 È una distinzione importante. Scrivere codice e guidare tecnicamente un prodotto non sono la stessa attività. Il secondo lavoro comprende anche decidere cosa non riscrivere, rendere verificabili le consegne e impedire che account, documentazione e conoscenza restino nelle mani di una sola persona.
 
-Il contesto aggiungeva tre vincoli non negoziabili:
+Il contesto di Sinfea aggiungeva tre vincoli non negoziabili:
 
 - il software avrebbe trattato dati sanitari;
 - più centri avrebbero usato la stessa piattaforma senza poter vedere i dati altrui;
@@ -121,7 +121,7 @@ Questa separazione non riduce la responsabilità tecnica. Evita che una persona 
 
 ## Cosa dimostra questo caso, e cosa no
 
-La prima fase è iniziata ed è ancora in corso. Questo non è quindi un caso «prima e dopo»: i documenti disponibili descrivono la revisione iniziale e i criteri concordati, non il completamento né risultati economici misurati. Sarebbe scorretto presentare come ottenuti risultati che, al momento della pubblicazione, sono ancora condizioni da raggiungere.
+La prima fase di Sinfea è iniziata ed è ancora in corso. I documenti disponibili descrivono la revisione iniziale e i criteri concordati, non il completamento né risultati economici misurati. Sarebbe scorretto presentare come ottenuti risultati che, al momento della pubblicazione, sono ancora condizioni da raggiungere.
 
 Il caso dimostra invece come può iniziare un ingaggio di leadership tecnica:
 
@@ -133,4 +133,6 @@ Il caso dimostra invece come può iniziare un ingaggio di leadership tecnica:
 
 Quando la prima fase sarà conclusa, il seguito corretto non sarà aggiungere un risultato celebrativo. Sarà documentare quali criteri sono stati superati, quali hanno richiesto correzioni e cosa è cambiato nel passaggio verso il pilota.
 
-Se stai costruendo un prodotto tecnologico e manca una persona che tenga insieme decisioni, sviluppo, fornitori e rischi, trovi il perimetro del mio servizio di [Fractional CTO](/fractional-cto). Per capire prima se il problema richiede leadership continuativa o un intervento circoscritto, puoi leggere [quando serve un Fractional CTO](/blog/quando-serve-fractional-cto) oppure [scrivermi](/contatti).
+Se stai costruendo un prodotto healthtech, la guida sullo [sviluppo di software sanitario](/blog/sviluppo-software-sanitario-costi-requisiti) raccoglie requisiti, architettura e ordini di grandezza. L'articolo sul [software come dispositivo medico](/blog/software-dispositivo-medico-mdr) aiuta a individuare i segnali che richiedono una valutazione MDR.
+
+Se manca una persona che tenga insieme decisioni, sviluppo, fornitori e rischi, trovi il perimetro del mio servizio di [Fractional CTO](/fractional-cto). Per capire se il problema richiede leadership continuativa o un intervento circoscritto, puoi leggere [quando serve un Fractional CTO](/blog/quando-serve-fractional-cto) oppure [scrivermi](/contatti).
