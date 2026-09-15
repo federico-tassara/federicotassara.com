@@ -2,14 +2,10 @@ import type { LucideIcon } from "lucide-react";
 import {
     Bot,
     BookOpen,
-    Target,
-    Receipt,
     Smile,
     Home,
     Waves,
 } from "lucide-react";
-
-export type ProjectStatus = "rilasciato" | "in-corso" | "wip" | "privato";
 
 export type ProjectKind =
     | "WebApplication"
@@ -26,7 +22,6 @@ export type Project = {
     slug: string;
     title: string;
     tagline: string;
-    status: ProjectStatus;
     role: string;
     year: string;
     summary: string;
@@ -51,14 +46,13 @@ export const PROJECTS: Project[] = [
         seoDescription:
             "AKINTU trasforma contenuti e processi aziendali in un AI Employee per assistenza, vendita, qualificazione lead e prenotazioni, integrabile su siti e WordPress.",
         tagline: "Il tuo miglior commerciale, disponibile 24/7.",
-        status: "in-corso",
         role: "Partner tecnico",
-        year: "2026 — in corso",
+        year: "2026",
         summary:
             "AI Employee Platform che usa la conoscenza aziendale per assistere clienti, qualificare lead, consigliare prodotti e gestire prenotazioni.",
         description: [
             "AKINTU trasforma la conoscenza di un'azienda in un collaboratore digitale accessibile dal sito. Acquisisce contenuti web e documenti, li organizza in una base di conoscenza dedicata e li usa per rispondere, consigliare prodotti, qualificare contatti e accompagnare l'utente alla prenotazione.",
-            "La piattaforma è multi-tenant e comprende dashboard Next.js, backend Node.js, ricerca semantica con PostgreSQL e pgvector, job asincroni e widget distribuibili su siti custom o tramite plugin WordPress. Come partner tecnico seguo architettura, sviluppo del prodotto e affidabilità delle integrazioni.",
+            "La piattaforma è multi-tenant e comprende dashboard Next.js, backend Node.js, ricerca semantica con PostgreSQL e pgvector, job asincroni e widget distribuibili su siti custom o tramite plugin WordPress. Come partner tecnico ho seguito architettura, sviluppo del prodotto e affidabilità delle integrazioni.",
         ],
         features: [
             { title: "Conoscenza aziendale", desc: "Ingestione di siti, documenti e PDF in una base di conoscenza separata per ogni azienda." },
@@ -97,9 +91,8 @@ export const PROJECTS: Project[] = [
         seoDescription:
             "Lectum è un'app mobile React Native per discussioni strutturate sui libri, club di lettura digitali, ricerca per ISBN e gestione della libreria personale.",
         tagline: "I tuoi libri, la tua community.",
-        status: "in-corso",
         role: "Fondatore tecnico",
-        year: "2025 — in corso",
+        year: "2025",
         summary:
             "App mobile per discussioni strutturate sui libri, club di lettura digitali e gestione della libreria personale.",
         description: [
@@ -142,9 +135,8 @@ export const PROJECTS: Project[] = [
         seoDescription:
             "App mobile offline-first per la manutenzione straordinaria dei tiranti delle paratoie del MOSE: lavoro in ambienti sotterranei senza connettività, foto e sincronizzazione automatica.",
         tagline: "Manutenzione dei tiranti del MOSE, anche dove non c'è rete.",
-        status: "in-corso",
         role: "Sviluppo full-stack",
-        year: "2025 — in corso",
+        year: "2025",
         summary:
             "App mobile offline-first per la manutenzione straordinaria dei tiranti delle paratoie del MOSE, con backend di sincronizzazione e dashboard per il committente.",
         description: [
@@ -182,109 +174,18 @@ export const PROJECTS: Project[] = [
         },
     },
     {
-        slug: "varco",
-        title: "Varco",
-        seoTitle: "Varco — Lead generation con agenti AI per agenzie",
-        seoDescription:
-            "Varco è uno strumento interno di lead generation con agenti AI: identifica aziende pronte al contatto e genera outreach personalizzato per i clienti dell'agenzia.",
-        tagline: "Trova il varco: il momento giusto per contattare un'azienda.",
-        status: "wip",
-        role: "Founder & Tech Lead",
-        year: "2025 — WIP",
-        summary:
-            "Strumento interno di lead generation che usa agenti AI per identificare aziende pronte a essere contattate.",
-        description: [
-            "Varco è uno strumento interno usato per trovare lead qualificati per i nostri clienti. Il flusso: creiamo un'azienda cliente in Varco, lanciamo campagne, gli agenti AI trovano lead qualificati, approviamo le email e le inviamo via Instantly. I clienti ricevono lead pronti.",
-            "Architettura modulare basata su agenti AI specializzati, code BullMQ, integrazioni Serper per web search e Claude API per il ragionamento. Pensato per essere scalabile orizzontalmente.",
-        ],
-        features: [
-            { title: "Agenti AI specializzati", desc: "Pipeline di agenti che analizzano segnali, qualificano lead e generano outreach personalizzato." },
-            { title: "Campagne per cliente", desc: "Gestione separata di aziende, campagne, lead ed email draft con audit trail completo." },
-            { title: "Integrazione Instantly", desc: "Invio delle email approvate via Instantly.ai con gestione delle response e follow-up." },
-            { title: "Dashboard operatori", desc: "Interfaccia interna su Next.js per gestire approvazioni e monitorare il flusso." },
-        ],
-        stack: [
-            { area: "Backend", items: ["Node.js", "Express", "MongoDB", "BullMQ", "Redis"] },
-            { area: "Frontend", items: ["Next.js 15", "shadcn/ui", "Tailwind", "Clerk"] },
-            { area: "AI / Agenti", items: ["Claude Sonnet 4.5", "MoltBot", "Serper API"] },
-            { area: "Outreach", items: ["Instantly.ai", "n8n"] },
-        ],
-        icon: Target,
-        kind: "WebApplication",
-        applicationCategory: "BusinessApplication",
-        operatingSystem: "Web",
-        caseStudy: {
-            challenge:
-                "Le agenzie marketing che generano lead per i loro clienti perdono molte ore su attività manuali: scraping, qualifica prospect, ricerca segnali di acquisto, scrittura di email outreach personalizzate. La maggior parte del tempo non genera valore — è preparazione. E i lead prodotti spesso non sono qualificati abbastanza per giustificare il costo del processo.",
-            solution:
-                "Una pipeline di agenti AI orchestrati che identifica aziende pronte al contatto, le qualifica su criteri specifici per cliente e genera email outreach personalizzate. Gli operatori interni approvano le email che vengono inviate via Instantly.ai. Tutto il flusso è auditato, ripetibile e scalabile: una sola persona può gestire decine di campagne in parallelo.",
-            results: [
-                "Architettura modulare con agenti specializzati basati su Claude Sonnet 4.5, orchestrati da MoltBot",
-                "Pipeline asincrona con BullMQ + Redis per processare migliaia di lead senza bloccare la UI",
-                "Dashboard operatori Next.js 15 + shadcn/ui per gestione aziende, campagne e approvazioni",
-                "Integrazione end-to-end con Instantly.ai, Serper API per ricerca e n8n per side effects",
-            ],
-        },
-    },
-    {
-        slug: "forfi",
-        title: "Forfi",
-        seoTitle: "Forfi — SaaS gestione fiscale partita IVA forfettaria",
-        seoDescription:
-            "Forfi è un SaaS per partite IVA forfettarie italiane: fatturazione elettronica con invio SDI, calcolo tasse, gestione clienti e abbonamenti Stripe.",
-        tagline: "Gestione fiscale per partite IVA in regime forfettario.",
-        status: "privato",
-        role: "Founder & CTO",
-        year: "2024 — in corso",
-        summary:
-            "SaaS per freelance italiani in regime forfettario: fatturazione, spese, calcolo tasse, invio SDI e gestione abbonamenti.",
-        description: [
-            "Forfi è un SaaS dedicato ai professionisti in regime forfettario. Gestisce fatture elettroniche con invio SDI tramite Aruba, tracciamento spese, calcolo imposte e contributi, e abbonamenti Stripe per i piani di servizio.",
-            "Architettura layered MVC rigorosa sul backend, frontend con Next.js 15 e Clerk per l'autenticazione. Storage file su Cloudflare R2 con signed URL.",
-        ],
-        features: [
-            { title: "Fatturazione elettronica", desc: "Emissione, ricezione e invio SDI tramite integrazione Aruba, con counter per anno fiscale." },
-            { title: "Gestione clienti e anni fiscali", desc: "Anagrafica clienti, archivio annuale e numerazione automatica delle fatture." },
-            { title: "Abbonamenti Stripe", desc: "Piani di servizio con gestione checkout, billing portal e webhook." },
-            { title: "Notifiche e email transazionali", desc: "Invio email via Brevo con template personalizzati e queue Bull." },
-        ],
-        stack: [
-            { area: "Backend", items: ["Express", "TypeScript", "MongoDB", "Bull", "Redis"] },
-            { area: "Frontend", items: ["Next.js 15", "React Query", "Zustand", "shadcn/ui"] },
-            { area: "Auth & Pagamenti", items: ["Clerk", "Stripe"] },
-            { area: "Integrazioni", items: ["Aruba SDI", "Brevo", "Cloudflare R2"] },
-        ],
-        icon: Receipt,
-        kind: "WebApplication",
-        applicationCategory: "FinanceApplication",
-        operatingSystem: "Web",
-        caseStudy: {
-            challenge:
-                "I professionisti in regime forfettario in Italia gestiscono fatturazione SDI, tracciamento spese, calcolo imposte e abbonamenti con strumenti separati, spesso vecchi e fiscalmente non aggiornati. Il tempo speso su gestione amministrativa è alto rispetto al valore prodotto, con rischio reale di errori sulle scadenze.",
-            solution:
-                "Un SaaS dedicato che integra in un solo prodotto: emissione e invio fatture elettroniche via Aruba SDI, anagrafica clienti, anni fiscali separati con numerazione automatica, abbonamenti Stripe per i piani, file storage Cloudflare R2 con signed URL e notifiche transazionali Brevo. Backend layered MVC rigoroso, frontend Next.js 15 con Clerk.",
-            results: [
-                "Architettura backend con 5 modelli Mongoose (User, Client, Invoice, FiscalYear, InvoiceCounter) e queue Bull dedicata per task fiscali",
-                "Invio SDI funzionante con counter automatico per anno fiscale e gestione stati ricevuta",
-                "Integrazione Stripe completa con webhook, billing portal e gestione abbonamenti per piani di servizio",
-                "Pipeline CI/CD su CapRover (backend) e Vercel (frontend) con ambienti separati staging/produzione",
-            ],
-        },
-    },
-    {
         slug: "oraloco",
         title: "Oraloco",
         seoTitle: "Oraloco — Community e contenuti sul calciomercato",
         seoDescription:
-            "Oraloco è la piattaforma per gli appassionati di calciomercato: contenuti editoriali, news e approfondimenti, community moderata e app mobile companion in sviluppo.",
+            "Oraloco è la piattaforma per gli appassionati di calciomercato: contenuti editoriali, news e approfondimenti, community moderata e app mobile companion.",
         tagline: "La community degli appassionati di calciomercato.",
-        status: "in-corso",
         role: "Founder & Fractional CTO",
-        year: "2023 — in corso",
+        year: "2023",
         summary:
             "Piattaforma web e mobile dedicata alla community degli appassionati di calciomercato: contenuti, news e community.",
         description: [
-            "Oraloco è la piattaforma per chi segue il calciomercato: contenuti editoriali, news e approfondimenti, community attiva e ambiente di confronto fra tifosi e appassionati. Il prodotto include un sito web pubblicato e un'app mobile in sviluppo.",
+            "Oraloco è la piattaforma per chi segue il calciomercato: contenuti editoriali, news e approfondimenti, community attiva e ambiente di confronto fra tifosi e appassionati. Il prodotto include un sito web e un'app mobile companion.",
             "L'obiettivo è creare un punto di riferimento italiano sul calciomercato, con SEO curato, contenuti di qualità e una community moderata.",
         ],
         features: [
@@ -324,9 +225,8 @@ export const PROJECTS: Project[] = [
         seoDescription:
             "Freedhome è una piattaforma per property manager: gestione prenotazioni, contratti digitali, automazioni operative e reporting per affitti brevi e mid-term.",
         tagline: "Gestione affitti brevi e mid-term, semplificata.",
-        status: "in-corso",
         role: "Tech partner",
-        year: "2024 — in corso",
+        year: "2024",
         summary:
             "Piattaforma per la gestione di immobili in affitto: prenotazioni, contratti, comunicazioni e automazioni operative.",
         description: [
@@ -370,10 +270,3 @@ export function getProject(slug: string): Project | undefined {
 export function getPublicProjects(): Project[] {
     return PROJECTS;
 }
-
-export const PROJECT_STATUS_LABEL: Record<ProjectStatus, string> = {
-    rilasciato: "Rilasciato",
-    "in-corso": "In corso",
-    wip: "Work in progress",
-    privato: "Progetto privato",
-};

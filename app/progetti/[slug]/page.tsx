@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, Clock } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
-import { PROJECTS, getProject, PROJECT_STATUS_LABEL } from "@/src/lib/projects";
+import { PROJECTS, getProject } from "@/src/lib/projects";
 import { getPostsByProject } from "@/src/lib/posts";
 import { SITE_URL } from "@/src/lib/utils";
 
@@ -102,14 +102,9 @@ export default async function ProjectPage({ params }: PageProps) {
                     </Link>
                     <div className="mt-8 grid items-start gap-10 lg:grid-cols-[1.4fr_1fr]">
                         <div>
-                            <div className="flex items-center gap-3">
-                                <span className="flex size-12 items-center justify-center rounded-xl bg-ink text-white">
-                                    <Icon className="size-5" />
-                                </span>
-                                <span className="rounded-full border border-ink/10 bg-surface-alt px-3 py-1 text-xs font-semibold uppercase tracking-wider text-ink-soft">
-                                    {PROJECT_STATUS_LABEL[project.status]}
-                                </span>
-                            </div>
+                            <span className="flex size-12 items-center justify-center rounded-xl bg-ink text-white">
+                                <Icon className="size-5" />
+                            </span>
                             <h1 className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
                                 {project.title}
                             </h1>
@@ -144,7 +139,6 @@ export default async function ProjectPage({ params }: PageProps) {
                             <dl className="mt-5 space-y-4 text-sm">
                                 <Row k="Ruolo" v={project.role} />
                                 <Row k="Anno" v={project.year} />
-                                <Row k="Status" v={PROJECT_STATUS_LABEL[project.status]} />
                                 {project.url && (
                                     <Row k="Web" v={new URL(project.url).hostname.replace(/^www\./, "")} />
                                 )}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { SectionTitle } from "@/src/components/ui/SectionTitle";
-import { PROJECTS, PROJECT_STATUS_LABEL } from "@/src/lib/projects";
+import { PROJECTS } from "@/src/lib/projects";
 import { SITE_URL } from "@/src/lib/utils";
 
 export const metadata: Metadata = {
@@ -70,7 +70,7 @@ export default function ProgettiPage() {
                 <SectionTitle
                     eyebrow="Progetti"
                     title="Cose che ho costruito."
-                    description="Una selezione di progetti su cui ho lavorato come fondatore, CTO o partner tecnico — alcuni rilasciati, altri in sviluppo, alcuni privati."
+                    description="Una selezione di app mobile, SaaS, piattaforme community e software su misura che ho costruito come fondatore, CTO o partner tecnico."
                     as="h1"
                 />
                 <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -83,12 +83,9 @@ export default function ProgettiPage() {
                                 className="group anim-fade-up flex flex-col overflow-hidden rounded-2xl border border-ink/8 bg-white p-8 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-[0_20px_50px_-20px_rgba(28,31,51,0.18)]"
                                 style={{ animationDelay: `${i * 70}ms` }}
                             >
-                                <div className="flex items-start justify-between gap-4">
+                                <div className="flex items-start gap-4">
                                     <span className="flex size-12 items-center justify-center rounded-xl bg-surface-alt text-ink">
                                         <Icon className="size-5" />
-                                    </span>
-                                    <span className="rounded-full border border-ink/10 bg-surface-alt px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-muted">
-                                        {PROJECT_STATUS_LABEL[p.status]}
                                     </span>
                                 </div>
                                 <h2 className="mt-6 text-2xl font-bold text-ink">{p.title}</h2>
