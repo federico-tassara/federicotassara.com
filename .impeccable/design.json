@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-22T09:54:54.030710+00:00",
+  "generatedAt": "2026-10-22T10:16:36.338205+00:00",
   "title": "Design System: Federico Tassara",
   "extensions": {
     "colorMeta": {
@@ -10,7 +10,7 @@
       },
       "canvas": {
         "role": "neutral",
-        "displayName": "Grigio caldo"
+        "displayName": "Bianco a tutta larghezza"
       },
       "surface": {
         "role": "neutral",
@@ -22,6 +22,21 @@
         "name": "interactive",
         "value": "200ms",
         "purpose": "Hover; disattivato con movimento ridotto."
+      },
+      {
+        "name": "portfolio-image-hover",
+        "value": "250ms",
+        "purpose": "Scala 1.025 sulle immagini del portfolio con hover e puntatore preciso; disattivata con movimento ridotto."
+      },
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.23,1,.32,1)",
+        "purpose": "Hover delle immagini e delle frecce dei progetti."
+      },
+      {
+        "name": "project-photo-parallax",
+        "value": "translateY(-3%) → translateY(3%); scale(1.08)",
+        "purpose": "Fotografie della home, timeline di scroll supportata, desktop da 900px e puntatore preciso. Esclude schermate e testo; disattivato con movimento ridotto."
       }
     ],
     "breakpoints": [
@@ -30,12 +45,12 @@
         "value": "640px"
       },
       {
-        "name": "frame-compact-max",
-        "value": "1000px"
-      },
-      {
         "name": "desktop-nav-min",
         "value": "1024px"
+      },
+      {
+        "name": "project-photo-parallax-min",
+        "value": "900px"
       }
     ]
   },
@@ -97,7 +112,7 @@
     }
   ],
   "narrative": {
-    "overview": "La direzione approvata è una pagina bianca su fondo grigio caldo, con Geist, accenti smeraldo e fotografie personali dagli angoli morbidi. La presenza di Federico resta riconoscibile mentre servizi, progetti e contenuti parlano a founder e aziende.",
+    "overview": "La direzione approvata è una pagina bianca a tutta larghezza con contenuti centrati, con Geist, accenti smeraldo e fotografie personali dagli angoli morbidi. La presenza di Federico resta riconoscibile mentre servizi, progetti e contenuti parlano a founder e aziende.",
     "keyCharacteristics": [
       "Tipografia compatta e leggibile.",
       "Ritratto personale e prove di esperienza.",
@@ -107,7 +122,8 @@
     "dos": [
       "**Do** mantenere testi, rotte, metadati SEO e gerarchia semantica durante i ritocchi visivi.",
       "**Do** usare i token e i componenti condivisi per le nuove pagine.",
-      "**Do** mantenere fotografie leggibili e focus da tastiera visibile."
+      "**Do** mantenere fotografie leggibili e focus da tastiera visibile.",
+      "**Do** usare immagini pertinenti ai progetti e dichiarare le schermate dimostrative."
     ],
     "donts": [
       "**Don't** trasformare i sei loghi statici in un carosello animato.",

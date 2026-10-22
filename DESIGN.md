@@ -10,7 +10,7 @@ colors:
   line: "#d6dcd7"
   surface: "#ffffff"
   surface-alt: "#f3f7f4"
-  canvas: "#eeeeec"
+  canvas: "#ffffff"
   highlight: "#b8f2d8"
   closing: "#152c26"
 typography:
@@ -84,7 +84,7 @@ components:
 
 ## Overview
 
-La direzione approvata è una pagina bianca su fondo grigio caldo, con Geist, accenti smeraldo e fotografie personali dagli angoli morbidi. La presenza di Federico resta riconoscibile mentre servizi, progetti e contenuti parlano a founder e aziende.
+La direzione approvata è una pagina bianca a tutta larghezza con contenuti centrati, con Geist, accenti smeraldo e fotografie personali dagli angoli morbidi. La presenza di Federico resta riconoscibile mentre servizi, progetti e contenuti parlano a founder e aziende.
 
 Questa documentazione fotografa il codice implementato, con priorità ad `app/globals.css` e ai componenti condivisi. Non introduce una nuova metafora creativa o una nuova identità.
 
@@ -95,7 +95,7 @@ Questa documentazione fotografa il codice implementato, con priorità ad `app/gl
 
 ## Colors
 
-L’accento smeraldo identifica le azioni principali; il verde chiaro evidenzia parole, il verde scuro chiude la pagina. Gli inchiostri verdi quasi neri mantengono continuità con l’accento. Il grigio caldo incornicia la superficie bianca; le superfici alternative distinguono gruppi di contenuto senza ombre pervasive.
+L’accento smeraldo identifica le azioni principali; il verde chiaro evidenzia parole, il verde scuro chiude la pagina. Gli inchiostri verdi quasi neri mantengono continuità con l’accento. Il bianco si estende fino ai bordi della finestra; le superfici alternative distinguono gruppi di contenuto senza ombre pervasive.
 
 ## Typography
 
@@ -103,13 +103,15 @@ Geist serve titoli, testo e controlli. Il display usa peso medio e tracking stre
 
 ## Layout
 
-Il foglio bianco raggiunge 1240px; il contenitore interno occupa l’86%, fino a 1060px. Il bordo esterno del documento passa da 32px a 20px sotto 1000px e a 10px sotto 640px. Su mobile il contenitore occupa l’88%.
+La pagina bianca occupa tutta la larghezza, senza cornice o padding esterno. Il contenitore interno occupa l’86%, fino a 1120px. Su mobile il contenitore occupa l’88%.
 
 La home affianca testo e ritratto con colonne 1.25fr/1fr; sotto 640px passa a una colonna. Le sezioni informative alternano spazio bianco e pannelli morbidi. I tre pilastri diventano una colonna su mobile. La navigazione desktop compare a 1024px; sotto tale soglia si usa un menu espandibile con scorrimento proprio.
 
+La sezione progetti della home presenta MOSE e Sinfea in righe editoriali con immagine e testo alternati (1.35fr/1fr e 1fr/1.35fr). Sotto 640px ogni immagine precede il testo in una colonna. Il portfolio Software raccoglie otto progetti in due colonne, ridotte a una sotto 640px, con immagini, ruolo e sintesi. Le immagini condivise provengono dal registro dei media dei progetti.
+
 ## Elevation & Depth
 
-Card e sezioni sono piatte, separate da contorni e variazioni di superficie. Il menu servizi usa l’ombra `shadow-xl` di Tailwind: è un livello sovrapposto funzionale, non un trattamento da estendere alle card. Il ritratto contiene una didascalia scura semitrasparente.
+Card e sezioni sono piatte, separate da contorni e variazioni di superficie. Il menu servizi usa l’ombra `shadow-xl` di Tailwind: è un livello sovrapposto funzionale, non un trattamento da estendere alle card. Il ritratto contiene una didascalia scura semitrasparente. Le schermate software usano una lieve ombra dell’immagine su fondo caldo per rendere distinguibile l’interfaccia; le fotografie restano piatte.
 
 ## Shapes
 
@@ -122,12 +124,14 @@ Le card condividono angoli ampi; le immagini principali arrivano a 25–28px. I 
 - **Campi:** superficie bianca, bordo tenue, label visibile. Focus con bordo scuro e anello discreto; errori rossi e indisponibilità ambra sono stati funzionali.
 - **Navigazione:** header bianco sticky; separatore sottile dopo lo scroll. Il menu servizi risponde anche al focus da tastiera. Il menu mobile espone lo stato tramite `aria-expanded`.
 - **Loghi clienti:** sei loghi statici, senza marquee. Sinfea non è un link; B-Play usa il fallback LinkedIn circolare previsto.
-- **Movimento:** le animazioni di ingresso sono disattivate; gli hover durano 200ms. Con movimento ridotto sono disattivati transizioni e scorrimento fluido.
+- **Immagini progetto:** fotografie a copertura, schermate e copertine intere senza ritagli. Angoli da 26px, ridotti a 22px su mobile. Le schermate dimostrative restano dichiarate nelle didascalie; non sono presentate come schermate di produzione. La home usa immagini ampie (rapporto 1.2); il portfolio usa rapporto 1.5.
+- **Movimento:** le animazioni di ingresso sono disattivate. Su desktop da 900px con puntatore preciso, supporto alle timeline di scroll e nessuna preferenza di movimento ridotto, le sole fotografie dei progetti in home scorrono dolcemente da −3% a +3% con scala 1.08. Testi e schermate rimangono fermi. Gli hover delle frecce durano 200ms; le immagini del portfolio crescono a scala 1.025 in 250ms sui dispositivi con hover e puntatore preciso. Con movimento ridotto sono disattivati parallax, trasformazioni, transizioni e scorrimento fluido.
 
 ## Do's and Don'ts
 
 - **Do** mantenere testi, rotte, metadati SEO e gerarchia semantica durante i ritocchi visivi.
 - **Do** usare i token e i componenti condivisi per le nuove pagine.
 - **Do** mantenere fotografie leggibili e focus da tastiera visibile.
+- **Do** usare immagini pertinenti ai progetti e dichiarare le schermate dimostrative.
 - **Don't** trasformare i sei loghi statici in un carosello animato.
 - **Don't** inventare link per Sinfea o alterare il fallback circolare B-Play.
