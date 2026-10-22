@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
+import { ProjectVisual } from "@/src/components/ui/ProjectVisual";
 import { getProject } from "@/src/lib/projects";
 
 type FeaturedProjectProps = {
@@ -33,6 +34,7 @@ export function FeaturedProject({
         <section className={className}>
             <Container>
                 <div className="anim-fade-up overflow-hidden rounded-3xl border border-ink/8 bg-white p-8 sm:p-12">
+                    <div className="mb-10"><ProjectVisual slug={slug} featured /></div>
                     <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
                         <div>
                             <span className="text-xs font-medium text-muted">

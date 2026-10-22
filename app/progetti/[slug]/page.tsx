@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, Clock } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
+import { ProjectVisual } from "@/src/components/ui/ProjectVisual";
 import { PROJECTS, getProject } from "@/src/lib/projects";
 import { getPostsByProject } from "@/src/lib/posts";
 import { SITE_URL } from "@/src/lib/utils";
@@ -100,6 +101,7 @@ export default async function ProjectPage({ params }: PageProps) {
                     >
                         <ArrowLeft className="size-4" /> Tutti i progetti
                     </Link>
+                    <div className="project-detail-visual mt-10"><ProjectVisual slug={project.slug} featured /></div>
                     <div className="mt-8 grid items-start gap-10 lg:grid-cols-[1.4fr_1fr]">
                         <div>
                             <span className="flex size-12 items-center justify-center rounded-xl bg-ink text-white">

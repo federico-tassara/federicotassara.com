@@ -8,6 +8,7 @@ import { SectionTitle } from "@/src/components/ui/SectionTitle";
 import { ServiceCard } from "@/src/components/ui/ServiceCard";
 import { ClientsMarquee } from "@/src/components/ui/ClientsMarquee";
 import { HeroAkintuWidget } from "@/src/components/akintu/HeroAkintuWidget";
+import { HomeProjects } from "@/src/components/sections/HomeProjects";
 import { SERVICES } from "@/src/lib/services";
 import { CALENDLY_URL, SITE_URL } from "@/src/lib/utils";
 import { getAllPosts } from "@/src/lib/posts";
@@ -50,6 +51,7 @@ export default function Home() {
             <figure className="hero-portrait"><Image src="/images/profile.jpeg" alt="Federico Tassara sulle montagne" fill sizes="(min-width: 900px) 430px, 88vw" priority /><figcaption>Federico Tassara<span>Full Stack Developer &amp; Fractional CTO</span></figcaption></figure>
         </section>
         <section className="home-clients" aria-label="Clienti e progetti"><p>Hanno scelto di lavorare con me</p><ClientsMarquee /></section>
+        <HomeProjects />
         <section className="home-about site-container"><Image src="/images/profile.jpeg" alt="Federico Tassara" width={245} height={305} className="about-portrait" /><div><SectionTitle eyebrow="La mia visione" title="Costruire prodotti che durano." description="Credo nello sviluppo di prodotti digitali pensati per durare, non solo per essere rilasciati. Ogni progetto nasce con una base tecnica solida, è semplice da evolvere e supporta davvero gli obiettivi di business nel tempo." /><p className="mt-5 text-muted leading-relaxed">Non scrivo codice per riempire feature: costruisco prodotti digitali che funzionano, scalano e creano valore reale.</p></div></section>
         <section id="servizi" className="home-services site-container"><SectionTitle eyebrow="Servizi" title="Cosa posso costruire con te." description="Da una web app fino a un'intera architettura cloud: ti accompagno dalla strategia tecnica al rilascio in produzione." /><div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{SERVICES.map(s => <ServiceCard key={s.slug} service={s} />)}</div></section>
         <section className="home-pillars site-container"><SectionTitle eyebrow="I pilastri del lavoro" title="Sei principi che guidano ogni progetto." /><div className="pillar-grid">{PILLARS.map(p => <article key={p.title}><h3>{p.title}</h3><p>{p.text}</p></article>)}</div></section>

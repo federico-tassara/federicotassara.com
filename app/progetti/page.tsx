@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { SectionTitle } from "@/src/components/ui/SectionTitle";
 import { PROJECTS } from "@/src/lib/projects";
+import { ProjectVisual } from "@/src/components/ui/ProjectVisual";
 import { SITE_URL } from "@/src/lib/utils";
 
 export const metadata: Metadata = {
@@ -69,46 +70,20 @@ export default function ProgettiPage() {
             <Container>
                 <SectionTitle
                     eyebrow="Progetti"
-                    title="Cose che ho costruito."
+                    title="Software che ho costruito."
                     description="Una selezione di app mobile, SaaS, piattaforme community e software su misura che ho costruito come fondatore, CTO o partner tecnico."
                     as="h1"
                 />
-                <div className="mt-14 grid gap-6 md:grid-cols-2">
-                    {PROJECTS.map((p, i) => {
-                        const Icon = p.icon;
-                        return (
-                            <Link
-                                key={p.slug}
-                                href={`/progetti/${p.slug}`}
-                                className="group anim-fade-up flex flex-col overflow-hidden rounded-[22px] border border-line bg-white p-8 transition-all hover:-translate-y-1 hover:border-ink/20 hover:border-accent"
-                                style={{ animationDelay: `${i * 70}ms` }}
-                            >
-                                <div className="flex items-start gap-4">
-                                    <span className="flex size-12 items-center justify-center rounded-xl bg-surface-alt text-ink">
-                                        <Icon className="size-5" />
-                                    </span>
-                                </div>
-                                <h2 className="mt-6 text-2xl font-bold text-ink">{p.title}</h2>
-                                <p className="mt-1 text-base text-ink-soft">{p.tagline}</p>
-                                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-muted">
-                                    {p.summary}
-                                </p>
-                                <div className="mt-5 flex flex-wrap gap-1.5">
-                                    {p.stack.flatMap((s) => s.items).slice(0, 4).map((s) => (
-                                        <span
-                                            key={s}
-                                            className="rounded-full border border-ink/10 bg-surface-alt px-2.5 py-1 text-xs text-ink-soft"
-                                        >
-                                            {s}
-                                        </span>
-                                    ))}
-                                </div>
-                                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-ink">
-                                    Scopri il progetto
-                                    <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
-                                </span>
-                            </Link>
-                        );
+                <div className="portfolio-grid">
+                    {["artissima", "club-treccani", "mose", "oraloco", "freedhome", "sinfea", "akintu", "lectum"].map(slug => {
+                        const project = PROJECTS.find(p => p.slug === slug)!;
+                        return <article key={project.slug} className="portfolio-project">
+                            <Link href={`/progetti/${project.slug}`} className="portfolio-image-link" aria-label={`Scopri ${project.title}`}><ProjectVisual slug={project.slug} /></Link>
+                            <div className="portfolio-project-title"><h2><Link href={`/progetti/${project.slug}`}>{project.title}</Link></h2><ArrowRight size={22} aria-hidden="true" /></div>
+                            <p className="portfolio-role">{project.role}</p>
+                            <p className="portfolio-summary">{project.summary}</p>
+                            <div className="portfolio-tags">{project.stack.flatMap(s => s.items).slice(0,3).map(t => <span key={t}>{t}</span>)}</div>
+                        </article>;
                     })}
                 </div>
             </Container>

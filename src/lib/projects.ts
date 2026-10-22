@@ -5,6 +5,7 @@ import {
     Smile,
     Home,
     Waves,
+    Target,
 } from "lucide-react";
 
 export type ProjectKind =
@@ -260,6 +261,46 @@ export const PROJECTS: Project[] = [
                 "Dashboard di reporting con metriche di occupancy, revenue e attività operative",
             ],
         },
+    },
+    {
+        slug: "artissima", title: "Artissima", tagline: "Il catalogo digitale dell’arte contemporanea.",
+        role: "Sviluppo web", year: "—",
+        summary: "Un archivio digitale per esplorare le edizioni della fiera, le gallerie, gli artisti e le opere.",
+        description: ["Il catalogo di Artissima raccoglie e rende consultabili le edizioni della fiera. Il lavoro sul software collega gallerie, artisti e opere in un archivio navigabile.", "L’applicazione web organizza i contenuti delle diverse edizioni e mantiene il collegamento con il catalogo corrente della fiera."],
+        features: [
+            { title: "Archivio delle edizioni", desc: "Consultazione del patrimonio delle diverse edizioni della fiera." },
+            { title: "Artisti e gallerie", desc: "Schede collegate per esplorare protagonisti e opere del catalogo." },
+            { title: "Contenuti organizzati", desc: "Importazione e organizzazione dei contenuti storici." },
+        ],
+        stack: [{area:"Applicazione web",items:["Next.js","React","TypeScript"]}],
+        icon: BookOpen, kind:"WebApplication", applicationCategory:"ReferenceApplication", operatingSystem:"Web",
+    },
+    {
+        slug: "club-treccani", title: "Club Treccani", tagline: "Una piattaforma digitale per vivere la cultura.",
+        role: "Sviluppo web", year: "—",
+        summary: "Il sito del Club Treccani: contenuti, iniziative culturali e servizi dedicati alla community degli iscritti.",
+        description: ["Club Treccani riunisce contenuti e iniziative culturali in un’esperienza dedicata ai suoi iscritti. Il progetto comprende il sito web e le funzionalità della community.", "Il lavoro di sviluppo riguarda un tema WordPress personalizzato, con percorsi di registrazione, area personale e contenuti riservati."],
+        features: [
+            {title:"Area personale",desc:"Accesso degli iscritti ai servizi e ai contenuti del Club."},
+            {title:"Contenuti culturali",desc:"Pagine e percorsi dedicati a iniziative, esperienze e approfondimenti."},
+            {title:"Tema personalizzato",desc:"Interfacce sviluppate intorno all’identità del Club Treccani."},
+        ],
+        stack:[{area:"Sito e contenuti",items:["WordPress","PHP","JavaScript"]}],
+        url:"https://clubtreccani.it",icon:BookOpen,kind:"WebApplication",applicationCategory:"LifestyleApplication",operatingSystem:"Web",
+    },
+    {
+        slug: "sinfea", title: "Sinfea", tagline: "Dalla visione del founder al primo pilota.",
+        role: "Fractional CTO", year: "2026",
+        summary: "Leadership tecnica e sviluppo di una piattaforma per coordinare i processi operativi dei centri sanitari privati.",
+        description: ["Sinfea sviluppa software per centri sanitari privati. Come Fractional CTO seguo le decisioni tecniche e il percorso che porta dalla fondazione esistente al primo pilota.", "Il lavoro mette in relazione prodotto, architettura e verifiche concrete: dati persistenti, accessi separati tra organizzazioni e attività programmate. La schermata presentata usa esclusivamente dati sintetici di dimostrazione."],
+        features:[
+            {title:"Revisione tecnica",desc:"Valutare ciò che esiste già e decidere cosa mantenere prima di sviluppare."},
+            {title:"Processi operativi",desc:"Coordinare attività e avanzamento dei percorsi di lavoro del centro."},
+            {title:"Separazione dei dati",desc:"Verificare i confini di accesso tra organizzazioni con ambienti di prova."},
+            {title:"Preparazione al pilota",desc:"Trasformare i rischi tecnici in risultati osservabili e verificabili."},
+        ],
+        stack:[{area:"Leadership tecnica",items:["Architettura","Sicurezza","Workflow","Verifiche di rilascio"]}],
+        icon:Target,kind:"WebApplication",applicationCategory:"BusinessApplication",operatingSystem:"Web",
     },
 ];
 
