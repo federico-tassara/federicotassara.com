@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T09:54:54.030710+00:00",
+  "title": "Design System: Federico Tassara",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Smeraldo"
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Grigio caldo"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Bianco pagina"
+      }
+    },
+    "motion": [
+      {
+        "name": "interactive",
+        "value": "200ms",
+        "purpose": "Hover; disattivato con movimento ridotto."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "home-mobile-max",
+        "value": "640px"
+      },
+      {
+        "name": "frame-compact-max",
+        "value": "1000px"
+      },
+      {
+        "name": "desktop-nav-min",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Variante del componente Button condiviso.",
+      "html": "<button class=\"ds-button\">Prenota consulenza</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:9999px;height:44px;padding:0 24px;font:500 14px Geist,system-ui,sans-serif;transition:all .2s}.ds-button:focus-visible{outline:2px solid #161d1a66;outline-offset:2px}.ds-button:disabled{opacity:.5;pointer-events:none}.ds-button{background:var(--color-accent,#00875f);color:white}.ds-button:hover{background:var(--color-accent-dark,#006a4a)}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Button outline",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Variante del componente Button condiviso.",
+      "html": "<button class=\"ds-button\">Prenota consulenza</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:9999px;height:44px;padding:0 24px;font:500 14px Geist,system-ui,sans-serif;transition:all .2s}.ds-button:focus-visible{outline:2px solid #161d1a66;outline-offset:2px}.ds-button:disabled{opacity:.5;pointer-events:none}.ds-button{background:transparent;color:#161d1a;border:1px solid #161d1a26}.ds-button:hover{border-color:#161d1a66;transform:translateY(-2px)}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Button ghost",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Variante del componente Button condiviso.",
+      "html": "<button class=\"ds-button\">Prenota consulenza</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:9999px;height:44px;padding:0 24px;font:500 14px Geist,system-ui,sans-serif;transition:all .2s}.ds-button:focus-visible{outline:2px solid #161d1a66;outline-offset:2px}.ds-button:disabled{opacity:.5;pointer-events:none}.ds-button{background:transparent;color:#161d1a}.ds-button:hover{background:#161d1a0d}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Button link",
+      "kind": "button",
+      "refersTo": "button-link",
+      "description": "Variante del componente Button condiviso.",
+      "html": "<button class=\"ds-button\">Prenota consulenza</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:9999px;height:44px;padding:0 24px;font:500 14px Geist,system-ui,sans-serif;transition:all .2s}.ds-button:focus-visible{outline:2px solid #161d1a66;outline-offset:2px}.ds-button:disabled{opacity:.5;pointer-events:none}.ds-button{background:transparent;color:#161d1a;text-decoration:underline;text-underline-offset:4px}.ds-button:hover{color:#294537}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Campo di contatto",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo del modulo contatti.",
+      "html": "<label class=\"ds-label\" for=\"ds-email\">Email</label><input class=\"ds-input\" id=\"ds-email\" placeholder=\"Indirizzo email\">",
+      "css": ".ds-label{display:block;margin-bottom:6px;font:500 14px Geist,system-ui,sans-serif}.ds-input{border:1px solid #161d1a1a;background:white;border-radius:8px;padding:12px 16px;font:14px Geist,system-ui,sans-serif;color:#161d1a}.ds-input:focus{outline:none;border-color:#161d1a;box-shadow:0 0 0 2px #161d1a1a}"
+    },
+    {
+      "name": "Card servizio",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Contenitore dei servizi.",
+      "html": "<a class=\"ds-card\" href=\"#servizi\"><h3>Consulenza tecnologica</h3><p>Strategia e sviluppo per il tuo progetto.</p></a>",
+      "css": ".ds-card{display:flex;flex-direction:column;min-height:195px;border:1px solid var(--color-line,#d6dcd7);border-radius:22px;padding:25px 23px;background:white;color:#161d1a;text-decoration:none;font-family:Geist,system-ui,sans-serif;transition:border-color .2s}.ds-card:hover{border-color:var(--color-accent,#00875f)}.ds-card:focus-visible{outline:3px solid #00875f;outline-offset:4px}.ds-card h3{font-size:17px;font-weight:600;margin:0 0 23px}.ds-card p{font-size:14px;line-height:1.6;color:#5f6e65;margin:0}"
+    },
+    {
+      "name": "Navigazione",
+      "kind": "nav",
+      "description": "Link della navigazione desktop.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#home\">Home</a><a href=\"#servizi\">Servizi</a></nav>",
+      "css": ".ds-nav{display:flex;gap:4px;background:white}.ds-nav a{border-radius:6px;padding:8px 12px;font:500 14px Geist,system-ui,sans-serif;color:#294537;text-decoration:none;transition:color .2s}.ds-nav a:hover{color:#161d1a}.ds-nav a:focus-visible{outline:3px solid #00875f;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "overview": "La direzione approvata è una pagina bianca su fondo grigio caldo, con Geist, accenti smeraldo e fotografie personali dagli angoli morbidi. La presenza di Federico resta riconoscibile mentre servizi, progetti e contenuti parlano a founder e aziende.",
+    "keyCharacteristics": [
+      "Tipografia compatta e leggibile.",
+      "Ritratto personale e prove di esperienza.",
+      "Superfici prevalentemente piatte e bordi leggeri."
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** mantenere testi, rotte, metadati SEO e gerarchia semantica durante i ritocchi visivi.",
+      "**Do** usare i token e i componenti condivisi per le nuove pagine.",
+      "**Do** mantenere fotografie leggibili e focus da tastiera visibile."
+    ],
+    "donts": [
+      "**Don't** trasformare i sei loghi statici in un carosello animato.",
+      "**Don't** inventare link per Sinfea o alterare il fallback circolare B-Play."
+    ]
+  }
+}

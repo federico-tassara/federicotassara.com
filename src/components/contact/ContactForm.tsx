@@ -193,7 +193,7 @@ function Field({
     multiline?: boolean;
 }) {
     const baseClasses =
-        "w-full rounded-lg border border-ink/10 bg-white px-4 py-3 text-sm text-ink placeholder:text-muted/70 transition-colors focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/10";
+        "w-full rounded-lg border border-ink/10 bg-white px-4 py-3 text-sm text-ink placeholder:text-muted transition-colors focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/10";
     return (
         <div>
             <label htmlFor={id} className="mb-1.5 block text-sm font-medium text-ink">
