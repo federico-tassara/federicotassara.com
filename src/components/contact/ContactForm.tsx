@@ -81,7 +81,7 @@ function ContactFormInner({ siteKey, source }: { siteKey: string; source: string
 
     if (state === "success") {
         return (
-            <div className="rounded-2xl border border-ink/8 bg-surface-alt p-10 text-center">
+            <div className="rounded-[22px] border border-line bg-surface-alt p-10 text-center">
                 <CheckCircle2 className="mx-auto size-12 text-ink" />
                 <h2 className="mt-5 text-2xl font-bold text-ink">Messaggio inviato.</h2>
                 <p className="mt-3 text-muted">
@@ -101,7 +101,7 @@ function ContactFormInner({ siteKey, source }: { siteKey: string; source: string
     return (
         <form
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-ink/8 bg-white p-7 sm:p-9"
+            className="rounded-[22px] border border-line bg-white p-7 sm:p-9"
             noValidate
         >
             <div className="grid gap-5 sm:grid-cols-2">

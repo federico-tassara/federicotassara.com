@@ -8,14 +8,14 @@ export function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="border-t border-ink/8 bg-surface-alt">
+        <footer className="site-footer rounded-t-[28px] bg-ink text-white">
             <Container className="py-14">
                 <div className="grid gap-10 lg:grid-cols-4">
                     <div className="lg:col-span-1">
-                        <Link href="/" className="text-lg font-bold tracking-tight text-ink">
+                        <Link href="/" className="text-lg font-medium tracking-tight text-white">
                             Federico Tassara
                         </Link>
-                        <p className="mt-3 text-sm leading-relaxed text-muted">
+                        <p className="mt-3 text-sm leading-relaxed text-white/75">
                             Full Stack Developer e Fractional CTO. Sviluppo app web e mobile,
                             backend solidi e architetture pronte a crescere.
                         </p>
@@ -27,33 +27,33 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-ink">Naviga</h3>
+                        <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Naviga</h3>
                         <ul className="mt-4 space-y-2.5 text-sm">
-                            <li><Link href="/" className="text-muted hover:text-ink">Home</Link></li>
-                            <li><Link href="/chi-sono" className="text-muted hover:text-ink">Chi sono</Link></li>
-                            <li><Link href="/blog" className="text-muted hover:text-ink">Blog</Link></li>
-                            <li><Link href="/progetti" className="text-muted hover:text-ink">Progetti</Link></li>
-                            <li><Link href="/contatti" className="text-muted hover:text-ink">Contatti</Link></li>
+                            <li><Link href="/" className="text-white/75 hover:text-white">Home</Link></li>
+                            <li><Link href="/chi-sono" className="text-white/75 hover:text-white">Chi sono</Link></li>
+                            <li><Link href="/blog" className="text-white/75 hover:text-white">Blog</Link></li>
+                            <li><Link href="/progetti" className="text-white/75 hover:text-white">Progetti</Link></li>
+                            <li><Link href="/contatti" className="text-white/75 hover:text-white">Contatti</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-ink">Servizi</h3>
+                        <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Servizi</h3>
                         <ul className="mt-4 space-y-2.5 text-sm">
                             {SERVICES.map((s) => (
                                 <li key={s.slug}>
-                                    <Link href={`/servizi/${s.slug}`} className="text-muted hover:text-ink">
+                                    <Link href={`/servizi/${s.slug}`} className="text-white/75 hover:text-white">
                                         {s.shortTitle}
                                     </Link>
                                 </li>
                             ))}
                             <li className="pt-1.5">
-                                <Link href="/fractional-cto" className="font-medium text-ink hover:text-ink-soft">
+                                <Link href="/fractional-cto" className="font-medium text-white hover:text-white/80">
                                     Fractional CTO
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/sviluppatore-react-native-italia" className="font-medium text-ink hover:text-ink-soft">
+                                <Link href="/sviluppatore-react-native-italia" className="font-medium text-white hover:text-white/80">
                                     Sviluppatore React Native
                                 </Link>
                             </li>
@@ -61,15 +61,15 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-ink">Contatti</h3>
-                        <ul className="mt-4 space-y-3 text-sm text-muted">
+                        <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contatti</h3>
+                        <ul className="mt-4 space-y-3 text-sm text-white/75">
                             <li className="flex items-start gap-2">
                                 <Mail className="mt-0.5 size-4 shrink-0" />
-                                <a href={`mailto:${SITE_EMAIL}`} className="hover:text-ink">{SITE_EMAIL}</a>
+                                <a href={`mailto:${SITE_EMAIL}`} className="hover:text-white">{SITE_EMAIL}</a>
                             </li>
                             {ADDRESSES.map((a) => (
                                 <li key={a.city} className="leading-relaxed">
-                                    <div className="font-medium text-ink">{a.city} ({a.province})</div>
+                                    <div className="font-medium text-white">{a.city} ({a.province})</div>
                                     <div>{a.street}</div>
                                 </li>
                             ))}
@@ -77,11 +77,11 @@ export function Footer() {
                     </div>
                 </div>
 
-                <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-ink/8 pt-6 text-xs text-muted sm:flex-row sm:items-center">
+                <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/15 pt-6 text-xs text-white/75 sm:flex-row sm:items-center">
                     <p>© {year} Federico Tassara. Tutti i diritti riservati.</p>
                     <div className="flex gap-5">
-                        <Link href="/privacy-policy" className="hover:text-ink">Privacy Policy</Link>
-                        <Link href="/cookie" className="hover:text-ink">Cookie</Link>
+                        <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
+                        <Link href="/cookie" className="hover:text-white">Cookie</Link>
                     </div>
                 </div>
             </Container>
@@ -96,7 +96,7 @@ function SocialIcon({ href, label, children }: { href: string; label: string; ch
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="flex size-9 items-center justify-center rounded-full border border-ink/10 bg-white text-ink-soft transition-all hover:-translate-y-0.5 hover:border-ink/30 hover:text-ink"
+            className="flex size-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white/80 transition-all hover:-translate-y-0.5 hover:border-white/50 hover:text-white"
         >
             {children}
         </a>

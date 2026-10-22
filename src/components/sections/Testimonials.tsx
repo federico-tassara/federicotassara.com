@@ -27,10 +27,10 @@ export function Testimonials({
         <section className={className}>
             <Container>
                 <div className="max-w-3xl">
-                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                    <span className="text-xs font-medium text-muted">
                         {eyebrow}
                     </span>
-                    <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                    <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                         {title}
                     </h2>
                 </div>
@@ -41,7 +41,7 @@ export function Testimonials({
                         return (
                             <figure
                                 key={`${t.name}-${i}`}
-                                className="anim-fade-up flex flex-col rounded-2xl border border-ink/8 bg-white p-6"
+                                className="anim-fade-up flex flex-col rounded-[22px] border border-line bg-white p-6"
                                 style={{ animationDelay: `${i * 40}ms` }}
                             >
                                 <blockquote className="flex-1 text-[15px] leading-relaxed text-ink-soft">

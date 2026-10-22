@@ -80,7 +80,7 @@ export default function ProgettiPage() {
                             <Link
                                 key={p.slug}
                                 href={`/progetti/${p.slug}`}
-                                className="group anim-fade-up flex flex-col overflow-hidden rounded-2xl border border-ink/8 bg-white p-8 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-[0_20px_50px_-20px_rgba(28,31,51,0.18)]"
+                                className="group anim-fade-up flex flex-col overflow-hidden rounded-[22px] border border-line bg-white p-8 transition-all hover:-translate-y-1 hover:border-ink/20 hover:border-accent"
                                 style={{ animationDelay: `${i * 70}ms` }}
                             >
                                 <div className="flex items-start gap-4">

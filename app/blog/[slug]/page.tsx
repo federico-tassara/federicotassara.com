@@ -159,7 +159,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                                 {post.category}
                             </span>
                         )}
-                        <h1 className="mt-5 text-3xl font-bold tracking-tight text-ink sm:text-4xl md:text-5xl md:leading-[1.1]">
+                        <h1 className="mt-5 text-3xl font-medium tracking-tight text-ink sm:text-4xl md:text-5xl md:leading-[1.1]">
                             {post.title}
                         </h1>
                         {post.excerpt && (
@@ -203,7 +203,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                     )}
 
                     <aside
-                        className="mt-12 flex flex-col gap-5 rounded-2xl border border-ink/8 bg-white p-6 sm:flex-row sm:items-center"
+                        className="mt-12 flex flex-col gap-5 rounded-[22px] border border-line bg-white p-6 sm:flex-row sm:items-center"
                         aria-label="Informazioni sull'autore"
                     >
                         <Image
@@ -247,7 +247,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                                 {post.faq.map((f, i) => (
                                     <details
                                         key={f.q}
-                                        className="group rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
+                                        className="group rounded-[22px] border border-line bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
                                         style={{ animationDelay: `${i * 40}ms` }}
                                     >
                                         <summary className="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-ink marker:hidden [&::-webkit-details-marker]:hidden">
@@ -265,7 +265,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                         </section>
                     )}
 
-                    <aside className="mt-14 rounded-2xl border border-ink/8 bg-surface-alt p-8 sm:p-10">
+                    <aside className="mt-14 rounded-[22px] border border-line bg-surface-alt p-8 sm:p-10">
                         <h2 className="text-2xl font-bold text-ink">{cta.title}</h2>
                         <p className="mt-3 text-muted">{cta.body}</p>
                         <div className="mt-6 flex flex-wrap gap-3">
@@ -287,7 +287,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                                 <Link
                                     key={rp.slug}
                                     href={`/blog/${rp.slug}`}
-                                    className="group anim-fade-up flex flex-col rounded-2xl border border-ink/8 bg-white p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
+                                    className="group anim-fade-up flex flex-col rounded-[22px] border border-line bg-white p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                     style={{ animationDelay: `${i * 60}ms` }}
                                 >
                                     <span className="text-xs text-muted">

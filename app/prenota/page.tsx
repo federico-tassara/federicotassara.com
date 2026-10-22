@@ -28,7 +28,7 @@ export default async function PrenotaPage({ searchParams }: PrenotaPageProps) {
                     <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-ink text-white">
                         <CalendarCheck className="size-6" aria-hidden="true" />
                     </div>
-                    <h1 className="mt-5 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                    <h1 className="mt-5 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                         Scegli quando sentirci
                     </h1>
                     <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-muted">

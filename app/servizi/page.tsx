@@ -69,10 +69,10 @@ export default function ServiziPage() {
             <section className="py-16 sm:py-24">
                 <Container>
                     <div className="anim-fade-up max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Servizi
                         </span>
-                        <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
+                        <h1 className="mt-3 text-4xl font-medium tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
                             Sei aree di lavoro,
                             <br />
                             una visione integrata.
@@ -137,7 +137,7 @@ export default function ServiziPage() {
                         ].map((step, i) => (
                             <div
                                 key={step.n}
-                                className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7"
+                                className="anim-fade-up rounded-[22px] border border-line bg-white p-7"
                                 style={{ animationDelay: `${i * 60}ms` }}
                             >
                                 <span className="text-sm font-bold text-muted">{step.n}</span>

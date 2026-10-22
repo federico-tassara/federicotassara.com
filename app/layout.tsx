@@ -6,12 +6,12 @@ import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
 import { SITE_URL } from "@/src/lib/utils";
 
-const montserrat = localFont({
-    src: "../node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2",
+const geist = localFont({
+    src: "../public/fonts/geist.woff2",
     display: "swap",
     weight: "100 900",
     style: "normal",
-    variable: "--font-montserrat",
+    variable: "--font-geist",
 });
 
 export const metadata: Metadata = {
@@ -165,11 +165,13 @@ export default function RootLayout({
     children,
 }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang="it" className={montserrat.variable}>
+        <html lang="it" className={geist.variable}>
             <body className="antialiased">
+                <div className="site-shell">
                 <Header />
-                <main className="pt-16 sm:pt-18">{children}</main>
+                <main id="main-content">{children}</main>
                 <Footer />
+                </div>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

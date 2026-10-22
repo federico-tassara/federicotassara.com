@@ -6,7 +6,7 @@ export function PostCard({ post, index = 0 }: { post: PostMetadata; index?: numb
     return (
         <Link
             href={`/blog/${post.slug}`}
-            className="group anim-fade-up flex flex-col overflow-hidden rounded-2xl border border-ink/8 bg-white p-7 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-[0_20px_50px_-20px_rgba(28,31,51,0.18)]"
+            className="group anim-fade-up flex flex-col overflow-hidden rounded-[22px] border border-line bg-white p-7 transition-all hover:-translate-y-1 hover:border-ink/20 hover:border-accent"
             style={{ animationDelay: `${index * 50}ms` }}
         >
             <div className="flex items-center gap-3 text-xs text-muted">

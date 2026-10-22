@@ -11,11 +11,11 @@ export function Container({
 }) {
     const sizes = {
         sm: "max-w-3xl",
-        default: "max-w-6xl",
-        lg: "max-w-7xl",
+        default: "max-w-[1060px]",
+        lg: "max-w-[1120px]",
     };
     return (
-        <div className={cn("mx-auto w-full px-5 sm:px-6 lg:px-8", sizes[size], className)}>
+        <div className={cn("site-container mx-auto w-[86%]", sizes[size], className)}>
             {children}
         </div>
     );

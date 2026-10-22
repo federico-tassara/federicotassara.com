@@ -21,10 +21,10 @@ export default function GraziePrenotazionePage() {
                         <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-ink text-white shadow-sm">
                             <CheckCircle2 className="size-8" aria-hidden="true" />
                         </div>
-                        <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <p className="mt-5 text-xs font-medium text-muted">
                             Prenotazione completata
                         </p>
-                        <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h1 className="mt-2 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Appuntamento confermato
                         </h1>
                         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
@@ -35,7 +35,7 @@ export default function GraziePrenotazionePage() {
 
                     <div className="px-6 py-8 sm:px-10 sm:py-10">
                         <div className="grid gap-5 sm:grid-cols-2">
-                            <div className="rounded-2xl border border-ink/8 p-5">
+                            <div className="rounded-[22px] border border-line p-5">
                                 <CalendarCheck className="size-5 text-ink" aria-hidden="true" />
                                 <h2 className="mt-3 font-semibold text-ink">Controlla il calendario</h2>
                                 <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -43,7 +43,7 @@ export default function GraziePrenotazionePage() {
                                     utilizzato durante la prenotazione.
                                 </p>
                             </div>
-                            <div className="rounded-2xl border border-ink/8 p-5">
+                            <div className="rounded-[22px] border border-line p-5">
                                 <Mail className="size-5 text-ink" aria-hidden="true" />
                                 <h2 className="mt-3 font-semibold text-ink">Controlla la conferma</h2>
                                 <p className="mt-2 text-sm leading-relaxed text-muted">

@@ -132,7 +132,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         <span className="inline-flex size-14 items-center justify-center rounded-2xl bg-ink text-white">
                             <Icon className="size-6" />
                         </span>
-                        <h1 className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
+                        <h1 className="mt-6 text-4xl font-medium tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
                             {service.title}
                         </h1>
                         <p className="mt-5 text-lg leading-relaxed text-muted sm:text-xl">
@@ -154,10 +154,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 <Container>
                     <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
                         <div>
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            <span className="text-xs font-medium text-muted">
                                 Cosa posso sviluppare
                             </span>
-                            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                            <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                                 Soluzioni concrete, pensate per durare.
                             </h2>
                         </div>
@@ -165,7 +165,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                             {service.deliverables.map((d, i) => (
                                 <div
                                     key={d.title}
-                                    className="anim-fade-up flex gap-4 rounded-2xl border border-ink/8 bg-white p-6"
+                                    className="anim-fade-up flex gap-4 rounded-[22px] border border-line bg-white p-6"
                                     style={{ animationDelay: `${i * 60}ms` }}
                                 >
                                     <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-ink" />
@@ -184,10 +184,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 <Container>
                     <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
                         <div className="space-y-3">
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            <span className="text-xs font-medium text-muted">
                                 Problemi che risolvo
                             </span>
-                            <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                            <h2 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                                 Quando ha senso lavorare insieme.
                             </h2>
                             <ul className="mt-6 space-y-3">
@@ -201,7 +201,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         </div>
                         {service.technologies && service.technologies.length > 0 && (
                             <div className="rounded-2xl bg-ink p-8 text-white sm:p-10">
-                                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                                <span className="text-xs font-medium text-white/60">
                                     Stack tecnico
                                 </span>
                                 <h3 className="mt-3 text-2xl font-bold">Tecnologie che uso.</h3>
@@ -225,10 +225,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 <section className="py-20 sm:py-24" id="faq">
                     <Container size="sm">
                         <div className="max-w-3xl">
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            <span className="text-xs font-medium text-muted">
                                 FAQ
                             </span>
-                            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                            <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                                 Domande frequenti.
                             </h2>
                             <p className="mt-4 text-base text-muted sm:text-lg sm:leading-relaxed">
@@ -239,7 +239,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                             {service.faq.map((f, i) => (
                                 <details
                                     key={f.q}
-                                    className="anim-fade-up group rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
+                                    className="anim-fade-up group rounded-[22px] border border-line bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
                                     style={{ animationDelay: `${i * 50}ms` }}
                                 >
                                     <summary className="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-ink marker:hidden [&::-webkit-details-marker]:hidden">
@@ -260,7 +260,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
             <section className="bg-surface-alt py-20 sm:py-24">
                 <Container>
-                    <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                    <h2 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                         Altri servizi.
                     </h2>
                     <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -270,7 +270,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                 <Link
                                     key={s.slug}
                                     href={`/servizi/${s.slug}`}
-                                    className="group anim-fade-up flex flex-col rounded-2xl border border-ink/8 bg-white p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
+                                    className="group anim-fade-up flex flex-col rounded-[22px] border border-line bg-white p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                     style={{ animationDelay: `${i * 60}ms` }}
                                 >
                                     <span className="flex size-11 items-center justify-center rounded-xl bg-surface-alt text-ink">

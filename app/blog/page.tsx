@@ -139,7 +139,7 @@ export default async function BlogPage({ searchParams }: PageProps) {
                     </div>
 
                     {posts.length === 0 ? (
-                        <div className="mt-14 rounded-2xl border border-ink/8 bg-surface-alt p-10 text-center text-muted">
+                        <div className="mt-14 rounded-[22px] border border-line bg-surface-alt p-10 text-center text-muted">
                             Nessun articolo per questo filtro.
                         </div>
                     ) : (

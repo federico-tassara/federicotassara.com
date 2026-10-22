@@ -229,10 +229,10 @@ export default function ReactNativeIndexPage() {
             <section className="py-16 sm:py-24">
                 <Container>
                     <div className="anim-fade-up max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             React Native · iOS + Android
                         </span>
-                        <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
+                        <h1 className="mt-3 text-4xl font-medium tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
                             Sviluppatore React Native in Italia.
                         </h1>
                         <p className="mt-6 text-lg leading-relaxed text-muted sm:text-xl">
@@ -255,10 +255,10 @@ export default function ReactNativeIndexPage() {
             <section className="bg-surface-alt py-20 sm:py-24">
                 <Container>
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Cosa sviluppo
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Quattro categorie di app, un solo approccio.
                         </h2>
                     </div>
@@ -268,7 +268,7 @@ export default function ReactNativeIndexPage() {
                             return (
                                 <div
                                     key={t.title}
-                                    className="anim-fade-up flex gap-4 rounded-2xl border border-ink/8 bg-white p-7"
+                                    className="anim-fade-up flex gap-4 rounded-[22px] border border-line bg-white p-7"
                                     style={{ animationDelay: `${i * 60}ms` }}
                                 >
                                     <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-ink text-white">
@@ -290,10 +290,10 @@ export default function ReactNativeIndexPage() {
             <section className="py-20 sm:py-24">
                 <Container>
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Perché React Native
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Sei vantaggi concreti.
                         </h2>
                     </div>
@@ -301,7 +301,7 @@ export default function ReactNativeIndexPage() {
                         {BENEFITS.map((b, i) => (
                             <div
                                 key={b.title}
-                                className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7"
+                                className="anim-fade-up rounded-[22px] border border-line bg-white p-7"
                                 style={{ animationDelay: `${i * 50}ms` }}
                             >
                                 <h3 className="text-lg font-bold text-ink">{b.title}</h3>
@@ -316,10 +316,10 @@ export default function ReactNativeIndexPage() {
                 <Container>
                     <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
                         <div>
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                            <span className="text-xs font-medium text-white/60">
                                 Stack tecnico
                             </span>
-                            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                            <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl">
                                 Le tecnologie che uso ogni giorno.
                             </h2>
                             <p className="mt-5 text-base leading-relaxed text-white/70">
@@ -333,7 +333,7 @@ export default function ReactNativeIndexPage() {
                                     key={s.area}
                                     className="rounded-2xl border border-white/10 bg-white/5 p-6"
                                 >
-                                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                                    <span className="text-xs font-medium text-white/60">
                                         {s.area}
                                     </span>
                                     <div className="mt-3 flex flex-wrap gap-2">
@@ -356,10 +356,10 @@ export default function ReactNativeIndexPage() {
             <section className="py-20 sm:py-24">
                 <Container>
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Come lavoriamo insieme
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Cinque fasi, processo chiaro.
                         </h2>
                     </div>
@@ -367,7 +367,7 @@ export default function ReactNativeIndexPage() {
                         {PROCESS.map((p, i) => (
                             <div
                                 key={p.n}
-                                className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-6"
+                                className="anim-fade-up rounded-[22px] border border-line bg-white p-6"
                                 style={{ animationDelay: `${i * 50}ms` }}
                             >
                                 <span className="text-sm font-bold text-muted">{p.n}</span>
@@ -384,10 +384,10 @@ export default function ReactNativeIndexPage() {
                     <Container>
                         <div className="flex flex-wrap items-end justify-between gap-6">
                             <div>
-                                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                                <span className="text-xs font-medium text-muted">
                                     Esempio di progetto
                                 </span>
-                                <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                                <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                                     {lectum.title}: {lectum.tagline}
                                 </h2>
                             </div>
@@ -403,7 +403,7 @@ export default function ReactNativeIndexPage() {
                             <p className="text-base leading-relaxed text-muted sm:text-lg">
                                 {lectum.summary}
                             </p>
-                            <div className="rounded-2xl border border-ink/8 bg-white p-7">
+                            <div className="rounded-[22px] border border-line bg-white p-7">
                                 <ul className="space-y-3">
                                     {lectum.features.slice(0, 4).map((f) => (
                                         <li key={f.title} className="flex items-start gap-3">
@@ -433,10 +433,10 @@ export default function ReactNativeIndexPage() {
             <section className="py-20 sm:py-24" id="faq">
                 <Container size="sm">
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             FAQ
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Domande frequenti su React Native.
                         </h2>
                     </div>
@@ -444,7 +444,7 @@ export default function ReactNativeIndexPage() {
                         {FAQ.map((f, i) => (
                             <details
                                 key={f.q}
-                                className="anim-fade-up group rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
+                                className="anim-fade-up group rounded-[22px] border border-line bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
                                 style={{ animationDelay: `${i * 40}ms` }}
                             >
                                 <summary className="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-ink marker:hidden [&::-webkit-details-marker]:hidden">
@@ -463,10 +463,10 @@ export default function ReactNativeIndexPage() {
             <section className="py-20 sm:py-24">
                 <Container>
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Approfondimenti
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Dal blog.
                         </h2>
                     </div>
@@ -475,7 +475,7 @@ export default function ReactNativeIndexPage() {
                             <Link
                                 key={p.href}
                                 href={p.href}
-                                className="anim-fade-up group flex flex-col rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20"
+                                className="anim-fade-up group flex flex-col rounded-[22px] border border-line bg-white p-6 transition-colors hover:border-ink/20"
                                 style={{ animationDelay: `${i * 40}ms` }}
                             >
                                 <h3 className="text-base font-semibold text-ink">{p.title}</h3>
@@ -495,7 +495,7 @@ export default function ReactNativeIndexPage() {
                     <div className="anim-fade-up overflow-hidden rounded-3xl bg-ink p-10 text-white sm:p-16">
                         <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
                             <div>
-                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl md:leading-[1.05]">
+                                <h2 className="text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl md:leading-[1.05]">
                                     Hai un’app in mente?
                                 </h2>
                                 <p className="mt-5 max-w-lg text-base text-white/70 sm:text-lg">

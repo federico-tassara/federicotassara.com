@@ -42,10 +42,10 @@ export default function NotFound() {
         <section className="py-20 sm:py-28">
             <Container size="sm">
                 <div className="anim-fade-up text-center">
-                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                    <span className="text-xs font-medium text-muted">
                         Errore 404
                     </span>
-                    <h1 className="mt-4 text-5xl font-bold tracking-tight text-ink sm:text-6xl md:text-7xl">
+                    <h1 className="mt-4 text-5xl font-medium tracking-tight text-ink sm:text-6xl md:text-7xl">
                         Pagina non trovata.
                     </h1>
                     <p className="mt-5 text-lg leading-relaxed text-muted">
@@ -69,7 +69,7 @@ export default function NotFound() {
                             <Link
                                 key={l.href}
                                 href={l.href}
-                                className="group anim-fade-up flex items-start gap-4 rounded-2xl border border-ink/8 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-ink/20 hover:shadow-sm"
+                                className="group anim-fade-up flex items-start gap-4 rounded-[22px] border border-line bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-ink/20 hover:shadow-sm"
                                 style={{ animationDelay: `${i * 60}ms` }}
                             >
                                 <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-surface-alt text-ink">

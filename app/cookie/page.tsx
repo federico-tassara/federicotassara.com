@@ -13,10 +13,10 @@ export default function CookiePage() {
     return (
         <section className="py-16 sm:py-24">
             <Container size="sm">
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                <span className="text-xs font-medium text-muted">
                     Legale
                 </span>
-                <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+                <h1 className="mt-3 text-4xl font-medium tracking-tight text-ink sm:text-5xl">
                     Cookie Policy
                 </h1>
                 <p className="mt-4 text-sm text-muted">

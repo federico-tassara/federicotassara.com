@@ -105,7 +105,7 @@ export default async function ProjectPage({ params }: PageProps) {
                             <span className="flex size-12 items-center justify-center rounded-xl bg-ink text-white">
                                 <Icon className="size-5" />
                             </span>
-                            <h1 className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
+                            <h1 className="mt-6 text-4xl font-medium tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
                                 {project.title}
                             </h1>
                             <p className="mt-5 text-lg leading-relaxed text-ink-soft sm:text-xl">
@@ -132,7 +132,7 @@ export default async function ProjectPage({ params }: PageProps) {
                                 </Button>
                             </div>
                         </div>
-                        <aside className="rounded-2xl border border-ink/8 bg-surface-alt p-7">
+                        <aside className="rounded-[22px] border border-line bg-surface-alt p-7">
                             <h3 className="text-sm font-semibold uppercase tracking-wider text-ink">
                                 Info progetto
                             </h3>
@@ -151,10 +151,10 @@ export default async function ProjectPage({ params }: PageProps) {
             <section className="bg-surface-alt py-20 sm:py-24">
                 <Container>
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Funzionalità principali
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl md:text-[2.4rem]">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl md:text-[2.4rem]">
                             Cosa fa {project.title}.
                         </h2>
                     </div>
@@ -162,7 +162,7 @@ export default async function ProjectPage({ params }: PageProps) {
                         {project.features.map((f, i) => (
                             <div
                                 key={f.title}
-                                className="anim-fade-up flex gap-4 rounded-2xl border border-ink/8 bg-white p-7"
+                                className="anim-fade-up flex gap-4 rounded-[22px] border border-line bg-white p-7"
                                 style={{ animationDelay: `${i * 60}ms` }}
                             >
                                 <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-ink" />
@@ -180,15 +180,15 @@ export default async function ProjectPage({ params }: PageProps) {
                 <section className="py-20 sm:py-24">
                     <Container>
                         <div className="max-w-3xl">
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            <span className="text-xs font-medium text-muted">
                                 Case study
                             </span>
-                            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl md:text-[2.4rem]">
+                            <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl md:text-[2.4rem]">
                                 Sfida, soluzione e risultati.
                             </h2>
                         </div>
                         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                            <div className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7">
+                            <div className="anim-fade-up rounded-[22px] border border-line bg-white p-7">
                                 <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted">
                                     <span className="size-1.5 rounded-full bg-red-500" /> Sfida
                                 </span>
@@ -196,7 +196,7 @@ export default async function ProjectPage({ params }: PageProps) {
                                     {project.caseStudy.challenge}
                                 </p>
                             </div>
-                            <div className="anim-fade-up anim-delay-100 rounded-2xl border border-ink/8 bg-white p-7">
+                            <div className="anim-fade-up anim-delay-100 rounded-[22px] border border-line bg-white p-7">
                                 <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted">
                                     <span className="size-1.5 rounded-full bg-amber-500" /> Soluzione
                                 </span>
@@ -204,7 +204,7 @@ export default async function ProjectPage({ params }: PageProps) {
                                     {project.caseStudy.solution}
                                 </p>
                             </div>
-                            <div className="anim-fade-up anim-delay-200 rounded-2xl border border-ink/8 bg-white p-7">
+                            <div className="anim-fade-up anim-delay-200 rounded-[22px] border border-line bg-white p-7">
                                 <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted">
                                     <span className="size-1.5 rounded-full bg-emerald-500" /> Risultati
                                 </span>
@@ -228,10 +228,10 @@ export default async function ProjectPage({ params }: PageProps) {
                         {project.stack.map((s, i) => (
                             <div
                                 key={s.area}
-                                className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7"
+                                className="anim-fade-up rounded-[22px] border border-line bg-white p-7"
                                 style={{ animationDelay: `${i * 60}ms` }}
                             >
-                                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                                <span className="text-xs font-medium text-muted">
                                     {s.area}
                                 </span>
                                 <div className="mt-4 flex flex-wrap gap-2">
@@ -255,10 +255,10 @@ export default async function ProjectPage({ params }: PageProps) {
                     <Container>
                         <div className="flex flex-wrap items-end justify-between gap-6">
                             <div>
-                                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                                <span className="text-xs font-medium text-muted">
                                     Dal blog
                                 </span>
-                                <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                                <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                                     Articoli su {project.title}.
                                 </h2>
                             </div>
@@ -275,7 +275,7 @@ export default async function ProjectPage({ params }: PageProps) {
                                 <Link
                                     key={post.slug}
                                     href={`/blog/${post.slug}`}
-                                    className="group anim-fade-up flex flex-col rounded-2xl border border-ink/8 bg-white p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
+                                    className="group anim-fade-up flex flex-col rounded-[22px] border border-line bg-white p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                     style={{ animationDelay: `${i * 60}ms` }}
                                 >
                                     <span className="text-xs text-muted">

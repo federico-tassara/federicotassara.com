@@ -118,10 +118,10 @@ export default function ChiSonoPage() {
                 <Container>
                     <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
                         <div className="anim-fade-up">
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            <span className="text-xs font-medium text-muted">
                                 Chi sono
                             </span>
-                            <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
+                            <h1 className="mt-3 text-4xl font-medium tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
                                 Full Stack Developer
                                 <br />
                                 & Fractional CTO.
@@ -147,7 +147,7 @@ export default function ChiSonoPage() {
                         </div>
                         <div className="anim-fade-up anim-delay-200 relative">
                             <div className="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-ink/5 to-transparent blur-2xl" aria-hidden />
-                            <div className="overflow-hidden rounded-2xl border border-ink/8 bg-white p-2 shadow-[0_30px_60px_-30px_rgba(28,31,51,0.25)]">
+                            <div className="overflow-hidden rounded-[22px] border border-line bg-white p-2 shadow-[0_30px_60px_-30px_rgba(28,31,51,0.25)]">
                                 <Image
                                     src="/images/profile.jpeg"
                                     alt="Federico Tassara"
@@ -183,7 +183,7 @@ export default function ChiSonoPage() {
                         {APPROACH.map((a, i) => (
                             <div
                                 key={a.n}
-                                className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7"
+                                className="anim-fade-up rounded-[22px] border border-line bg-white p-7"
                                 style={{ animationDelay: `${i * 80}ms` }}
                             >
                                 <span className="text-sm font-bold text-muted">{a.n}</span>
@@ -199,10 +199,10 @@ export default function ChiSonoPage() {
                 <Container>
                     <div className="grid gap-12 lg:grid-cols-2">
                         <div>
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                            <span className="text-xs font-medium text-white/60">
                                 Cosa mi distingue
                             </span>
-                            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl md:text-[2.6rem] md:leading-[1.1]">
+                            <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl md:text-[2.6rem] md:leading-[1.1]">
                                 Più di 50 progetti tra web, mobile e backend.
                             </h2>
                             <p className="mt-5 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg">
@@ -224,7 +224,7 @@ export default function ChiSonoPage() {
                             </ul>
                         </div>
                         <div>
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                            <span className="text-xs font-medium text-white/60">
                                 Stack tecnico
                             </span>
                             <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
@@ -250,7 +250,7 @@ export default function ChiSonoPage() {
                     <div className="anim-fade-up overflow-hidden rounded-3xl bg-surface-alt p-10 sm:p-16">
                         <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
                             <div>
-                                <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl md:text-5xl md:leading-[1.05]">
+                                <h2 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl md:text-5xl md:leading-[1.05]">
                                     Hai un’idea? Parliamone, senza impegno.
                                 </h2>
                                 <p className="mt-5 max-w-lg text-base text-muted sm:text-lg">
@@ -271,8 +271,8 @@ export default function ChiSonoPage() {
 
 function Stat({ value, label }: { value: string; label: string }) {
     return (
-        <div className="rounded-2xl border border-ink/8 bg-white p-8 text-center">
-            <div className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">{value}</div>
+        <div className="rounded-[22px] border border-line bg-white p-8 text-center">
+            <div className="text-4xl font-medium tracking-tight text-ink sm:text-5xl">{value}</div>
             <div className="mt-2 text-sm text-muted">{label}</div>
         </div>
     );

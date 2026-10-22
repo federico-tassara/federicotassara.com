@@ -93,10 +93,10 @@ export default async function ContattiPage({ searchParams }: ContattiPageProps) 
             <Container>
                 <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr]">
                     <div className="anim-fade-up">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Contatti
                         </span>
-                        <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
+                        <h1 className="mt-3 text-4xl font-medium tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
                             Hai un’idea?
                             <br />
                             Parliamone, senza impegno.
@@ -118,7 +118,7 @@ export default async function ContattiPage({ searchParams }: ContattiPageProps) 
                                 value="Prenota una call su Calendly"
                                 href="/prenota?source=contact_page"
                             />
-                            <div className="rounded-2xl border border-ink/8 bg-surface-alt p-6">
+                            <div className="rounded-[22px] border border-line bg-surface-alt p-6">
                                 <div className="flex items-center gap-2 text-sm font-semibold text-ink">
                                     <MapPin className="size-4" /> Sedi fisiche
                                 </div>
@@ -172,7 +172,7 @@ function Info({
             href={href}
             target={external ? "_blank" : undefined}
             rel={external ? "noopener noreferrer" : undefined}
-            className="group flex items-center gap-4 rounded-2xl border border-ink/8 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-ink/20 hover:shadow-sm"
+            className="group flex items-center gap-4 rounded-[22px] border border-line bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-ink/20 hover:shadow-sm"
         >
             <span className="flex size-11 items-center justify-center rounded-xl bg-surface-alt text-ink">
                 {icon}

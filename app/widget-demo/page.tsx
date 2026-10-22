@@ -14,10 +14,10 @@ export default function WidgetDemoPage() {
             <Container>
                 <div className="mx-auto max-w-4xl">
                     <header className="mb-10 max-w-2xl">
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <p className="text-xs font-medium text-muted">
                             Integrazione npm
                         </p>
-                        <h1 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h1 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Test del widget Akintu
                         </h1>
                         <p className="mt-4 leading-relaxed text-muted">

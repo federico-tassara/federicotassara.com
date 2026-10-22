@@ -39,22 +39,22 @@ export function Header() {
     return (
         <header
             className={cn(
-                "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+                "site-header sticky top-0 z-50 bg-white transition-colors duration-200",
                 scrolled
-                    ? "border-b border-ink/5 bg-white/85 backdrop-blur-md"
-                    : "bg-white/0",
+                    ? "border-b border-ink/5 bg-white"
+                    : "bg-white",
             )}
         >
-            <Container className="flex h-16 items-center justify-between sm:h-18">
+            <Container className="flex min-h-24 items-center justify-between gap-5">
                 <Link
                     href="/"
-                    className="text-base font-bold tracking-tight text-ink sm:text-lg"
+                    className="text-base font-medium tracking-tight text-ink sm:text-lg"
                     aria-label="Federico Tassara — home"
                 >
                     Federico Tassara
                 </Link>
 
-                <nav className="hidden items-center gap-1 md:flex">
+                <nav className="hidden items-center gap-1 lg:flex">
                     {NAV.map((item) =>
                         item.hasDropdown ? (
                             <div key={item.href} className="group relative">
@@ -65,7 +65,7 @@ export function Header() {
                                     {item.label}
                                     <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180" />
                                 </Link>
-                                <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 focus-within:visible focus-within:opacity-100">
+                                <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                                     <div className="w-72 overflow-hidden rounded-xl border border-ink/8 bg-white shadow-xl">
                                         <ul className="p-2">
                                             {SERVICES.map((s) => (
@@ -108,7 +108,7 @@ export function Header() {
                     )}
                 </nav>
 
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                     <Button href={CALENDLY_URL} external size="sm">
                         Prenota consulenza
                     </Button>
@@ -117,8 +117,9 @@ export function Header() {
                 <button
                     type="button"
                     onClick={() => setMobileOpen((o) => !o)}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-md text-ink md:hidden"
-                    aria-label="Apri menu"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-md text-ink lg:hidden"
+                    aria-label={mobileOpen ? "Chiudi menu" : "Apri menu"}
+                    aria-controls="mobile-navigation"
                     aria-expanded={mobileOpen}
                 >
                     {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -126,7 +127,7 @@ export function Header() {
             </Container>
 
             {mobileOpen && (
-                <div className="md:hidden">
+                <div id="mobile-navigation" className="max-h-[calc(100dvh-96px)] overflow-y-auto lg:hidden">
                     <div className="border-t border-ink/5 bg-white">
                         <Container className="py-4">
                             <ul className="flex flex-col gap-1">

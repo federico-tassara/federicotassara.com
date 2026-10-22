@@ -35,10 +35,10 @@ export function FeaturedProject({
                 <div className="anim-fade-up overflow-hidden rounded-3xl border border-ink/8 bg-white p-8 sm:p-12">
                     <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
                         <div>
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            <span className="text-xs font-medium text-muted">
                                 {eyebrow}
                             </span>
-                            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                            <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                                 {project.title}
                             </h2>
                             <p className="mt-4 text-base text-ink-soft sm:text-lg">

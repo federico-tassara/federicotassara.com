@@ -209,10 +209,10 @@ export default function SviluppoAppSaaSPage() {
             <section className="py-16 sm:py-24">
                 <Container>
                     <div className="anim-fade-up max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Sviluppo App & SaaS su misura
                         </span>
-                        <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
+                        <h1 className="mt-3 text-4xl font-medium tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
                             Sviluppo app e SaaS su misura per chi ha già un’idea chiara.
                         </h1>
                         <p className="mt-6 text-lg leading-relaxed text-muted sm:text-xl">
@@ -248,7 +248,7 @@ export default function SviluppoAppSaaSPage() {
             <section className="border-y border-ink/5 bg-surface-alt py-10 sm:py-12">
                 <Container>
                     <div className="mb-6 text-center">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Aziende e prodotti su cui ho lavorato
                         </span>
                     </div>
@@ -260,10 +260,10 @@ export default function SviluppoAppSaaSPage() {
             <section className="py-20 sm:py-24">
                 <Container>
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Con chi lavoro
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Tre tipi di interlocutore, lo stesso approccio.
                         </h2>
                         <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
@@ -277,7 +277,7 @@ export default function SviluppoAppSaaSPage() {
                             return (
                                 <div
                                     key={s.title}
-                                    className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7 transition-colors hover:border-ink/20"
+                                    className="anim-fade-up rounded-[22px] border border-line bg-white p-7 transition-colors hover:border-ink/20"
                                     style={{ animationDelay: `${i * 60}ms` }}
                                 >
                                     <span className="flex size-11 items-center justify-center rounded-xl bg-ink text-white">
@@ -298,10 +298,10 @@ export default function SviluppoAppSaaSPage() {
             <section className="bg-surface-alt py-20 sm:py-24">
                 <Container>
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Cosa costruisco
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Sei tipologie di prodotto, un solo modo di lavorare.
                         </h2>
                     </div>
@@ -311,7 +311,7 @@ export default function SviluppoAppSaaSPage() {
                             return (
                                 <div
                                     key={s.title}
-                                    className="anim-fade-up rounded-2xl border border-ink/8 bg-white p-7 transition-colors hover:border-ink/20"
+                                    className="anim-fade-up rounded-[22px] border border-line bg-white p-7 transition-colors hover:border-ink/20"
                                     style={{ animationDelay: `${i * 50}ms` }}
                                 >
                                     <span className="flex size-11 items-center justify-center rounded-xl bg-ink text-white">
@@ -334,10 +334,10 @@ export default function SviluppoAppSaaSPage() {
                     <Container>
                         <div className="flex flex-wrap items-end justify-between gap-6">
                             <div>
-                                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                                <span className="text-xs font-medium text-muted">
                                     Esempio di progetto
                                 </span>
-                                <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                                <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                                     {featuredProject.title}: {featuredProject.tagline}
                                 </h2>
                             </div>
@@ -353,7 +353,7 @@ export default function SviluppoAppSaaSPage() {
                             <p className="text-base leading-relaxed text-muted sm:text-lg">
                                 {featuredProject.summary}
                             </p>
-                            <div className="rounded-2xl border border-ink/8 bg-white p-7">
+                            <div className="rounded-[22px] border border-line bg-white p-7">
                                 <ul className="space-y-3">
                                     {featuredProject.features.slice(0, 4).map((f) => (
                                         <li key={f.title} className="flex items-start gap-3">
@@ -386,10 +386,10 @@ export default function SviluppoAppSaaSPage() {
             <section className="bg-surface-alt py-20 sm:py-24" id="faq">
                 <Container size="sm">
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Domande frequenti
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Quello che probabilmente ti stai chiedendo.
                         </h2>
                     </div>
@@ -397,7 +397,7 @@ export default function SviluppoAppSaaSPage() {
                         {FAQ.map((f, i) => (
                             <details
                                 key={f.q}
-                                className="anim-fade-up group rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
+                                className="anim-fade-up group rounded-[22px] border border-line bg-white p-6 transition-colors hover:border-ink/20 open:border-ink/20"
                                 style={{ animationDelay: `${i * 40}ms` }}
                             >
                                 <summary className="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-ink marker:hidden [&::-webkit-details-marker]:hidden">
@@ -420,10 +420,10 @@ export default function SviluppoAppSaaSPage() {
             <section className="bg-surface-alt py-20 sm:py-24">
                 <Container>
                     <div className="max-w-3xl">
-                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                        <span className="text-xs font-medium text-muted">
                             Approfondimenti
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                             Dal blog.
                         </h2>
                     </div>
@@ -432,7 +432,7 @@ export default function SviluppoAppSaaSPage() {
                             <Link
                                 key={p.href}
                                 href={p.href}
-                                className="anim-fade-up group flex flex-col rounded-2xl border border-ink/8 bg-white p-6 transition-colors hover:border-ink/20"
+                                className="anim-fade-up group flex flex-col rounded-[22px] border border-line bg-white p-6 transition-colors hover:border-ink/20"
                                 style={{ animationDelay: `${i * 40}ms` }}
                             >
                                 <h3 className="text-base font-semibold text-ink">{p.title}</h3>
@@ -452,10 +452,10 @@ export default function SviluppoAppSaaSPage() {
                 <Container>
                     <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr]">
                         <div className="anim-fade-up">
-                            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                            <span className="text-xs font-medium text-muted">
                                 Iniziamo
                             </span>
-                            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl md:text-5xl md:leading-[1.05]">
+                            <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl md:text-5xl md:leading-[1.05]">
                                 Parlami del tuo progetto.
                             </h2>
                             <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
