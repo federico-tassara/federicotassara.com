@@ -306,6 +306,14 @@ a.client-logo:hover { opacity:.7; }
 .visual-artissima img { object-fit:contain; }
 .visual-cover { background:#eef3f0; }
 .visual-cover img { object-fit:contain; }
+.visual-logo-freedhome,.visual-logo-sinfea,.visual-logo-akintu { background:#f3f7f4; }
+.visual-logo-freedhome .project-image-frame,.visual-logo-sinfea .project-image-frame,.visual-logo-akintu .project-image-frame { inset:18% 8%; }
+.visual-logo-freedhome img,.visual-logo-sinfea img,.visual-logo-akintu img { object-fit:contain; }
+.visual-logo-sinfea { background:#f8f1ea; }
+.visual-logo-akintu { background:#f1f5f3; }
+.visual-logo-oraloco { background:linear-gradient(100deg,#4c1a41 0%,#17182d 72%); }
+.visual-logo-oraloco .project-image-frame { inset:auto;width:55%;aspect-ratio:3;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);mask-composite:intersect;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);-webkit-mask-composite:source-in; }
+.visual-logo-oraloco .project-image-frame img { inset:auto!important;left:0!important;top:0!important;width:325%!important;height:auto!important;max-width:none!important;object-fit:fill;transform:translate(-4.4%,-12%); }
 .project-visual figcaption { position:absolute;bottom:14px;left:20px;right:20px;font-size:10px;color:#5c5147; }
 .portfolio-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px 36px;margin-top:64px; }
 .portfolio-project { min-width:0; }
