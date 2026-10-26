@@ -17,6 +17,9 @@ export type CaseStudy = {
     challenge: string;
     solution: string;
     results: string[];
+    why?: string;
+    work?: { title: string; desc: string }[];
+    challenges?: { title: string; desc: string }[];
 };
 
 export type Project = {
@@ -50,10 +53,11 @@ export const PROJECTS: Project[] = [
         role: "Partner tecnico",
         year: "2026",
         summary:
-            "AI Employee Platform che usa la conoscenza aziendale per assistere clienti, qualificare lead, consigliare prodotti e gestire prenotazioni.",
+            "Piattaforma AI multi-tenant che trasforma siti e documenti aziendali in assistenza, qualificazione commerciale e prenotazioni.",
         description: [
-            "AKINTU trasforma la conoscenza di un'azienda in un collaboratore digitale accessibile dal sito. Acquisisce contenuti web e documenti, li organizza in una base di conoscenza dedicata e li usa per rispondere, consigliare prodotti, qualificare contatti e accompagnare l'utente alla prenotazione.",
-            "La piattaforma è multi-tenant e comprende dashboard Next.js, backend Node.js, ricerca semantica con PostgreSQL e pgvector, job asincroni e widget distribuibili su siti custom o tramite plugin WordPress. Come partner tecnico ho seguito architettura, sviluppo del prodotto e affidabilità delle integrazioni.",
+            "AKINTU acquisiva pagine web, documenti e PDF autorizzati dall'azienda e li trasformava in una base di conoscenza interrogabile. Il visitatore poteva fare domande, ricevere indicazioni sui prodotti, lasciare un contatto o arrivare alla prenotazione senza uscire dalla conversazione.",
+            "Come partner tecnico ho progettato l'architettura e sviluppato le parti centrali del prodotto: dashboard, API, pipeline di acquisizione, ricerca semantica, processi asincroni e widget. La stessa piattaforma serviva aziende diverse, mantenendo separati contenuti, configurazioni e conversazioni.",
+            "Il prodotto doveva entrare in siti già esistenti. Per questo ho realizzato un widget web indipendente dallo stack del cliente e un plugin WordPress dedicato, con configurazione gestita dalla dashboard.",
         ],
         features: [
             { title: "Conoscenza aziendale", desc: "Ingestione di siti, documenti e PDF in una base di conoscenza separata per ogni azienda." },
@@ -67,21 +71,58 @@ export const PROJECTS: Project[] = [
             { area: "Dati & AI", items: ["PostgreSQL", "pgvector", "RAG"] },
             { area: "Integrazioni", items: ["WordPress", "Stripe", "Google Identity", "Resend"] },
         ],
-        url: "https://akintu.io",
         icon: Bot,
         kind: "WebApplication",
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
         caseStudy: {
+            why:
+                "Nei siti aziendali le informazioni utili sono spesso distribuite tra cataloghi, pagine di servizio, FAQ e documenti. Un visitatore deve ricostruire da solo la risposta e, quando decide di contattare l'azienda, ricomincia da un modulo senza contesto. AKINTU nasce per collegare conoscenza e azione: usare fonti controllate dall'azienda, capire la richiesta e accompagnare la persona verso un prodotto, un contatto qualificato o un appuntamento.",
             challenge:
-                "Molte aziende hanno informazioni commerciali distribuite tra pagine web, documenti e persone. I visitatori devono cercare da soli la risposta o attendere un contatto, mentre i team ripetono le stesse attività di qualificazione e assistenza senza un contesto condiviso.",
+                "Il sistema doveva recuperare risposte da fonti eterogenee, rispettare i confini tra aziende e continuare a funzionare durante crawling, conversione dei documenti e indicizzazione. Ogni conversazione doveva inoltre raccogliere dati commerciali senza confondere una risposta informativa con una raccomandazione o una prenotazione.",
             solution:
-                "Una piattaforma multi-tenant che acquisisce la conoscenza autorizzata dell'azienda e la rende utilizzabile da un AI Employee. Dashboard, backend e widget sono separati: l'indicizzazione semantica usa PostgreSQL con pgvector, le elaborazioni lunghe passano da code Redis e BullMQ e la distribuzione copre sia siti custom sia WordPress.",
+                "Ho separato dashboard, API, worker e componenti di distribuzione. PostgreSQL e pgvector gestivano dati applicativi e ricerca semantica; Redis e BullMQ spostavano le elaborazioni lunghe fuori dalle richieste web. Il widget consumava API dedicate e manteneva isolati stile, configurazione e sessione del cliente.",
             results: [
                 "Pipeline di acquisizione per contenuti web, documenti e PDF con indicizzazione vettoriale per tenant",
                 "Widget web riutilizzabile e plugin WordPress per integrare l'esperienza nei siti esistenti",
                 "Flussi conversazionali per assistenza, raccomandazioni, qualificazione lead e prenotazioni",
                 "Dashboard Next.js con onboarding, analytics e gestione degli abbonamenti Stripe",
+            ],
+            work: [
+                {
+                    title: "Architettura multi-tenant",
+                    desc: "Ho definito i confini tra aziende, utenti, fonti, conversazioni e configurazioni. La separazione copriva query, indicizzazione, job e interfaccia.",
+                },
+                {
+                    title: "Pipeline della conoscenza",
+                    desc: "Ho costruito il flusso che acquisiva siti e file, estraeva il testo, lo preparava per la ricerca e lo indicizzava in pgvector. I job asincroni gestivano attività lunghe, tentativi e avanzamento.",
+                },
+                {
+                    title: "Esperienza conversazionale",
+                    desc: "Ho collegato recupero delle fonti e azioni applicative. La conversazione poteva rispondere, raccogliere dati, proporre prodotti e preparare una prenotazione mantenendo il contesto.",
+                },
+                {
+                    title: "Distribuzione e gestione",
+                    desc: "Ho sviluppato dashboard, widget riutilizzabile e integrazione WordPress. Onboarding, configurazione e billing permettevano di attivare un'azienda senza creare una versione separata del prodotto.",
+                },
+            ],
+            challenges: [
+                {
+                    title: "Risposte fondate sulle fonti",
+                    desc: "La qualità dipendeva dal recupero del contenuto giusto. Ho strutturato ingestione e ricerca per limitare le risposte generiche e mantenere il legame con la conoscenza autorizzata dal cliente.",
+                },
+                {
+                    title: "Isolamento tra aziende",
+                    desc: "Contenuti e conversazioni di tenant diversi non potevano mescolarsi. Ho applicato il contesto aziendale a storage, ricerca vettoriale, job e accesso dalla dashboard.",
+                },
+                {
+                    title: "Elaborazioni fuori richiesta",
+                    desc: "Crawling e documenti richiedevano tempi incompatibili con una chiamata HTTP. Le code BullMQ rendevano il lavoro ripetibile e permettevano alla dashboard di mostrarne lo stato.",
+                },
+                {
+                    title: "Integrazione in siti diversi",
+                    desc: "Il widget doveva convivere con temi, CSS e stack non controllati. Ho ridotto le dipendenze dall'host e separato la configurazione del cliente dal codice incorporato nel sito.",
+                },
             ],
         },
     },
@@ -95,10 +136,11 @@ export const PROJECTS: Project[] = [
         role: "Fondatore tecnico",
         year: "2025",
         summary:
-            "App mobile per discussioni strutturate sui libri, club di lettura digitali e gestione della libreria personale.",
+            "App mobile per organizzare letture, discussioni e club intorno ai libri, con struttura per capitoli e protezione dagli spoiler.",
         description: [
-            "Lectum nasce dalla volontà di unificare gli strumenti frammentati dedicati ai libri. Mette al centro il libro come oggetto di conversazione: discussioni tematiche, club di lettura, ricerca per ISBN e libreria personale, in un'unica esperienza ordinata e tematica.",
-            "L'esperienza si ispira ai forum strutturati ma è più ordinata e tematica rispetto ai feed infiniti: pensata per favorire discussioni di qualità invece che engagement vuoto.",
+            "Lectum riuniva libreria personale, discussioni e club di lettura in una sola app. Ogni conversazione partiva da un libro e poteva essere organizzata per tema o capitolo, così un lettore trovava il contesto prima di intervenire.",
+            "Ho ideato il prodotto e seguito l'intero sviluppo tecnico. L'app React Native con Expo condivideva la stessa base di codice tra iOS e Android; il backend Node.js gestiva libri, profili, club, thread e commenti su MongoDB.",
+            "La progettazione ha dato priorità alla qualità della conversazione. ISBN e metadati riducevano i duplicati, mentre la struttura dei thread e le regole sugli spoiler permettevano a persone con ritmi di lettura diversi di partecipare allo stesso spazio.",
         ],
         features: [
             { title: "Discussioni sui libri", desc: "Thread strutturati per separare temi: trama, personaggi, interpretazioni." },
@@ -111,21 +153,58 @@ export const PROJECTS: Project[] = [
             { area: "Backend", items: ["Node.js", "Express", "Redis", "BullMQ"] },
             { area: "Database", items: ["MongoDB"] },
         ],
-        url: "https://lectum.io",
         icon: BookOpen,
         kind: "MobileApplication",
         applicationCategory: "SocialNetworkingApplication",
         operatingSystem: "iOS, Android",
         caseStudy: {
+            why:
+                "Chi legge con altre persone finisce spesso per usare strumenti diversi: un catalogo per ricordare i libri, una chat per il gruppo e un social per cercare opinioni. Le conversazioni si perdono nel flusso e chi è indietro nella lettura rischia spoiler. Ho progettato Lectum per dare a ogni libro uno spazio ordinato, mantenere memoria delle discussioni e far convivere lettori che procedono a velocità diverse.",
             challenge:
-                "Le conversazioni sui libri online sono distribuite tra Goodreads, Reddit, Discord e gruppi WhatsApp: ogni piattaforma ha pezzi del puzzle ma nessuna offre un'esperienza tematica e ordinata. I lettori che vogliono partecipare a club di lettura organizzati o discutere capitoli senza spoiler hanno strumenti frammentati e UX caotica.",
+                "Libri, edizioni e ISBN non coincidono sempre, mentre una discussione può riferirsi a un'opera, a un capitolo o a una fase del club. Il modello dati doveva conservare questi legami e sostenere thread annidati senza rendere pesante la navigazione su mobile.",
             solution:
-                "Un'app mobile React Native che mette il libro al centro: ricerca per ISBN, thread strutturati per separare trama e personaggi, club di lettura con discussioni organizzate per capitoli, libreria personale e scudo anti-spoiler attivo per default. Sviluppata in public da fondatore tecnico, con cadenza di rilascio quindicinale e roadmap pubblica.",
+                "Ho modellato il dominio intorno al libro e allo stato di lettura. L'app collegava ricerca ISBN, libreria personale, club e thread; il backend esponeva API dedicate e usava Redis e BullMQ per cache e lavori asincroni. La protezione dagli spoiler usava il punto raggiunto dal lettore come regola.",
             results: [
                 "MVP rilasciato in 12 settimane partendo da zero, su iOS e Android da unica codebase",
                 "Architettura backend modulare Node.js + Express + MongoDB con caching Redis e queue BullMQ",
                 "Schema dati pensato per scalare a thread profondi, commenti annidati e metadata variabili per libro",
                 "Community di beta tester attiva con feedback iterativi integrati nella roadmap",
+            ],
+            work: [
+                {
+                    title: "Definizione del prodotto",
+                    desc: "Ho trasformato l'idea in flussi concreti: trovare un libro, aggiungerlo alla libreria, entrare in un club, seguire una lettura e aprire discussioni legate al punto raggiunto.",
+                },
+                {
+                    title: "App iOS e Android",
+                    desc: "Ho sviluppato l'app con React Native, Expo e TypeScript. Una sola base di codice copriva navigazione, profili, libreria, club e discussioni sui due sistemi operativi.",
+                },
+                {
+                    title: "Backend e modello dati",
+                    desc: "Ho costruito API e schema MongoDB per libri, edizioni, utenti, club, thread e commenti. Redis e BullMQ sostenevano cache e attività che non dovevano rallentare l'esperienza mobile.",
+                },
+                {
+                    title: "Rilascio e feedback",
+                    desc: "Ho portato l'MVP dalla definizione al rilascio e raccolto il feedback dei beta tester. Le osservazioni entravano nella roadmap e guidavano le iterazioni sui flussi più usati.",
+                },
+            ],
+            challenges: [
+                {
+                    title: "Identità dei libri",
+                    desc: "Un titolo può avere più edizioni e più ISBN. Ho separato l'opera dall'edizione per evitare conversazioni duplicate e conservare i metadati utili alla ricerca.",
+                },
+                {
+                    title: "Spoiler e avanzamento",
+                    desc: "Ogni lettore può trovarsi in un punto diverso. La struttura per capitoli e lo stato di lettura definivano quali contenuti mostrare e quali proteggere.",
+                },
+                {
+                    title: "Discussioni profonde su mobile",
+                    desc: "Thread e commenti annidati diventano difficili da leggere su uno schermo piccolo. Ho lavorato su gerarchia, contesto e navigazione per mantenere chiaro il legame tra risposta e discussione.",
+                },
+                {
+                    title: "Un dominio con molti legami",
+                    desc: "Libreria, club, libri e conversazioni condividono dati ma hanno cicli diversi. Ho mantenuto separati i moduli del backend per poter modificare una parte senza propagare dipendenze nel resto del prodotto.",
+                },
             ],
         },
     },
@@ -184,10 +263,11 @@ export const PROJECTS: Project[] = [
         role: "Founder & Fractional CTO",
         year: "2023",
         summary:
-            "Piattaforma web e mobile dedicata alla community degli appassionati di calciomercato: contenuti, news e community.",
+            "Piattaforma editoriale e community sul calciomercato, composta da sito pubblico, app mobile e backoffice operativo.",
         description: [
-            "Oraloco è la piattaforma per chi segue il calciomercato: contenuti editoriali, news e approfondimenti, community attiva e ambiente di confronto fra tifosi e appassionati. Il prodotto include un sito web e un'app mobile companion.",
-            "L'obiettivo è creare un punto di riferimento italiano sul calciomercato, con SEO curato, contenuti di qualità e una community moderata.",
+            "Oraloco riuniva news, approfondimenti e discussioni sul calciomercato. Il sito pubblico dava spazio ai contenuti editoriali e alla ricerca organica; l'app mobile portava feed, profili e conversazioni in un'esperienza pensata per l'uso quotidiano.",
+            "Come founder e responsabile tecnico ho definito l'architettura del prodotto e coordinato lo sviluppo di sito, app e strumenti interni. Il lavoro comprendeva il frontend Nuxt, l'app React Native, le API e il backoffice usato dalla redazione per pubblicare e moderare.",
+            "La parte editoriale e quella community condividevano utenti e contenuti, ma seguivano esigenze diverse. La redazione aveva bisogno di velocità e controllo; i lettori di pagine rapide, accessibili dai motori di ricerca e coerenti tra web e mobile.",
         ],
         features: [
             { title: "Sito editoriale", desc: "Contenuti, news di calciomercato e SEO ottimizzato su Nuxt 3 con sitemap dinamica e schema.org." },
@@ -201,21 +281,58 @@ export const PROJECTS: Project[] = [
             { area: "Backend", items: ["Node.js", "API REST"] },
             { area: "Integrazioni", items: ["Brevo", "Apple/Google Sign-In", "GTM"] },
         ],
-        url: "https://oraloco.com",
         icon: Smile,
         kind: "WebApplication",
         applicationCategory: "SportsApplication",
         operatingSystem: "Web, iOS, Android",
         caseStudy: {
+            why:
+                "Il calciomercato genera molte notizie brevi, aggiornamenti e discussioni, ma l'esperienza era distribuita tra siti editoriali, forum e social generalisti. L'idea di Oraloco era costruire un prodotto verticale: una redazione pubblica contenuti verificabili e la community li discute nello stesso ambiente, con strumenti specifici per utenti e moderatori.",
             challenge:
-                "La community italiana del calciomercato è frammentata tra forum datati, gruppi Facebook poco moderati, thread Reddit e X. Mancava un punto di riferimento moderno, curato editorialmente e ottimizzato per la ricerca organica, capace di unire news, approfondimenti e community in un'unica esperienza coerente.",
+                "Il sito doveva indicizzare molte pagine e restare rapido mentre la redazione pubblicava contenuti con frequenza. App e web dovevano condividere identità e dati senza offrire la stessa interfaccia, mentre il backoffice doveva rendere pubblicazione e moderazione attività gestibili da operatori non tecnici.",
             solution:
-                "Una piattaforma editoriale costruita su Nuxt 3 con SSR/SSG, contenuti di calciomercato strutturati e SEO curato, affiancata da un'app mobile companion in React Native (Expo) per la community e i contenuti in mobilità. Backoffice operatori dedicato per gestire contenuti, utenti e moderazione, con integrazione di Brevo per email transazionali e GTM per analytics.",
+                "Ho separato le esperienze per canale mantenendo un backend comune. Nuxt 3 gestiva rendering, pagine editoriali e dati strutturati; React Native ed Expo coprivano feed e community su mobile. Un backoffice dedicato concentrava pubblicazione, utenti e moderazione, mentre Brevo e GTM gestivano comunicazioni e misurazione.",
             results: [
                 "Sito SEO-friendly con SSR/SSG, sitemap dinamica, schema.org strutturato e Core Web Vitals nei target Google",
                 "App mobile companion con autenticazione Apple/Google Sign-In e navigazione expo-router",
                 "Backoffice interno completo per gestione contenuti editoriali e community",
                 "Architettura pensata per scalare a migliaia di pagine indicizzate sul calciomercato italiano",
+            ],
+            work: [
+                {
+                    title: "Architettura del prodotto",
+                    desc: "Ho definito i confini tra contenuti editoriali, community, identità utente e strumenti interni. Web, mobile e backoffice usavano lo stesso dominio senza duplicare le regole applicative.",
+                },
+                {
+                    title: "Sito editoriale",
+                    desc: "Ho lavorato sul frontend Nuxt 3 con rendering adatto ai motori di ricerca, sitemap dinamica, dati Schema.org e template per news e approfondimenti.",
+                },
+                {
+                    title: "App mobile",
+                    desc: "Ho sviluppato l'esperienza companion con React Native ed Expo, includendo autenticazione Apple e Google, feed, profili e navigazione dedicata alla community.",
+                },
+                {
+                    title: "Operatività della redazione",
+                    desc: "Ho costruito il backoffice per contenuti, utenti e moderazione e integrato email transazionali e analytics. Gli operatori potevano lavorare senza intervenire sul codice.",
+                },
+            ],
+            challenges: [
+                {
+                    title: "Velocità e indicizzazione",
+                    desc: "Le pagine editoriali dovevano essere disponibili ai crawler e aprirsi rapidamente anche da mobile. Ho combinato rendering server-side, generazione statica e metadati strutturati in base al tipo di contenuto.",
+                },
+                {
+                    title: "Coerenza tra web e app",
+                    desc: "I due canali condividevano account, contenuti e interazioni, ma avevano navigazioni diverse. Ho mantenuto le regole nel backend e adattato la presentazione al contesto d'uso.",
+                },
+                {
+                    title: "Flusso editoriale",
+                    desc: "Pubblicare una notizia richiedeva campi, tassonomie e controlli diversi da un post della community. Il backoffice separava i flussi e dava alla redazione strumenti adatti a ciascun contenuto.",
+                },
+                {
+                    title: "Moderazione",
+                    desc: "Una community calcistica richiede visibilità sulle conversazioni e interventi rapidi. Ho previsto funzioni operative per gestire utenti e contenuti dal pannello interno.",
+                },
             ],
         },
     },

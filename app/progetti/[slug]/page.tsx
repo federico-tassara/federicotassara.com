@@ -186,9 +186,19 @@ export default async function ProjectPage({ params }: PageProps) {
                                 Case study
                             </span>
                             <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink sm:text-4xl md:text-[2.4rem]">
-                                Sfida, soluzione e risultati.
+                                {project.caseStudy.why
+                                    ? "Perché, cosa ho costruito e le sfide."
+                                    : "Sfida, soluzione e risultati."}
                             </h2>
                         </div>
+                        {project.caseStudy.why && (
+                            <div className="mt-10 max-w-4xl rounded-[22px] border border-line bg-surface-alt p-7 sm:p-9">
+                                <h3 className="text-xl font-medium text-ink">Perché è nato</h3>
+                                <p className="mt-4 text-base leading-relaxed text-ink-soft">
+                                    {project.caseStudy.why}
+                                </p>
+                            </div>
+                        )}
                         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                             <div className="anim-fade-up rounded-[22px] border border-line bg-white p-7">
                                 <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted">
@@ -220,6 +230,48 @@ export default async function ProjectPage({ params }: PageProps) {
                                 </ul>
                             </div>
                         </div>
+                        {project.caseStudy.work && (
+                            <div className="mt-16">
+                                <h3 className="text-2xl font-medium tracking-tight text-ink sm:text-3xl">
+                                    Il lavoro svolto
+                                </h3>
+                                <div className="mt-8 grid gap-5 md:grid-cols-2">
+                                    {project.caseStudy.work.map((item, i) => (
+                                        <div
+                                            key={item.title}
+                                            className="anim-fade-up rounded-[22px] border border-line bg-white p-7"
+                                            style={{ animationDelay: `${i * 60}ms` }}
+                                        >
+                                            <h4 className="text-lg font-semibold text-ink">{item.title}</h4>
+                                            <p className="mt-3 text-[15px] leading-relaxed text-muted">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                        {project.caseStudy.challenges && (
+                            <div className="mt-16">
+                                <h3 className="text-2xl font-medium tracking-tight text-ink sm:text-3xl">
+                                    Le sfide principali
+                                </h3>
+                                <div className="mt-8 grid gap-5 md:grid-cols-2">
+                                    {project.caseStudy.challenges.map((item, i) => (
+                                        <div
+                                            key={item.title}
+                                            className="anim-fade-up rounded-[22px] border border-line bg-surface-alt p-7"
+                                            style={{ animationDelay: `${i * 60}ms` }}
+                                        >
+                                            <h4 className="text-lg font-semibold text-ink">{item.title}</h4>
+                                            <p className="mt-3 text-[15px] leading-relaxed text-muted">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </Container>
                 </section>
             )}
