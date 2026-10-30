@@ -42,3 +42,4 @@ next-env.d.ts
 
 # local SEO research cache
 .seo-cache/
+.migration-backup/

@@ -1,0 +1,13 @@
+node_modules
+.next
+.git
+.env*
+.serena
+.seo-cache
+.migration-backup
+.idea
+.vscode
+.agents
+.claude
+.codex
+*.tsbuildinfo
