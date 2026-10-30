@@ -11,7 +11,15 @@ type AnalyticsWindow = Window & {
     gtag?: (command: string, eventName: string, parameters?: Record<string, unknown>) => void;
 };
 
-export function ContactForm({ siteKey, source = "contact_page" }: { siteKey: string; source?: string }) {
+type ContactFormProps = {
+    siteKey: string;
+    source?: string;
+    submitLabel?: string;
+    messageLabel?: string;
+    messagePlaceholder?: string;
+};
+
+export function ContactForm({ siteKey, source = "contact_page", ...copy }: ContactFormProps) {
     if (!siteKey) {
         return (
             <div className="rounded-2xl border border-amber-200 bg-amber-50 p-7 sm:p-9">
@@ -30,10 +38,16 @@ export function ContactForm({ siteKey, source = "contact_page" }: { siteKey: str
             </div>
         );
     }
-    return <ContactFormInner siteKey={siteKey} source={source} />;
+    return <ContactFormInner siteKey={siteKey} source={source} {...copy} />;
 }
 
-function ContactFormInner({ siteKey, source }: { siteKey: string; source: string }) {
+function ContactFormInner({
+    siteKey,
+    source,
+    submitLabel = "Invia",
+    messageLabel = "Messaggio",
+    messagePlaceholder = "Scrivi il tuo messaggio qui",
+}: ContactFormProps & { source: string }) {
     const [state, setState] = useState<FormState>("idle");
     const [errorMsg, setErrorMsg] = useState("");
     const [token, setToken] = useState("");
@@ -136,8 +150,8 @@ function ContactFormInner({ siteKey, source }: { siteKey: string; source: string
             <div className="mt-5">
                 <Field
                     id="message"
-                    label="Messaggio"
-                    placeholder="Scrivi il tuo messaggio qui"
+                    label={messageLabel}
+                    placeholder={messagePlaceholder}
                     value={form.message}
                     onChange={handleChange("message")}
                     required
@@ -165,7 +179,7 @@ function ContactFormInner({ siteKey, source }: { siteKey: string; source: string
                     .
                 </p>
                 <Button type="submit" disabled={state === "submitting"}>
-                    {state === "submitting" ? "Invio…" : "Invia"}
+                    {state === "submitting" ? "Invio…" : submitLabel}
                     {state !== "submitting" && <Send className="size-4" />}
                 </Button>
             </div>
