@@ -153,7 +153,7 @@ Non serve attendere la classificazione definitiva di ogni dettaglio per iniziare
 9. porta i controlli critici dentro la pipeline;
 10. conserva le evidenze insieme alla documentazione tecnica.
 
-Il servizio di [Tech Consulting](/servizi/tech-consulting) può aiutare a trasformare il perimetro legale in un piano tecnico, mentre [Architettura e Scalabilità](/servizi/architettura-e-scalabilita) serve quando il problema è strutturale: aggiornamenti impossibili, autorizzazioni fragili, componenti non tracciati o log insufficienti.
+Il servizio di [Tech Consulting](/servizi/tech-consulting) può aiutare a trasformare il perimetro legale in un piano tecnico, mentre [Architettura e Scalabilità](/servizi/tech-consulting) serve quando il problema è strutturale: aggiornamenti impossibili, autorizzazioni fragili, componenti non tracciati o log insufficienti.
 
 ## Il risultato da cercare
 

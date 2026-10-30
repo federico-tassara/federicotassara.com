@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
+import { ArrowLeft, CheckCircle2, XCircle } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { Button } from "@/src/components/ui/Button";
 import { SERVICES, getService } from "@/src/lib/services";
+import { PRIMARY_SERVICES } from "@/src/lib/service-navigation";
+import { ServiceCard } from "@/src/components/ui/ServiceCard";
 import { CALENDLY_URL, SITE_URL } from "@/src/lib/utils";
 
 interface PageProps {
@@ -101,7 +103,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           }
         : null;
 
-    const otherServices = SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
 
     return (
         <>
@@ -264,27 +265,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         Altri servizi.
                     </h2>
                     <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                        {otherServices.map((s, i) => {
-                            const OtherIcon = s.icon;
-                            return (
-                                <Link
-                                    key={s.slug}
-                                    href={`/servizi/${s.slug}`}
-                                    className="group anim-fade-up flex flex-col rounded-[22px] border border-line bg-white p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
-                                    style={{ animationDelay: `${i * 60}ms` }}
-                                >
-                                    <span className="flex size-11 items-center justify-center rounded-xl bg-surface-alt text-ink">
-                                        <OtherIcon className="size-5" />
-                                    </span>
-                                    <h3 className="mt-5 text-lg font-bold text-ink">{s.shortTitle}</h3>
-                                    <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{s.tagline}</p>
-                                    <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-ink">
-                                        Scopri
-                                        <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
-                                    </span>
-                                </Link>
-                            );
-                        })}
+                        {PRIMARY_SERVICES.map((service) => (
+                            <ServiceCard key={service.href} service={service} />
+                        ))}
                     </div>
                 </Container>
             </section>

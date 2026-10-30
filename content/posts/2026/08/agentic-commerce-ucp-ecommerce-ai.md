@@ -113,7 +113,7 @@ Shopify ha inserito l'agentic commerce nella propria piattaforma e ha descritto 
 
 Un ecommerce su WooCommerce, Magento, Shopware o un backend custom non deve necessariamente cambiare piattaforma. Può preparare un livello API stabile e adottare i protocolli quando integrazioni e volumi lo giustificano. Migrare soltanto per inseguire una sigla crea più rischio di quanto ne rimuova.
 
-La decisione dipende da tre domande: il canale agentico è disponibile per il mercato target? Le capacità richieste sono già coperte dalla piattaforma? Quanto costa mantenere un adattatore rispetto a usare una funzione nativa? Una [valutazione dell'architettura](/servizi/architettura-e-scalabilita) dovrebbe rispondere con vincoli e numeri, non con preferenze di stack.
+La decisione dipende da tre domande: il canale agentico è disponibile per il mercato target? Le capacità richieste sono già coperte dalla piattaforma? Quanto costa mantenere un adattatore rispetto a usare una funzione nativa? Una [valutazione dell'architettura](/servizi/tech-consulting) dovrebbe rispondere con vincoli e numeri, non con preferenze di stack.
 
 ## Sicurezza, privacy e tutela del cliente
 

@@ -144,6 +144,6 @@ Un primo rilascio dovrebbe limitarsi a una collaborazione leggibile e reversibil
 
 Il protocollo A2A è utile quando riduce dipendenze reali tra agenti. Non è una scorciatoia per trasformare un processo confuso in automazione affidabile. Se dati, responsabilità e criteri di accettazione non sono chiari, la rete distribuirà l'ambiguità invece di eliminarla.
 
-La sequenza più solida è partire dal processo, identificare i confini di dominio, costruire API e controlli deterministici, quindi scegliere se esporre strumenti con MCP e deleghe con A2A. Una [consulenza su architettura e scalabilità](/servizi/architettura-e-scalabilita) può aiutare a verificare questi confini prima che diventino dipendenze costose.
+La sequenza più solida è partire dal processo, identificare i confini di dominio, costruire API e controlli deterministici, quindi scegliere se esporre strumenti con MCP e deleghe con A2A. Una [consulenza su architettura e scalabilità](/servizi/tech-consulting) può aiutare a verificare questi confini prima che diventino dipendenze costose.
 
 Se stai valutando agenti collegati a CRM, gestionali o piattaforme proprietarie, il primo passo non è scegliere un framework. È disegnare identità, capacità e punti di controllo. È anche il modo in cui affronto un progetto di [automazione dei processi aziendali](/automazione-processi-aziendali): una decisione misurabile alla volta, con responsabilità esplicite.

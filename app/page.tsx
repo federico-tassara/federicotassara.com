@@ -9,21 +9,21 @@ import { ServiceCard } from "@/src/components/ui/ServiceCard";
 import { ClientsMarquee } from "@/src/components/ui/ClientsMarquee";
 import { HeroAkintuWidget } from "@/src/components/akintu/HeroAkintuWidget";
 import { HomeProjects } from "@/src/components/sections/HomeProjects";
-import { SERVICES } from "@/src/lib/services";
+import { PRIMARY_SERVICES } from "@/src/lib/service-navigation";
 import { CALENDLY_URL, SITE_URL } from "@/src/lib/utils";
 import { getAllPosts } from "@/src/lib/posts";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Sviluppatore Web e Fractional CTO Italia | Federico Tassara",
+        absolute: "Fractional CTO e Sviluppatore Web e Mobile | Federico Tassara",
     },
     description:
-        "Sviluppatore Full Stack freelance in Italia. Sviluppo applicazioni web, app mobile, architetture scalabili e consulenza tecnica per startup e aziende.",
+        "Fractional CTO e sviluppatore software web e mobile in Italia. Automazioni aziendali, applicazioni su misura e consulenza tecnica per startup e PMI.",
     alternates: { canonical: SITE_URL },
     openGraph: {
-        title: "Sviluppatore Web e Fractional CTO Italia | Federico Tassara",
+        title: "Fractional CTO e Sviluppatore Web e Mobile | Federico Tassara",
         description:
-            "Sviluppo app mobile, siti web e piattaforme per startup e aziende italiane. Disponibile per progetti, consulenze e ruolo di CTO part-time.",
+            "Fractional CTO, sviluppo software web e mobile e automazioni aziendali per startup e PMI italiane.",
         url: SITE_URL,
         type: "website",
     },
@@ -44,16 +44,16 @@ export default function Home() {
         <section className="home-hero site-container">
             <div>
                 <h1>Trasformo idee in <mark>prodotti digitali</mark> scalabili.</h1>
-                <p className="hero-description">Progetto e sviluppo applicazioni web e mobile performanti, scalabili e pronte per crescere. Per startup, aziende e prodotti digitali in evoluzione.</p>
+                <p className="hero-description">Affianco startup e PMI come Fractional CTO, sviluppo software web e mobile e automatizzo i processi aziendali. Dalle decisioni tecniche al prodotto in produzione.</p>
                 <div className="hero-actions"><Button href={CALENDLY_URL} external>Prenota una consulenza</Button><Link href="/servizi" className="text-sm">Scopri i servizi</Link></div>
                 <div className="home-stats">{[["6+", "Anni di esperienza"], ["50+", "Progetti realizzati"], ["20+", "Startup e PMI supportate"]].map(([value,label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>
             </div>
-            <figure className="hero-portrait"><Image src="/images/profile.jpeg" alt="Federico Tassara sulle montagne" fill sizes="(min-width: 900px) 430px, 88vw" priority /><figcaption>Federico Tassara<span>Full Stack Developer &amp; Fractional CTO</span></figcaption></figure>
+            <figure className="hero-portrait"><Image src="/images/federico-ritratto-professionale.png" alt="Federico Tassara, sviluppatore software e Fractional CTO" fill sizes="(min-width: 900px) 430px, 88vw" priority /><figcaption>Federico Tassara<span>Full Stack Developer &amp; Fractional CTO</span></figcaption></figure>
         </section>
         <section className="home-clients" aria-label="Clienti e progetti"><p>Hanno scelto di lavorare con me</p><ClientsMarquee /></section>
         <HomeProjects />
-        <section className="home-about site-container"><Image src="/images/profile.jpeg" alt="Federico Tassara" width={245} height={305} className="about-portrait" /><div><SectionTitle eyebrow="La mia visione" title="Costruire prodotti che durano." description="Credo nello sviluppo di prodotti digitali pensati per durare, non solo per essere rilasciati. Ogni progetto nasce con una base tecnica solida, è semplice da evolvere e supporta davvero gli obiettivi di business nel tempo." /><p className="mt-5 text-muted leading-relaxed">Non scrivo codice per riempire feature: costruisco prodotti digitali che funzionano, scalano e creano valore reale.</p></div></section>
-        <section id="servizi" className="home-services site-container"><SectionTitle eyebrow="Servizi" title="Cosa posso costruire con te." description="Da una web app fino a un'intera architettura cloud: ti accompagno dalla strategia tecnica al rilascio in produzione." /><div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{SERVICES.map(s => <ServiceCard key={s.slug} service={s} />)}</div></section>
+        <section className="home-about site-container"><Image src="/images/federico-ritratto-professionale.png" alt="Federico Tassara" width={245} height={305} className="about-portrait" /><div><SectionTitle eyebrow="La mia visione" title="Costruire prodotti che durano." description="Credo nello sviluppo di prodotti digitali pensati per durare, non solo per essere rilasciati. Ogni progetto nasce con una base tecnica solida, è semplice da evolvere e supporta davvero gli obiettivi di business nel tempo." /><p className="mt-5 text-muted leading-relaxed">Non scrivo codice per riempire feature: costruisco prodotti digitali che funzionano, scalano e creano valore reale.</p></div></section>
+        <section id="servizi" className="home-services site-container"><SectionTitle eyebrow="Servizi" title="Cosa posso costruire con te." description="Fractional CTO, sviluppo software web e mobile e automazioni aziendali: tre modi per aiutare la tua impresa a crescere." /><div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{PRIMARY_SERVICES.map(s => <ServiceCard key={s.href} service={s} />)}</div></section>
         <section className="home-pillars site-container"><SectionTitle eyebrow="I pilastri del lavoro" title="Sei principi che guidano ogni progetto." /><div className="pillar-grid">{PILLARS.map(p => <article key={p.title}><h3>{p.title}</h3><p>{p.text}</p></article>)}</div></section>
         {latestPosts.length > 0 && <section className="home-journal site-container"><SectionTitle eyebrow="Ultime notizie" title="Dal blog." description="Articoli, riflessioni e guide pratiche su sviluppo, architettura e prodotto." align="center" /><div className="mt-8 grid gap-6 md:grid-cols-3">{latestPosts.map(post => <Link key={post.slug} href={`/blog/${post.slug}`} className="home-post"><time dateTime={post.date}>{new Date(post.date).toLocaleDateString("it-IT", {day:"numeric",month:"long",year:"numeric"})}</time><h3>{post.title}</h3><p>{post.excerpt}</p><span>Leggi <ArrowRight size={15} aria-hidden="true" /></span></Link>)}</div><div className="mt-8 text-center"><Button href="/blog">Vai al blog</Button></div></section>}
         <div className="site-container pb-16"><HeroAkintuWidget /></div>

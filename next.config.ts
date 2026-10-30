@@ -77,7 +77,12 @@ const nextConfig: NextConfig = {
         remotePatterns: [],
     },
     async redirects() {
-        return [...legacyPostRedirects, ...orphanedPostRedirects];
+        return [
+            ...legacyPostRedirects,
+            ...orphanedPostRedirects,
+            { source: "/servizi/architettura-e-scalabilita", destination: "/servizi/tech-consulting", permanent: true },
+            { source: "/servizi/automazioni", destination: "/automazione-processi-aziendali", permanent: true },
+        ];
     },
     async headers() {
         return [

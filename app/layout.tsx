@@ -17,18 +17,18 @@ const geist = localFont({
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
     title: {
-        default: "Sviluppatore Web e Fractional CTO Italia | Federico Tassara",
+        default: "Fractional CTO e Sviluppatore Web e Mobile | Federico Tassara",
         template: "%s | Federico Tassara",
     },
     description:
-        "Sviluppatore Full Stack freelance in Italia. Sviluppo applicazioni web, app mobile, architetture scalabili e consulenza tecnica per startup e aziende.",
+        "Fractional CTO e sviluppatore software web e mobile in Italia. Automazioni aziendali, applicazioni su misura e consulenza tecnica per startup e PMI.",
     authors: [{ name: "Federico Tassara", url: SITE_URL }],
     creator: "Federico Tassara",
     publisher: "Federico Tassara",
     openGraph: {
         title: "Federico Tassara — Sviluppatore Web, Mobile & Fractional CTO in Italia",
         description:
-            "Sviluppo app mobile, siti web e piattaforme per startup e aziende italiane. Disponibile per progetti, consulenze e ruolo di CTO part-time.",
+            "Fractional CTO, sviluppo software web e mobile e automazioni aziendali per startup e PMI italiane.",
         url: SITE_URL,
         siteName: "Federico Tassara",
         type: "website",
@@ -61,10 +61,10 @@ const personSchema = {
     "@id": `${SITE_URL}/#person`,
     name: "Federico Tassara",
     url: SITE_URL,
-    image: `${SITE_URL}/images/profile.jpeg`,
+    image: `${SITE_URL}/images/federico-ritratto-professionale.png`,
     jobTitle: "Full Stack Developer & Fractional CTO",
     description:
-        "Sviluppatore Full Stack freelance specializzato in applicazioni web e mobile, architetture scalabili e consulenza tecnica.",
+        "Fractional CTO e sviluppatore software freelance specializzato in applicazioni web e mobile e automazioni aziendali.",
     inLanguage: "it-IT",
     knowsLanguage: ["it", "en"],
     knowsAbout: [
@@ -104,14 +104,14 @@ const organizationSchema = {
     url: SITE_URL,
     logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/profile.jpeg`,
-        width: 512,
-        height: 512,
+        url: `${SITE_URL}/images/federico-ritratto-professionale.png`,
+        width: 1122,
+        height: 1402,
     },
-    image: `${SITE_URL}/images/profile.jpeg`,
+    image: `${SITE_URL}/images/federico-ritratto-professionale.png`,
     email: "info@federicotassara.com",
     description:
-        "Sviluppo applicazioni web e mobile, architetture scalabili e consulenza tecnica per startup e aziende.",
+        "Fractional CTO, sviluppo software web e mobile e automazioni aziendali per startup e PMI.",
     founder: { "@id": `${SITE_URL}/#person` },
     inLanguage: "it-IT",
     areaServed: { "@type": "Country", name: "Italia" },
@@ -132,12 +132,10 @@ const organizationSchema = {
         },
     ],
     serviceType: [
-        "Web Development",
-        "Mobile Development",
-        "Backend & API",
-        "Cloud Architecture",
-        "Tech Consulting",
-        "Process Automation",
+        "Fractional CTO",
+        "Sviluppo software web e mobile",
+        "Automazioni aziendali",
+        "Tech Consulting, architettura e scalabilità",
     ],
 };
 

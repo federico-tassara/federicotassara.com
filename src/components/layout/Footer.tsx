@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Instagram, Youtube, Linkedin, Mail } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
-import { SERVICES } from "@/src/lib/services";
+import { SERVICE_NAVIGATION } from "@/src/lib/service-navigation";
 import { ADDRESSES, SITE_EMAIL, SOCIAL } from "@/src/lib/utils";
 
 export function Footer() {
@@ -16,8 +16,8 @@ export function Footer() {
                             Federico Tassara
                         </Link>
                         <p className="mt-3 text-sm leading-relaxed text-white/75">
-                            Full Stack Developer e Fractional CTO. Sviluppo app web e mobile,
-                            backend solidi e architetture pronte a crescere.
+                            Fractional CTO e sviluppatore software web e mobile.
+                            Automazioni aziendali e consulenza tecnica per startup e PMI.
                         </p>
                         <div className="mt-5 flex items-center gap-2">
                             <SocialIcon href={SOCIAL.instagram} label="Instagram"><Instagram className="size-4" /></SocialIcon>
@@ -40,23 +40,13 @@ export function Footer() {
                     <div>
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Servizi</h3>
                         <ul className="mt-4 space-y-2.5 text-sm">
-                            {SERVICES.map((s) => (
-                                <li key={s.slug}>
-                                    <Link href={`/servizi/${s.slug}`} className="text-white/75 hover:text-white">
-                                        {s.shortTitle}
+                            {SERVICE_NAVIGATION.map((s) => (
+                                <li key={s.href}>
+                                    <Link href={s.href} className="text-white/75 hover:text-white">
+                                        {s.title}
                                     </Link>
                                 </li>
                             ))}
-                            <li className="pt-1.5">
-                                <Link href="/fractional-cto" className="font-medium text-white hover:text-white/80">
-                                    Fractional CTO
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/sviluppatore-react-native-italia" className="font-medium text-white hover:text-white/80">
-                                    Sviluppatore React Native
-                                </Link>
-                            </li>
                         </ul>
                     </div>
 

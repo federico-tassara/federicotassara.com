@@ -138,7 +138,7 @@ Separare le viste dopo aver costruito un unico documento completo è rischioso. 
 - livello di sensibilità;
 - regola di aggiornamento.
 
-Token di accesso, ruoli e log proteggono l'applicazione. La classificazione dei dati protegge il processo. L'[architettura software](/servizi/architettura-e-scalabilita) deve coprire entrambe.
+Token di accesso, ruoli e log proteggono l'applicazione. La classificazione dei dati protegge il processo. L'[architettura software](/servizi/tech-consulting) deve coprire entrambe.
 
 ## Piattaforma, integrazione o sviluppo su misura
 

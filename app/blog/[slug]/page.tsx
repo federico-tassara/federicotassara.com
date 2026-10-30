@@ -207,7 +207,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                         aria-label="Informazioni sull'autore"
                     >
                         <Image
-                            src="/images/profile.jpeg"
+                            src="/images/federico-ritratto-professionale.png"
                             alt="Federico Tassara"
                             width={80}
                             height={80}

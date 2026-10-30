@@ -35,9 +35,9 @@ function fileModified(...relativePaths: string[]): Date {
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const staticEntries: MetadataRoute.Sitemap = [
-        { url: `${SITE_URL}/`, lastModified: fileModified("app/page.tsx"), changeFrequency: "monthly", priority: 1 },
+        { url: `${SITE_URL}/`, lastModified: fileModified("app/page.tsx", "src/lib/service-navigation.ts"), changeFrequency: "monthly", priority: 1 },
         { url: `${SITE_URL}/chi-sono`, lastModified: fileModified("app/chi-sono/page.tsx"), changeFrequency: "yearly", priority: 0.8 },
-        { url: `${SITE_URL}/servizi`, lastModified: fileModified("app/servizi/page.tsx"), changeFrequency: "monthly", priority: 0.9 },
+        { url: `${SITE_URL}/servizi`, lastModified: fileModified("app/servizi/page.tsx", "src/lib/service-navigation.ts"), changeFrequency: "monthly", priority: 0.9 },
         { url: `${SITE_URL}/progetti`, lastModified: fileModified("app/progetti/page.tsx"), changeFrequency: "monthly", priority: 0.8 },
         { url: `${SITE_URL}/blog`, lastModified: fileModified("app/blog/page.tsx"), changeFrequency: "weekly", priority: 0.9 },
         { url: `${SITE_URL}/contatti`, lastModified: fileModified("app/contatti/page.tsx"), changeFrequency: "yearly", priority: 0.7 },
@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${SITE_URL}/sviluppatore-react-native-italia`, lastModified: fileModified("app/sviluppatore-react-native-italia/page.tsx"), changeFrequency: "monthly", priority: 0.95 },
         { url: `${SITE_URL}/sviluppo-app-saas`, lastModified: fileModified("app/sviluppo-app-saas/page.tsx"), changeFrequency: "monthly", priority: 0.95 },
         { url: `${SITE_URL}/automazione-processi-aziendali`, lastModified: fileModified("app/automazione-processi-aziendali/page.tsx"), changeFrequency: "monthly", priority: 0.95 },
+        { url: `${SITE_URL}/sviluppo-software-web-mobile`, lastModified: fileModified("app/sviluppo-software-web-mobile/page.tsx"), changeFrequency: "monthly", priority: 0.95 },
     ];
 
     const serviceEntries: MetadataRoute.Sitemap = SERVICES.map((s) => ({

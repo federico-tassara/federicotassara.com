@@ -84,4 +84,4 @@ Il ruolo letto dal token e usato per autorizzare sul server senza rileggerlo dal
 
 L'autenticazione in React ha una parte visibile facile e una parte invisibile che decide se il sistema tiene. Il token va messo dove i rischi che accetti sono quelli che sai gestire, il modello dei permessi va scelto guardando a come cresceranno le richieste, e l'autorizzazione resta un lavoro del server anche quando l'interfaccia la replica.
 
-Se stai impostando un'app con più livelli di accesso e vuoi una lettura del modello prima di scrivere il codice, oppure hai un'app già in produzione da verificare, [scrivimi](/contatti). Vedi anche come affronto [architettura e scalabilità](/servizi/architettura-e-scalabilita) e cosa guardo in un [audit tecnico del software](/blog/audit-tecnico-software-cosa-controllare).
+Se stai impostando un'app con più livelli di accesso e vuoi una lettura del modello prima di scrivere il codice, oppure hai un'app già in produzione da verificare, [scrivimi](/contatti). Vedi anche come affronto [architettura e scalabilità](/servizi/tech-consulting) e cosa guardo in un [audit tecnico del software](/blog/audit-tecnico-software-cosa-controllare).

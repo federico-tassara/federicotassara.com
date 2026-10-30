@@ -149,11 +149,12 @@ export default function ChiSonoPage() {
                             <div className="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-ink/5 to-transparent blur-2xl" aria-hidden />
                             <div className="overflow-hidden rounded-[22px] border border-line bg-white p-2 shadow-[0_30px_60px_-30px_rgba(28,31,51,0.25)]">
                                 <Image
-                                    src="/images/profile.jpeg"
+                                    src="/images/federico-ritratto-professionale.png"
                                     alt="Federico Tassara"
-                                    width={640}
-                                    height={640}
-                                    className="aspect-square w-full rounded-xl object-cover"
+                                    width={1122}
+                                    height={1402}
+                                    sizes="(min-width: 1024px) 42vw, 100vw"
+                                    className="aspect-[4/5] w-full rounded-xl object-cover"
                                     priority
                                 />
                             </div>

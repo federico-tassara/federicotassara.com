@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/src/components/ui/Button";
 import { Container } from "@/src/components/ui/Container";
-import { SERVICES } from "@/src/lib/services";
+import { SERVICE_NAVIGATION } from "@/src/lib/service-navigation";
 import { CALENDLY_URL } from "@/src/lib/utils";
 import { cn } from "@/src/lib/utils";
 
@@ -68,31 +68,18 @@ export function Header() {
                                 <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                                     <div className="w-72 overflow-hidden rounded-xl border border-ink/8 bg-white shadow-xl">
                                         <ul className="p-2">
-                                            {SERVICES.map((s) => (
-                                                <li key={s.slug}>
+                                            {SERVICE_NAVIGATION.map((s) => (
+                                                <li key={s.href}>
                                                     <Link
-                                                        href={`/servizi/${s.slug}`}
+                                                        href={s.href}
                                                         className="block rounded-lg px-3 py-2.5 text-sm text-ink-soft transition-colors hover:bg-surface-alt hover:text-ink"
                                                     >
-                                                        {s.shortTitle}
+                                                        {s.title}
                                                     </Link>
                                                 </li>
                                             ))}
                                         </ul>
-                                        <div className="border-t border-ink/5 p-2">
-                                            <Link
-                                                href="/fractional-cto"
-                                                className="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-surface-alt"
-                                            >
-                                                Fractional CTO
-                                            </Link>
-                                            <Link
-                                                href="/sviluppatore-react-native-italia"
-                                                className="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-surface-alt"
-                                            >
-                                                Sviluppatore React Native
-                                            </Link>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -142,35 +129,17 @@ export function Header() {
                                         </Link>
                                         {item.hasDropdown && (
                                             <ul className="ml-3 mt-1 border-l border-ink/10 pl-3">
-                                                {SERVICES.map((s) => (
-                                                    <li key={s.slug}>
+                                                {SERVICE_NAVIGATION.map((s) => (
+                                                    <li key={s.href}>
                                                         <Link
-                                                            href={`/servizi/${s.slug}`}
+                                                            href={s.href}
                                                             onClick={() => setMobileOpen(false)}
                                                             className="block rounded-md px-3 py-2 text-sm text-muted"
                                                         >
-                                                            {s.shortTitle}
+                                                            {s.title}
                                                         </Link>
                                                     </li>
                                                 ))}
-                                                <li>
-                                                    <Link
-                                                        href="/fractional-cto"
-                                                        onClick={() => setMobileOpen(false)}
-                                                        className="block rounded-md px-3 py-2 text-sm font-medium text-ink"
-                                                    >
-                                                        Fractional CTO
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link
-                                                        href="/sviluppatore-react-native-italia"
-                                                        onClick={() => setMobileOpen(false)}
-                                                        className="block rounded-md px-3 py-2 text-sm font-medium text-ink"
-                                                    >
-                                                        Sviluppatore React Native
-                                                    </Link>
-                                                </li>
                                             </ul>
                                         )}
                                     </li>

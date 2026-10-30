@@ -83,4 +83,4 @@ Verticale e orizzontale rispondono a problemi diversi. La macchina più grande r
 
 Chi decide presto paga poco. Chi rimanda si ritrova a districare sessioni, file e cache mentre il sistema è già in difficoltà, che è il momento in cui ogni intervento costa il triplo.
 
-Se vuoi capire dove sia il limite reale del tuo sistema prima di spendere in infrastruttura, guardo architettura e codice e ti dico da dove partire: vedi [architettura e scalabilità](/servizi/architettura-e-scalabilita), oppure [scrivimi](/contatti). Se il dubbio riguarda lo stato complessivo del progetto, ne parlo in [audit tecnico del software](/blog/audit-tecnico-software-cosa-controllare).
+Se vuoi capire dove sia il limite reale del tuo sistema prima di spendere in infrastruttura, guardo architettura e codice e ti dico da dove partire: vedi [architettura e scalabilità](/servizi/tech-consulting), oppure [scrivimi](/contatti). Se il dubbio riguarda lo stato complessivo del progetto, ne parlo in [audit tecnico del software](/blog/audit-tecnico-software-cosa-controllare).

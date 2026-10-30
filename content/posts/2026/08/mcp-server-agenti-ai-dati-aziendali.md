@@ -202,4 +202,4 @@ MCP evita di reinventare per ogni applicazione AI il collegamento agli strumenti
 
 Io partirei con un processo circoscritto e pochi tool in sola lettura. Dopo aver osservato errori, richieste ambigue e tentativi di abuso, aggiungerei azioni reversibili. È lo stesso criterio che userei per introdurre gli [agenti AI in una PMI](/blog/agenti-ai-pmi-cosa-sono-da-dove-partire): prima il processo reale, poi il grado di autonomia.
 
-Per progettare un MCP Server, collegarlo a sistemi esistenti o valutare se basti un'integrazione API tradizionale, puoi partire dai servizi di [automazione dei processi](/servizi/automazioni) e [Tech Consulting](/servizi/tech-consulting), oppure descrivere il caso nella [pagina contatti](/contatti).
+Per progettare un MCP Server, collegarlo a sistemi esistenti o valutare se basti un'integrazione API tradizionale, puoi partire dai servizi di [automazione dei processi](/automazione-processi-aziendali) e [Tech Consulting](/servizi/tech-consulting), oppure descrivere il caso nella [pagina contatti](/contatti).

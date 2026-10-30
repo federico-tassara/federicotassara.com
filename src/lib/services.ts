@@ -3,8 +3,6 @@ import {
     Code2,
     Smartphone,
     Server,
-    Layers,
-    Workflow,
     Compass,
 } from "lucide-react";
 
@@ -28,8 +26,8 @@ export type Service = {
 export const SERVICES: Service[] = [
     {
         slug: "web-development",
-        title: "Web Development",
-        shortTitle: "Web Development",
+        title: "Sviluppo applicazioni web",
+        shortTitle: "Sviluppo web",
         seoTitle: "Sviluppo Web App con Next.js e React",
         seoDescription:
             "Sviluppo web app moderne con Next.js e React: SaaS, dashboard, portali B2B/B2C e e-commerce headless ottimizzati per performance e SEO.",
@@ -71,8 +69,8 @@ export const SERVICES: Service[] = [
     },
     {
         slug: "mobile-development",
-        title: "Mobile Development",
-        shortTitle: "Mobile Development",
+        title: "Sviluppo app mobile",
+        shortTitle: "Sviluppo mobile",
         seoTitle: "Sviluppo App Mobile iOS e Android con React Native",
         seoDescription:
             "Sviluppo app mobile iOS e Android con React Native da unica codebase: business app, MVP startup e prodotti pensati per l'uso reale degli utenti.",
@@ -173,17 +171,17 @@ export const SERVICES: Service[] = [
         technologies: ["Node.js", "Laravel", "PostgreSQL", "MongoDB"],
     },
     {
-        slug: "architettura-e-scalabilita",
-        title: "Architettura & Scalabilità",
-        shortTitle: "Architettura & Scalabilità",
-        seoTitle: "Architettura Cloud e Scalabilità Tecnica",
+        slug: "tech-consulting",
+        title: "Tech Consulting, architettura e scalabilità",
+        shortTitle: "Tech Consulting",
+        seoTitle: "Tech Consulting, Architettura e Scalabilità",
         seoDescription:
-            "Progetto architetture cloud scalabili, CI/CD e ottimizzazione costi/performance per applicazioni web e mobile pensate per crescere nel tempo.",
+            "Consulenza tecnica per startup e PMI: audit software, architetture cloud scalabili, CI/CD, roadmap e ottimizzazione di performance e costi.",
         tagline:
-            "Architetture tecniche stabili e pronte a crescere, riducendo rischi, costi e problemi futuri.",
+            "Supporto aziende e startup nelle decisioni tecnologiche per costruire prodotti solidi, sostenibili e pronti a crescere.",
         intro:
-            "Progetto architetture cloud e flussi di deployment orientati alla stabilità e alla crescita nel tempo, con una visione tecnica integrata fra prodotto, team e infrastruttura.",
-        icon: Layers,
+            "Affianco fondatori, CTO e team interni nelle scelte tecnologiche, di architettura e roadmap. Trasformo esigenze di business in piani tecnici chiari, eseguibili e misurabili.",
+        icon: Compass,
         deliverables: [
             {
                 title: "Architetture cloud scalabili",
@@ -205,70 +203,7 @@ export const SERVICES: Service[] = [
                 description:
                     "Accompagnamento nel tempo con consulenza tecnica continuativa.",
             },
-        ],
-        problems: [
-            "Applicazioni che non reggono picchi di traffico",
-            "Deployment manuali e soggetti a errori",
-            "Ambienti di sviluppo e produzione incoerenti",
-            "Costi cloud fuori controllo",
-        ],
-        technologies: ["AWS", "Docker", "GitHub Actions", "Vercel"],
-    },
-    {
-        slug: "automazioni",
-        title: "Automazioni e Ottimizzazione Processi",
-        shortTitle: "Automazioni",
-        seoTitle: "Automazione Processi Aziendali con n8n",
-        seoDescription:
-            "Automatizzo workflow tra CRM, email, database e API con n8n: riduco lavoro manuale, errori e aumento efficienza operativa di team e aziende.",
-        tagline:
-            "Automatizzo processi e workflow aziendali per ridurre il lavoro manuale, gli errori e aumentare l’efficienza operativa.",
-        intro:
-            "Snellisco processi ripetitivi con n8n, connettendo sistemi, CRM, email marketing e database. L’obiettivo è risparmiare tempo, minimizzare errori e aumentare l’efficienza dei team.",
-        icon: Workflow,
-        deliverables: [
-            {
-                title: "Workflow automatizzati",
-                description:
-                    "Automazioni tra CRM, email marketing, calendario e database aziendali.",
-            },
-            {
-                title: "Integrazioni API",
-                description:
-                    "Connessione tra piattaforme interne ed esterne con regole personalizzate.",
-            },
-            {
-                title: "Task ripetitivi automatizzati",
-                description:
-                    "Reportistica, notifiche e operazioni routine completamente automatizzate.",
-            },
-            {
-                title: "Soluzioni personalizzate",
-                description:
-                    "Workflow su misura per ottimizzare risorse e produttività del team.",
-            },
-        ],
-        problems: [
-            "Processi manuali lenti con operazioni ripetitive",
-            "Difficoltà di connessione tra strumenti diversi",
-            "Workflow non tracciabili o poco efficienti",
-            "Reporting manuale e data aggregation complessa",
-        ],
-        technologies: ["n8n", "Zapier", "Make", "Node.js"],
-    },
-    {
-        slug: "tech-consulting",
-        title: "Tech Consulting",
-        shortTitle: "Tech Consulting",
-        seoTitle: "Tech Consulting e Fractional CTO in Italia",
-        seoDescription:
-            "Tech Consulting e Fractional CTO part-time per startup e PMI italiane: scelte tecnologiche, roadmap, due diligence e audit di progetti esistenti.",
-        tagline:
-            "Supporto aziende e startup nelle decisioni tecnologiche per costruire prodotti solidi, sostenibili e pronti a crescere.",
-        intro:
-            "Affianco fondatori, CTO e team interni nelle scelte tecnologiche, di architettura e roadmap. Trasformo esigenze di business in piani tecnici chiari, eseguibili e misurabili.",
-        icon: Compass,
-        deliverables: [
+
             {
                 title: "Scelte tecnologiche e architetturali",
                 description:
@@ -295,23 +230,23 @@ export const SERVICES: Service[] = [
             "Progetti senza direzione chiara e debito tecnico accumulato",
             "Costi e tempi di sviluppo non prevedibili",
             "Difficoltà nel passare da idea a prodotto scalabile",
+            "Applicazioni che non reggono picchi di traffico",
+            "Deployment manuali e ambienti incoerenti",
+            "Costi cloud fuori controllo",
         ],
+        technologies: ["AWS", "Docker", "GitHub Actions", "Vercel"],
         faq: [
             {
-                q: "Cos'è un Fractional CTO?",
-                a: "Un Fractional CTO è un Chief Technology Officer part-time o on-demand che porta esperienza senior in azienda senza il costo di un CTO full-time. Si occupa di scelte tecnologiche, architettura, hiring del team tech, due diligence e roadmap di prodotto. Tipicamente lavora 1-3 giorni a settimana o su ingaggi mensili a forfait.",
+                q: "Cosa comprende una consulenza tecnica?",
+                a: "Parto da codice, infrastruttura e obiettivi del prodotto. Individuo rischi, colli di bottiglia e debito tecnico, poi definisco interventi ordinati per priorità, costi e impatto sul business.",
             },
             {
-                q: "Quando una startup ha bisogno di un Fractional CTO?",
-                a: "Quando hai un'idea ma nessun co-founder tecnico, prima di un round di investimento (per due diligence), durante una crescita rapida del team tech, o quando devi prendere decisioni di architettura che impatteranno i prossimi 2-3 anni di prodotto.",
+                q: "Puoi migliorare la scalabilità di un'applicazione esistente?",
+                a: "Sì. Analizzo carico, database, API e infrastruttura per individuare i limiti reali. Progetto interventi su performance, architettura cloud e deployment, verificando anche i costi operativi.",
             },
             {
-                q: "Quanto costa un Fractional CTO in Italia?",
-                a: "Le tariffe in Italia variano indicativamente tra €120 e €250/ora, oppure con pacchetti mensili da €3.000 a €15.000 in base a giorni/settimana e seniority. Per startup early-stage esistono modelli misti equity + cash ridotto.",
-            },
-            {
-                q: "Cosa fa un Fractional CTO nelle prime settimane?",
-                a: "Tipicamente nelle prime 2-4 settimane si fa audit dello stato attuale (codice, infrastruttura, team), si allineano roadmap tecnica e roadmap di business, si identificano i rischi prioritari e si definisce un piano di intervento misurabile.",
+                q: "Qual è la differenza rispetto a un Fractional CTO?",
+                a: "Il Tech Consulting è adatto a una valutazione o a un intervento tecnico circoscritto. Il Fractional CTO segue invece con continuità la direzione tecnologica, le priorità di prodotto e il coordinamento del team.",
             },
         ],
     },

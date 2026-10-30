@@ -4,27 +4,27 @@ import { Button } from "@/src/components/ui/Button";
 import { SectionTitle } from "@/src/components/ui/SectionTitle";
 import { ServiceCard } from "@/src/components/ui/ServiceCard";
 import { FeaturedProject } from "@/src/components/sections/FeaturedProject";
-import { SERVICES } from "@/src/lib/services";
+import { SERVICE_NAVIGATION, PRIMARY_SERVICES } from "@/src/lib/service-navigation";
 import { CALENDLY_URL, SITE_URL } from "@/src/lib/utils";
 
 export const metadata: Metadata = {
-    title: { absolute: "Servizi di sviluppo web, mobile e cloud | Federico Tassara" },
+    title: { absolute: "Fractional CTO, sviluppo software e automazioni | Federico Tassara" },
     description:
-        "Sviluppo web e mobile, backend e API REST, architettura cloud, automazioni e tech consulting per startup e aziende italiane. Lavoro full-remote.",
+        "Fractional CTO, sviluppo software web e mobile e automazioni aziendali per startup e PMI. Tech Consulting, architettura e scalabilità a supporto.",
     alternates: { canonical: `${SITE_URL}/servizi` },
     openGraph: {
-        title: "Servizi di sviluppo web, mobile e cloud",
+        title: "Fractional CTO, sviluppo software e automazioni",
         description:
-            "Sviluppo web, mobile, backend, architettura, automazioni e consulenza tecnica per startup e PMI.",
+            "Fractional CTO, sviluppo software web e mobile e automazioni aziendali per startup e PMI.",
         url: `${SITE_URL}/servizi`,
         type: "website",
         images: [`${SITE_URL}/opengraph-image`],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Servizi di sviluppo web, mobile e cloud",
+        title: "Fractional CTO, sviluppo software e automazioni",
         description:
-            "Sviluppo web, mobile, backend, architettura, automazioni e consulenza tecnica per startup e PMI.",
+            "Fractional CTO, sviluppo software web e mobile e automazioni aziendali per startup e PMI.",
     },
 };
 
@@ -46,11 +46,11 @@ const itemListSchema = {
     "@id": `${url}#list`,
     name: "Servizi di Federico Tassara",
     inLanguage: "it-IT",
-    numberOfItems: SERVICES.length,
-    itemListElement: SERVICES.map((s, i) => ({
+    numberOfItems: SERVICE_NAVIGATION.length,
+    itemListElement: SERVICE_NAVIGATION.map((s, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: `${SITE_URL}/servizi/${s.slug}`,
+        url: `${SITE_URL}${s.href}`,
         name: s.title,
     })),
 };
@@ -73,13 +73,13 @@ export default function ServiziPage() {
                             Servizi
                         </span>
                         <h1 className="mt-3 text-4xl font-medium tracking-tight text-ink sm:text-5xl md:text-6xl md:leading-[1.05]">
-                            Sei aree di lavoro,
+                            Tre servizi principali,
                             <br />
-                            una visione integrata.
+                            un unico interlocutore.
                         </h1>
                         <p className="mt-6 text-lg leading-relaxed text-muted">
-                            Dal prodotto digitale alla consulenza strategica: ti seguo end-to-end o
-                            su una fase specifica del progetto, in base a quello che serve davvero.
+                            Fractional CTO, sviluppo software web e mobile e automazioni aziendali.
+                            Ti affianco nella direzione tecnica, nella realizzazione del prodotto e nel miglioramento dei processi.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-3">
                             <Button href={CALENDLY_URL} external size="lg">
@@ -96,10 +96,17 @@ export default function ServiziPage() {
             <section className="pb-20 sm:pb-28">
                 <Container>
                     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                        {SERVICES.map((s, i) => (
-                            <ServiceCard key={s.slug} service={s} index={i} />
+                        {PRIMARY_SERVICES.map((s, i) => (
+                            <ServiceCard key={s.href} service={s} index={i} />
                         ))}
                     </div>
+                </Container>
+            </section>
+
+            <section className="pb-20 sm:pb-28">
+                <Container>
+                    <SectionTitle eyebrow="Consulenza specialistica" title="Tech Consulting, architettura e scalabilità." description="Un audit, una scelta di stack o un problema di crescita: intervengo anche su esigenze tecniche circoscritte, con un piano concreto per codice, infrastruttura e deployment." />
+                    <div className="mt-8"><Button href="/servizi/tech-consulting" variant="outline">Scopri il Tech Consulting</Button></div>
                 </Container>
             </section>
 

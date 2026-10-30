@@ -53,7 +53,7 @@ Cinque fattori spostano il preventivo molto più del numero di pagine:
 
 Il costo di sviluppo è la punta dell'iceberg. Sotto la linea d'acqua ci sono l'**infrastruttura cloud** (che scala con gli utenti), i **servizi terzi** a canone (email transazionali, gateway di pagamento, monitoring, autenticazione) e — la voce più sottovalutata — la **manutenzione evolutiva**. Metti a budget il 15-25% del costo di sviluppo iniziale ogni anno solo per aggiornamenti di sicurezza, bug fixing e adeguamenti. Un SaaS che smette di essere manutenuto non resta fermo: si degrada.
 
-Le scelte di architettura fatte all'inizio determinano quanto peseranno questi costi per anni. È il motivo per cui vale la pena impostare bene l'[Architettura & Scalabilità](/servizi/architettura-e-scalabilita) prima di scrivere codice, non dopo.
+Le scelte di architettura fatte all'inizio determinano quanto peseranno questi costi per anni. È il motivo per cui vale la pena impostare bene l'[Architettura & Scalabilità](/servizi/tech-consulting) prima di scrivere codice, non dopo.
 
 ## Come non sforare il budget
 

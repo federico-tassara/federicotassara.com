@@ -45,7 +45,7 @@ Ci sono cinque momenti in cui un audit ripaga quasi sempre il suo costo:
 Un audit completo guarda sette dimensioni, e per ognuna misura sia lo stato attuale sia il rischio:
 
 - **Qualità del codice.** Non l'estetica, ma quanto è comprensibile e modificabile senza rompere altro. Codice illeggibile è codice costoso da far evolvere.
-- **Architettura.** Le fondamenta reggono la crescita prevista, o ogni nuovo carico è una toppa? Qui si decide se il sistema scalerà o si spaccherà. È il terreno del servizio di [Architettura & Scalabilità](/servizi/architettura-e-scalabilita).
+- **Architettura.** Le fondamenta reggono la crescita prevista, o ogni nuovo carico è una toppa? Qui si decide se il sistema scalerà o si spaccherà. È il terreno del servizio di [Architettura & Scalabilità](/servizi/tech-consulting).
 - **Sicurezza e gestione dei dati.** Vulnerabilità note, gestione delle credenziali, conformità GDPR, protezione dei dati sensibili.
 - **Debito tecnico e dipendenze.** Librerie obsolete, versioni non più supportate, scorciatoie accumulate: quanto pesano e quanto costa ripagarle.
 - **Test e affidabilità.** Quanto del sistema è coperto da test automatici, e quindi quanto è sicuro modificarlo.
@@ -60,4 +60,4 @@ Il valore di un audit non è la lunghezza del report, ma la sua **azionabilità*
 
 Il costo di un audit — qualche migliaio di euro — va confrontato con quello che protegge: mesi di sviluppo costruiti su fondamenta sbagliate, un'acquisizione fatta senza vedere i problemi, una riscrittura decisa per paura invece che per dati. In quasi tutti i casi in cui c'è una decisione importante in gioco, l'audit costa una frazione di ciò che evita di sbagliare. E quando conferma che il sistema è sano, ti dà la cosa più rara di tutte: la tranquillità di continuare a investire sapendo perché.
 
-Se stai per ereditare, comprare o rilanciare un software e vuoi sapere davvero su cosa stai costruendo, posso farne una valutazione indipendente e restituirti i rischi ordinati per priorità. Approfondisci il servizio di [Tech Consulting](/servizi/tech-consulting) e quello di [Architettura & Scalabilità](/servizi/architettura-e-scalabilita). Per una prima valutazione, [scrivimi qui](/contatti).
+Se stai per ereditare, comprare o rilanciare un software e vuoi sapere davvero su cosa stai costruendo, posso farne una valutazione indipendente e restituirti i rischi ordinati per priorità. Approfondisci il servizio di [Tech Consulting](/servizi/tech-consulting) e quello di [Architettura & Scalabilità](/servizi/tech-consulting). Per una prima valutazione, [scrivimi qui](/contatti).

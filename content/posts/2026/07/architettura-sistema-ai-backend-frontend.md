@@ -89,4 +89,4 @@ L'architettura di un sistema con AI ricalca quella di qualsiasi applicazione web
 
 Chi salta questi quattro punti ottiene un prototipo. Chi li affronta ottiene qualcosa che si può rilasciare, e la distanza fra i due stadi supera quasi sempre la stima iniziale.
 
-Se stai valutando come inserire una funzionalità AI in un prodotto esistente e vuoi capire dove sono i rischi prima di partire, [scrivimi](/contatti). Vedi anche come lavoro su [architettura e scalabilità](/servizi/architettura-e-scalabilita), oppure leggi cosa succede quando un [MVP generato con l'AI](/blog/mvp-generato-ai-debito-tecnico-industrializzare) va industrializzato.
+Se stai valutando come inserire una funzionalità AI in un prodotto esistente e vuoi capire dove sono i rischi prima di partire, [scrivimi](/contatti). Vedi anche come lavoro su [architettura e scalabilità](/servizi/tech-consulting), oppure leggi cosa succede quando un [MVP generato con l'AI](/blog/mvp-generato-ai-debito-tecnico-industrializzare) va industrializzato.

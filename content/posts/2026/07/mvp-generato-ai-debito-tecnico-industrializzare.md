@@ -92,4 +92,4 @@ Ho raccolto quei vincoli in una guida operativa agli [AI coding agent in azienda
 
 Avere un prodotto costruito in fretta con l'AI non è un errore da rimediare, è una fase da attraversare con metodo. Il debito non sta nel codice generato in sé, ma nel fatto che nessuno possiede più il modello mentale del sistema — e quello si ricostruisce, senza buttare via ciò che funziona e senza fermare lo sviluppo per sei mesi.
 
-Se ti riconosci nei segnali di questo articolo, il passo utile è capire con precisione dove sei prima di decidere cosa fare: i servizi di [Tech Consulting](/servizi/tech-consulting) e [Architettura & Scalabilità](/servizi/architettura-e-scalabilita) partono da qui. [Scrivimi](/contatti) e guardiamo insieme il tuo caso.
+Se ti riconosci nei segnali di questo articolo, il passo utile è capire con precisione dove sei prima di decidere cosa fare: i servizi di [Tech Consulting](/servizi/tech-consulting) e [Architettura & Scalabilità](/servizi/tech-consulting) partono da qui. [Scrivimi](/contatti) e guardiamo insieme il tuo caso.

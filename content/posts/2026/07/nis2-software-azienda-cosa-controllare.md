@@ -64,6 +64,6 @@ Chi ha già investito seriamente sul GDPR parte avvantaggiato: molte fondamenta 
 
 ## In sintesi
 
-La NIS2 trasforma la sicurezza da buona pratica facoltativa a requisito con scadenza e sanzioni, e buona parte del lavoro ricade sul software e sui fornitori software. Il confronto giusto non è "quanto costa adeguarsi" ma "quanto costa il rischio di non farlo" — considerando che nel 2026 esistono anche voucher per cloud e cybersecurity che possono coprire parte della spesa. Il modo più economico di affrontarla è sapere con precisione dove sei oggi, ed è esattamente ciò che offre una valutazione tecnica indipendente: i servizi di [Tech Consulting](/servizi/tech-consulting) e [Architettura & Scalabilità](/servizi/architettura-e-scalabilita) partono da qui.
+La NIS2 trasforma la sicurezza da buona pratica facoltativa a requisito con scadenza e sanzioni, e buona parte del lavoro ricade sul software e sui fornitori software. Il confronto giusto non è "quanto costa adeguarsi" ma "quanto costa il rischio di non farlo" — considerando che nel 2026 esistono anche voucher per cloud e cybersecurity che possono coprire parte della spesa. Il modo più economico di affrontarla è sapere con precisione dove sei oggi, ed è esattamente ciò che offre una valutazione tecnica indipendente: il servizio di [Tech Consulting, architettura e scalabilità](/servizi/tech-consulting) parte da qui.
 
 Se vuoi capire dove il tuo software è già in regola e dove no — prima che te lo chieda un cliente o l'ACN — [scrivimi qui](/contatti) e facciamo il punto sul tuo caso.
