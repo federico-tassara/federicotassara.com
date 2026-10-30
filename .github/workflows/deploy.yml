@@ -30,12 +30,25 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run lint
+      - name: Record release version
+        run: printf '%s' "$GITHUB_SHA" > public/deploy-version.txt
       - run: npm run build
       - name: Package standalone server
         run: tar --exclude='.env*' -czf deploy.tar .next/standalone .next/static public content deploy/Dockerfile captain-definition
       - name: Deploy to CapRover
-        uses: caprover/deploy-from-github@v1.1.2
-        with:
-          server: ${{ secrets.CAPROVER_SERVER }}
-          app: ${{ vars.CAPROVER_APP_NAME }}
-          token: ${{ secrets.CAPROVER_APP_TOKEN }}
+        env:
+          CAPROVER_URL: ${{ secrets.CAPROVER_SERVER }}
+          CAPROVER_APP: ${{ vars.CAPROVER_APP_NAME }}
+          CAPROVER_APP_TOKEN: ${{ secrets.CAPROVER_APP_TOKEN }}
+        run: npx --yes caprover@2.3.1 deploy --tarFile ./deploy.tar
+      - name: Verify deployed release
+        run: |
+          for attempt in $(seq 1 36); do
+            version=$(curl --fail --silent --max-time 10 "https://federicotassara.com/deploy-version.txt?release=$GITHUB_SHA" || true)
+            if [ "$version" = "$GITHUB_SHA" ]; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "The expected release did not become available."
+          exit 1
