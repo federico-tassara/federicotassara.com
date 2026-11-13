@@ -77,9 +77,8 @@ const personSchema = {
         "Cloud architecture",
     ],
     sameAs: [
-        "https://www.instagram.com/federicotassara_/",
         "https://www.youtube.com/@federicotassara_dev",
-        "https://www.linkedin.com/in/federico-tassara/",
+        "https://www.linkedin.com/in/tassarafederico/",
     ],
     hasOccupation: {
         "@type": "Occupation",

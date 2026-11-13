@@ -35,7 +35,6 @@ export const ADDRESSES = [
 ];
 
 export const SOCIAL = {
-    instagram: "https://www.instagram.com/federicotassara_/",
     youtube: "https://www.youtube.com/@federicotassara_dev",
-    linkedin: "https://www.linkedin.com/in/federico-tassara/",
+    linkedin: "https://www.linkedin.com/in/tassarafederico/",
 };

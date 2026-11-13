@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Youtube, Linkedin, Mail } from "lucide-react";
+import { Youtube, Linkedin, Mail } from "lucide-react";
 import { Container } from "@/src/components/ui/Container";
 import { SERVICE_NAVIGATION } from "@/src/lib/service-navigation";
 import { ADDRESSES, SITE_EMAIL, SOCIAL } from "@/src/lib/utils";
@@ -20,7 +20,6 @@ export function Footer() {
                             Automazioni aziendali e consulenza tecnica per startup e PMI.
                         </p>
                         <div className="mt-5 flex items-center gap-2">
-                            <SocialIcon href={SOCIAL.instagram} label="Instagram"><Instagram className="size-4" /></SocialIcon>
                             <SocialIcon href={SOCIAL.youtube} label="YouTube"><Youtube className="size-4" /></SocialIcon>
                             <SocialIcon href={SOCIAL.linkedin} label="LinkedIn"><Linkedin className="size-4" /></SocialIcon>
                         </div>

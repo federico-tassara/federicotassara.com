@@ -9,7 +9,7 @@
 - Stack principale: React, Next.js, React Native, Node.js, Laravel, TypeScript
 - Aree di servizio: Italia (remote-first), sedi a Loano (SV) e Orbassano (TO)
 - Contatto: info@federicotassara.com
-- LinkedIn: https://www.linkedin.com/in/federico-tassara/
+- LinkedIn: https://www.linkedin.com/in/tassarafederico/
 - Sito: https://federicotassara.com
 
 ## Profilo
