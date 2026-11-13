@@ -7,7 +7,6 @@ import { Button } from "@/src/components/ui/Button";
 import { SectionTitle } from "@/src/components/ui/SectionTitle";
 import { ServiceCard } from "@/src/components/ui/ServiceCard";
 import { ClientsMarquee } from "@/src/components/ui/ClientsMarquee";
-import { HeroAkintuWidget } from "@/src/components/akintu/HeroAkintuWidget";
 import { HomeProjects } from "@/src/components/sections/HomeProjects";
 import { PRIMARY_SERVICES } from "@/src/lib/service-navigation";
 import { CALENDLY_URL, SITE_URL } from "@/src/lib/utils";
@@ -56,7 +55,6 @@ export default function Home() {
         <section id="servizi" className="home-services site-container"><SectionTitle eyebrow="Servizi" title="Cosa posso costruire con te." description="Fractional CTO, sviluppo software web e mobile e automazioni aziendali: tre modi per aiutare la tua impresa a crescere." /><div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{PRIMARY_SERVICES.map(s => <ServiceCard key={s.href} service={s} />)}</div></section>
         <section className="home-pillars site-container"><SectionTitle eyebrow="I pilastri del lavoro" title="Sei principi che guidano ogni progetto." /><div className="pillar-grid">{PILLARS.map(p => <article key={p.title}><h3>{p.title}</h3><p>{p.text}</p></article>)}</div></section>
         {latestPosts.length > 0 && <section className="home-journal site-container"><SectionTitle eyebrow="Ultime notizie" title="Dal blog." description="Articoli, riflessioni e guide pratiche su sviluppo, architettura e prodotto." align="center" /><div className="mt-8 grid gap-6 md:grid-cols-3">{latestPosts.map(post => <Link key={post.slug} href={`/blog/${post.slug}`} className="home-post"><time dateTime={post.date}>{new Date(post.date).toLocaleDateString("it-IT", {day:"numeric",month:"long",year:"numeric"})}</time><h3>{post.title}</h3><p>{post.excerpt}</p><span>Leggi <ArrowRight size={15} aria-hidden="true" /></span></Link>)}</div><div className="mt-8 text-center"><Button href="/blog">Vai al blog</Button></div></section>}
-        <div className="site-container pb-16"><HeroAkintuWidget /></div>
         <section className="home-closing"><Container><h2>Hai un’idea? Parliamone,<br /> senza impegno.</h2><p>Una consulenza iniziale gratuita per capire se possiamo lavorare bene insieme e definire i prossimi passi.</p><div className="flex flex-wrap justify-center gap-3"><Button href={CALENDLY_URL} external className="bg-white text-ink hover:bg-white/90">Prendi appuntamento</Button><Button href="/contatti" variant="outline" className="border-white/40 text-white hover:border-white">Scrivimi</Button></div></Container></section>
     </>;
 }
