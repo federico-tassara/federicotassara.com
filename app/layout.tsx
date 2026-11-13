@@ -5,6 +5,7 @@ import "./globals.css";
 import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
 import { SITE_URL } from "@/src/lib/utils";
+import { AkintuWidget } from "@/src/components/akintu/AkintuWidget";
 
 const geist = localFont({
     src: "../public/fonts/geist.woff2",
@@ -165,6 +166,7 @@ export default function RootLayout({
                 <main id="main-content">{children}</main>
                 <Footer />
                 </div>
+                <AkintuWidget />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

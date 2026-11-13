@@ -1,5 +1,18 @@
 # federicotassara.com
 
+## Akintu V2
+
+Il layout monta una sola istanza del widget su tutte le pagine, tramite
+`https://akintu.io/loader/v2/loader.js` e l'API di produzione. Impostare la variabile
+pubblica GitHub `NEXT_PUBLIC_AKINTU_CLIENT_KEY` con una chiave associata a
+`https://federicotassara.com`; senza chiave il widget non viene caricato.
+
+La chat resta disponibile senza tracciamento. La proattività richiede sia la
+configurazione del sito nella dashboard Akintu sia un consenso esplicito tramite
+`window.AKINTU_TRACKING_CONSENT`, installato dal gestore del consenso prima del
+loader. L'integrazione non concede automaticamente analytics o personalizzazione.
+Non utilizzare chiavi o consenso della demo locale in produzione.
+
 ## Deploy Docker su CapRover
 
 Il workflow `.github/workflows/deploy.yml` esegue lint e build su GitHub a ogni

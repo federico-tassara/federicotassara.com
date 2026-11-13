@@ -20,6 +20,7 @@ jobs:
       NEXT_TELEMETRY_DISABLED: 1
       NEXT_PUBLIC_SITE_URL: https://federicotassara.com
       NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+      NEXT_PUBLIC_AKINTU_CLIENT_KEY: ${{ vars.NEXT_PUBLIC_AKINTU_CLIENT_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
